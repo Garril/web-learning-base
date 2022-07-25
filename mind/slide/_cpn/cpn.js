@@ -1,75 +1,77 @@
-// 更进一步的，我们可以将组件通用模型抽象出来 看 _cpn文件夹
 /* 
-  我们可以看到这里的html代码，只有一行了 
-  取而代之，我们用render方法去生成
-  
-  插件中我们主要做两件事情
-  1、render接收数据，渲染模板返回
-  2、action接收slider实例（进行api调用）--render后执行
-    且，在render阶段生成的模板中，html有css类名
-    通过querySelector，
-    可以对其进行事件监听 和 css的className的切换
+  抽出一层Component类
+    处理注册插件 和 渲染（abstract待子类实现）
+  更进：还没考虑嵌套：
+    有些组件可以嵌套的，他的子组件可以作为父组件的插件来使用
+    这里Component 和 Plugin是分开的
+    可以设计一种更通用的，把 Component 和 Plugin组合起来，构成一个SumCpn
+    SumCpn有它的子组件，作为父组件插件来使用
 */
-class Slider{
-  constructor(id, opts = {images:[], cycle: 3000}){
+class Component {
+  constructor(id, opts = {name, data:[]}) {
     this.container = document.getElementById(id);
     this.options = opts;
-    this.cycle = opts.cycle || 3000;
-    // render一定要在querySelectorAll之前
-    this.container.innerHTML = this.render();
-    this.items = this.container.querySelectorAll('.slider-list__item, .slider-list__item--selected');
-    this.slideTo(0);
+    this.container.innerHTML = this.render(opts.data);
   }
-  // render 获取 数据对应的html模板
-  render(){
-    const images = this.options.images;
-    // 模板拼接 --- 新数组content
-    const content = images.map(image => `
-      <li class="slider-list__item">
-        <img src="${image}"/>
-      </li>    
-    `.trim());
-    return `<ul>${content.join('')}</ul>`;
-  }
-  // 插件注册
-  registerPlugins(...plugins){
+  registerPlugins(...plugins) {
     plugins.forEach(plugin => {
-      // 构建div，div内放插件render返回的内容，最后将其放入container，样式看css
       const pluginContainer = document.createElement('div');
-      pluginContainer.className = '.slider-list__plugin';
-      pluginContainer.innerHTML = plugin.render(this.options.images);
+      // 名字通用化，其他无变化
+      pluginContainer.className = `.${name}__plugin`;
+      pluginContainer.innerHTML = plugin.render(this.options.data);
       this.container.appendChild(pluginContainer);
       plugin.action(this);
     });
   }
-
-  getSelectedItem(){
+  render(data) {
+    /* abstract */
+    return ''
+  }
+}
+// 继承Component，实现render，实现自身api
+// 插件处理的代码被抽出
+class Slider extends Component {
+  constructor(id, opts = {name: 'slider-list', data:[], cycle: 3000}){
+    super(id, opts);
+    this.items = this.container.querySelectorAll('.slider-list__item, .slider-list__item--selected');
+    this.cycle = opts.cycle || 3000;
+    this.slideTo(0);
+  }
+  render(data) {
+    const content = data.map(image => `
+      <li class="slider-list__item">
+        <img src="${image}"/>
+      </li>
+    `.trim());
+    return `<ul>${content.join('')}</ul>`;
+  }
+  getSelectedItem() {
     const selected = this.container.querySelector('.slider-list__item--selected');
     return selected
   }
-  getSelectedItemIndex(){
+  getSelectedItemIndex() {
     return Array.from(this.items).indexOf(this.getSelectedItem());
   }
-  slideTo(idx){
+  slideTo(idx) {
     const selected = this.getSelectedItem();
     if(selected){ 
       selected.className = 'slider-list__item';
     }
-    let item = this.items[idx];
+    const item = this.items[idx];
     if(item){
       item.className = 'slider-list__item--selected';
     }
-    
+
     const detail = {index: idx}
     const event = new CustomEvent('slide', {bubbles:true, detail})
     this.container.dispatchEvent(event)
   }
-  slideNext(){
+  slideNext() {
     const currentIdx = this.getSelectedItemIndex();
     const nextIdx = (currentIdx + 1) % this.items.length;
     this.slideTo(nextIdx);
   }
-  slidePrevious(){
+  slidePrevious() {
     const currentIdx = this.getSelectedItemIndex();
     const previousIdx = (this.items.length + currentIdx - 1) % this.items.length;
     this.slideTo(previousIdx);  
@@ -77,17 +79,17 @@ class Slider{
   addEventListener(type, handler){
     this.container.addEventListener(type, handler);
   }
-  start(){
+  start() {
     this.stop();
-    this._timer = setInterval(() => this.slideNext(), this.cycle);
+    this._timer = setInterval(()=>this.slideNext(), this.cycle);
   }
-  stop(){
+  stop() {
     clearInterval(this._timer);
   }
 }
-
+// 插件都实现 render 和 action 即可
 const pluginController = {
-  render(images){
+  render(images) {
     return `
       <div class="slide-list__control">
         ${images.map((image, i) => `
@@ -96,26 +98,26 @@ const pluginController = {
       </div>    
     `.trim();
   },
-  action(slider){
-    const controller = slider.container.querySelector('.slide-list__control');
+  action(slider) {
+    let controller = slider.container.querySelector('.slide-list__control');
     
     if(controller){
-      const buttons = controller.querySelectorAll('.slide-list__control-buttons, .slide-list__control-buttons--selected');
-      controller.addEventListener('mouseover', evt => {
-        const idx = Array.from(buttons).indexOf(evt.target);
+      let buttons = controller.querySelectorAll('.slide-list__control-buttons, .slide-list__control-buttons--selected');
+      controller.addEventListener('mouseover', evt=>{
+        var idx = Array.from(buttons).indexOf(evt.target);
         if(idx >= 0){
           slider.slideTo(idx);
           slider.stop();
         }
       });
 
-      controller.addEventListener('mouseout', evt => {
+      controller.addEventListener('mouseout', evt=>{
         slider.start();
       });
 
       slider.addEventListener('slide', evt => {
-        const idx = evt.detail.index
-        const selected = controller.querySelector('.slide-list__control-buttons--selected');
+        const idx = evt.detail.index;
+        let selected = controller.querySelector('.slide-list__control-buttons--selected');
         if(selected) selected.className = 'slide-list__control-buttons';
         buttons[idx].className = 'slide-list__control-buttons--selected';
       });
@@ -128,13 +130,13 @@ const pluginPrevious = {
     return `<a class="slide-list__previous"></a>`;
   },
   action(slider){
-    const previous = slider.container.querySelector('.slide-list__previous');
+    let previous = slider.container.querySelector('.slide-list__previous');
     if(previous){
       previous.addEventListener('click', evt => {
         slider.stop();
         slider.slidePrevious();
         slider.start();
-        evt.preventDefault(); // 阻止a标签默认跳转
+        evt.preventDefault();
       });
     }  
   }
@@ -145,7 +147,7 @@ const pluginNext = {
     return `<a class="slide-list__next"></a>`;
   },
   action(slider){
-    const previous = slider.container.querySelector('.slide-list__next');
+    let previous = slider.container.querySelector('.slide-list__next');
     if(previous){
       previous.addEventListener('click', evt => {
         slider.stop();
@@ -156,7 +158,7 @@ const pluginNext = {
     }  
   }
 };
-// 修改部分 -----------------------------------------------
+
 const slider = new Slider('my-slider',
   {
     images: ['https://p5.ssl.qhimg.com/t0119c74624763dd070.png',
@@ -164,9 +166,7 @@ const slider = new Slider('my-slider',
             'https://p2.ssl.qhimg.com/t01645cd5ba0c3b60cb.jpg',
             'https://p4.ssl.qhimg.com/t01331ac159b58f5478.jpg'],
     cycle: 3000
-  } // 数据传入
+  }
 );
-// -----------------------------------------------
-
 slider.registerPlugins(pluginController, pluginPrevious, pluginNext);
 slider.start();
