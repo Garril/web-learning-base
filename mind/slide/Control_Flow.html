@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS_API</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 30vh;
+    }
+    #my-slider{
+      position: relative;
+      width: 790px;
+    }
+
+    .slider-list ul{
+      list-style-type:none;
+      position: relative;
+      padding: 0;
+      margin: 0;
+    }
+
+    .slider-list__item,
+    .slider-list__item--selected{
+      position: absolute;
+      transition: opacity 1s;
+      opacity: 0;
+      text-align: center;
+    }
+
+    .slider-list__item--selected{
+      transition: opacity 1s;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <a class="slide-list__next"></a>
+  <a class="slide-list__previous"></a>
+  <div class="slide-list__control">
+    <span class="slide-list__control-buttons--selected"></span>
+    <span class="slide-list__control-buttons"></span>
+    <span class="slide-list__control-buttons"></span>
+    <span class="slide-list__control-buttons"></span>
+  </div>
+  
+  <script src="./Control_Flow.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      box-sizing: border-box;
+    }
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .container {
+      width: 290px;
+      height: 232px;
+      margin: 100px auto;
+      /* border: 1px solid red; */
+      overflow: hidden;
+    }
+    .list {
+      width: 292px;
+      height: 232px;
+      border: 1px solid #000;
+      margin-left: -1px;
+    }
+    /* 
+      一开始，container是290px，红色边框，
+            list是292px，黑色边框。
+      显示效果：红色边框左边和上边，都是紧贴着黑色边框，不重叠，
+          右边和下边，黑色边框超出红色边框，下边是紧贴，右边是中间空了2px
+        我们给list加上box-sizing: border-box;，发现
+          边框都是紧贴着的，只有右边框，黑色在外，红色在内。
+        然后我们给list设置margin-left：-1px。
+          上下不变，左右两边黑色覆盖了红色border
+        最后我们加上overflow：hidden；发现左右的黑边，消失了，只剩下上下的黑边。
+        紧贴着，在红边内侧。我们注释掉红色border，只剩下上下两条黑色border
+        
+        不管是container还是list，宽高均为 290*232
+    */
+  </style>
+</head>
+<body>
+  <div class="container clearfix">
+    <ul class="list">
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+    </ul>
+  </div>
+</body>
+</html>

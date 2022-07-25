@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      min-width:700px;
+    }
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    div::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    ul {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    .header,
+    .footer {
+      height: 200px;
+      background-color: orange;
+      line-height: 200px;
+      text-align: center;
+    }
+    #content {
+      background-color: skyblue;
+      height: 500px;
+      /* 这里padding和margin没差别 */
+      margin-left: 200px;
+      margin-right: 300px;
+    }
+    #content div{
+      float: left;
+      height: 100%;
+      text-align: center;
+      line-height: 500px;
+    }
+    #content .main {
+      background-color: red;
+      width: 100%;
+    }
+    #content .left {
+      background-color: green;
+      width: 200px;
+      position: relative;
+      /* 之后直接记： left 左边：设置相对的left和margin-left均为负值，右边就设置margin-right */
+      left: -200px;
+      margin-left: -100%;
+    }
+    #content .right {
+      background-color: blue;
+      width: 300px;
+      margin-right: -300px;
+    }
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">header</div>
+  <div id="content" class="clearfix">
+    <div class="main">main</div>
+    <div class="left">left</div>
+    <div class="right">right</div>
+  </div>
+  <div class="footer">footer</div>
+
+</body>
+</html>

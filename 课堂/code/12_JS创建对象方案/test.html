@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+  <title>Document</title>
+</head>
+<body>
+
+<input type="button" onclick="add_Private()" value="加密" />
+<input type="button" onclick="move_Private()" value="解密" />
+
+<script src="../../../../Basic/jQuery//jquery-3.5.0.min.js"></script>
+<script type="text/javascript">
+  let a,b,c;
+
+  function add_Private() {
+    a = prompt("加密源文件路径:","");
+    b = prompt('加密后文件存储路径:',"");
+    if(a&&b) {
+      console.log("加密源文件路径为:",a,"加密后文件存储路径:",b);
+    }else {
+      alert('不能为空');
+    }
+    $.ajax({
+      type : "post",
+      url : "http://localhost:8000/query",
+      dataType : 'json',
+      data : {
+        "a":a,
+        "b":b,
+      },
+      success : function(data) {
+        console.info(data);
+      }
+    })
+  }
+
+  function move_Private() {
+    c = prompt('解密后文件存储路径:',"");
+    if(c) {
+      console.log("解密后文件存储路径:",c);
+    }else {
+      alert('不能为空');
+    }
+    data = {
+      "c":c
+    }
+    $.ajax({
+      type : "post",
+      url : "http://localhost:8000/query",
+      dataType : 'json',
+      contentType:'application/json',
+      data : JSON.stringify(data),
+      success : function(data) {
+        console.info(data);
+      }
+    })
+
+  }
+
+  
+
+    </script>
+</body>
+</html>

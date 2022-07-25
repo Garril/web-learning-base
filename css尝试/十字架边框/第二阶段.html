@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    ul,
+    li {
+      box-sizing: border-box; 
+    }
+    /* 没给li加box-sizing时，容器容纳不下，挤到4行，overflow溢出隐藏了 */
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .container {
+      width: 290px;
+      height: 232px;
+      margin: 100px auto;
+      overflow: hidden;
+    }
+    .list {
+      width: 292px;
+      height: 232px;
+      /* border: 1px solid green; */
+      /* （此时margin-left为-1px） 
+        将边框改为绿色，你会发现，li标签均在容器内部
+        底部和上部的边框都是list这里设置的，li设置的border-top紧贴上部，在内侧
+        左侧有黑border，右侧无
+      */
+      margin-left: -2px;
+      /* margin-left改为-2px，右侧黑边消失，现在整体的border，只有上部有黑色border*/
+      border-bottom: 1px solid #000;
+      /* 所以给list整体设计了个border-bottom */
+    }
+    .item {
+      float: left;
+      width: 25%;
+      height: 77px;
+      border-top: 1px solid #000;
+      border-left: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container clearfix">
+    <ul class="list">
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+      <li class="item"><a href=""></a></li>
+    </ul>
+  </div>
+</body>
+</html>

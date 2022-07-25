@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a {
+      border: 1px solid black;
+      border-radius: 50%;
+      background-color: red;
+    }
+    div {
+      padding-top: 20px;
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <a href="#">nothing</a>
+  </div>
+
+  <!-- 脚本 1 -->
+  <script>
+    // 同步
+    console.log('start1')
+    // 异步宏
+    setTimeout(() => console.log('timer1'), 0)
+    new Promise((resolve, reject) => {
+      // 同步
+      console.log('p1')
+      resolve()
+    }).then(() => {
+      // 异步微
+      console.log('then1')
+    })
+    // 同步
+    console.log('end1')
+  </script>
+
+  <!-- 脚本 2 -->
+  <script>
+    // 同步
+    console.log('start2')
+    // 异步宏
+    setTimeout(() => console.log('timer2'), 0)
+    new Promise((resolve, reject) => {
+      // 同步
+      console.log('p2')
+      resolve()
+    }).then(() => {
+      // 异步微
+      console.log('then2')
+    })
+    // 同步
+    console.log('end2')
+  </script>
+
+</body>
+</html>

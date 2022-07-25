@@ -1,0 +1,35 @@
+.box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+}
+.flex-box{
+  height:200px;
+  width:500px;
+  background-color:#ddd;
+  border:1px solid #fff;
+}
+.box1 .flex-box{
+  background-color:#E0BCDB;
+}
+.box2 .flex-box{
+  background-color:#E0B6B6;
+  width:800px;
+}
+.left{
+  flex-shrink:0;//空间不足时不允许左侧缩小
+}
+.box3 .flex-box{
+  background-color:#ABD9E0;
+  width:900px;
+}
+.box4{
+  flex-wrap: wrap;//空间不足换行
+}
+.box4 .flex-box{
+  background-color:#dadada;
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 如果没加type="module",会报错，因为只是一个普通的js，从上往下执行而已 
+  但是，当你把这个文件当成一个模块去加载的时候，main里面引用了foo，foo用export
+  也是相当于访问另一个模块，这个时候如果你访问html还是用的本地文件路径的方式
+  而不是开启一个本地服务localhost:5500的话，那么还是报错Cross Origin
+  -->
+  
+  <script src="./main.js" type="module"></script>
+</body>
+</html>

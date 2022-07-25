@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      min-width:700px;
+    }
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    ul {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    .header,
+    .footer {
+      height: 200px;
+      background-color: orange;
+      line-height: 200px;
+      text-align: center;
+    }
+    #content {
+      background-color: skyblue;
+      height: 500px;
+
+    }
+    #content div{
+      float: left;
+      height: 100%;
+      line-height: 500px;
+      text-align: center;
+    }
+    #content .main {
+      background-color: red;
+      width: 100%;
+    }
+    #content .left {
+      background-color: green;
+      width: 200px;
+      margin-left: -100%;
+    }
+    #content .right {
+      background-color: blue;
+      width: 300px;
+      margin-left: -300px;
+    }
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .main-wrap {
+      padding-left: 200px;
+      padding-right: 300px;
+      /* 试出来的67% */
+      width:67%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">header</div>
+  <div id="content" class="clearfix">
+    <div class="main">
+      <div class="main-wrap">main</div>
+    </div>
+    <div class="left">left</div>
+    <div class="right">right</div>
+  </div>
+  <div class="footer">footer</div>
+
+</body>
+</html>
