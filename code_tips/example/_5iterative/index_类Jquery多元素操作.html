@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <ul>
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+    <li>d</li>
+    <li>e</li>
+    <li>f</li>
+    <li>g</li>
+  </ul>
+
+  <script>
+    const isIterable = obj => obj != null 
+      && typeof obj[Symbol.iterator] === 'function';
+
+    function iterative(fn) {
+
+      return function(subject, ...rest) {
+        if(isIterable(subject)) {
+          const ret = [];
+          for(let obj of subject) {
+            ret.push(fn.apply(this, [obj, ...rest]));
+          }
+          return ret;
+        }
+        return fn.apply(this, [subject, ...rest]);
+      }
+
+    }
+    // iterative处理之后，setColor可以处理多个el
+    const setColor = iterative((el, color) => {
+      el.style.color = color;
+    });
+
+    const els = document.querySelectorAll('li:nth-child(2n+1)');
+    setColor(els, 'red');
+    // 当然你可以选择写个foo函数去 遍历el，然后一个个同步的设置属性
+    // 但是这里的 iterative 是个纯函数，foo非纯函数
+
+    /* 
+      test iterative
+      const add = iterative((a,b) => a+b);
+      add([1,2,3,4],5); //  [6,7,8,9] --- 结果由传入决定，符合预期
+    */
+  </script>
+
+
+</body>
+</html>

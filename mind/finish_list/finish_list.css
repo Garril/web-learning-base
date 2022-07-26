@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+#content_box {
+  border: 2px solid orange;
+  text-align: left;
+  padding: 30px;
+  min-width: 15%;
+  background-color: rgb(207, 202, 202);
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  outline: 0 none;
+}
+
+li.completed {
+  transition: opacity 2s;
+  opacity: 0;
+}
+
+li button:before {
+  content: '☑️';
+}
+
+li.completed button:before {
+  content: '✅';
+}

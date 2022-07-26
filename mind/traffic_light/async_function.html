@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #traffic {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #traffic li {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background-color: gray;
+      margin: 5px;
+      border-radius: 50%;
+    }
+
+    #traffic.stop li:nth-child(1) {
+      background-color: #a00;
+    }
+
+    #traffic.wait li:nth-child(2) {
+      background-color: #aa0;
+    }
+
+    #traffic.pass li:nth-child(3) {
+      background-color: #0a0;
+    }
+  </style>
+
+</head>
+<body>
+
+  <ul id="traffic" class="wait">
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <script>
+    const traffic = document.getElementById('traffic');
+    function wait(time){
+      return new Promise(resolve => setTimeout(resolve, time));
+    }
+    function setState(state){
+      traffic.className = state;
+    }
+    async function start(){
+      //noprotect
+      while(1){
+        // setTimeout直接奔溃，肯定是promise、await
+        setState('wait');
+        await wait(1000);
+        setState('stop');
+        await wait(3000);
+        setState('pass');
+        await wait(3000);
+      }
+    }
+    start();
+  </script>
+
+</body>
+</html>
