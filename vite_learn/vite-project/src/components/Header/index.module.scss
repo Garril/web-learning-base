@@ -1,0 +1,9 @@
+// vite 会默认的把 .module.scss文件当作css modules处理
+.header {
+  color: red;
+  .inner {
+    color: skyblue;
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+}
