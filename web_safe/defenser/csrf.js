@@ -70,12 +70,14 @@
         解决：
           服务器端进行 Set-Cookie: SameSite=None; Secure;
           不对SameSite做限制，但是cookie是Secure，确保安全。
+          
       demo：
         有两个页面a.com和b.com，服务端domain：a.com
         a.com和b.com都发送request，服务器解析当前请求携带的cookie，返回
         结果都是 把a.com域名下的cookie解析，返回回来。但是有点不同：
           同源方cookie（a.com）：设置了两个值，key：lax和none，值：1和2
-            none---不对cookie做任何限制，lax----浏览器默认行为
+            lax----浏览器默认行为
+            none---不对cookie做任何限制
           但是在非同源（跨域请求）：可以看到，key和value剩下 none：2
           （这就是SameSite进行了限制---如果我设置的是none，意味着cookie可以被
           作为第三方cookie进行携带，但针对默认值lax，他不能被第三方cookie携带到服务器侧）

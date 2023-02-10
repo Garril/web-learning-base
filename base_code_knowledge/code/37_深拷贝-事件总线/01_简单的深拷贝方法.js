@@ -13,7 +13,7 @@ const obj = {
   s2: s2
 }
 
-obj.inner = obj
+// obj.inner = obj
 
 const info = JSON.parse(JSON.stringify(obj))
 console.log(info === obj)

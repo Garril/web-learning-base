@@ -16,4 +16,5 @@ function sayName() {
 }
 
 sayName();
+console.log(b); // [Function: sayName]
 

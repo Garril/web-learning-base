@@ -10,3 +10,4 @@ function foo() {
 // var obj = new bar()
 
 // new绑定 > 显示绑定(apply/call/bind) > 隐式绑定(obj.foo()) > 默认绑定(独立函数调用)
+

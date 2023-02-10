@@ -7,8 +7,8 @@ const finalRegistry = new FinalizationRegistry((value) => {
 let obj = { name: "why" }
 let info = { age: 18 }
 
-finalRegistry.register(obj, "obj") // 第二个参数传给第二行的回调的value
-finalRegistry.register(info, "value")
+finalRegistry.register(obj, "obj_") // 第二个参数传给第二行的回调的value
+finalRegistry.register(info, "value_")
 
 obj = null
 info = null

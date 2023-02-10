@@ -32,7 +32,10 @@ const obj = {
   },
   // Symbol作为key和value
   [s1]: "abc",
-  s2: s2
+  s2: s2,
+  foo() {
+    console.log("hhh")
+  }
 }
 
 const newObj = deepClone(obj)

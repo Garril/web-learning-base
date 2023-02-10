@@ -45,15 +45,15 @@ hhh studying~
 // 1.第一个弊端: 打印stu对象, 继承的属性是看不到的
 // console.log(stu) // Person { name: 'hhh', age: 18, friends: [ 'kobe' ], sno: 111 }
 
-// 2.第二个弊端: 创建出来两个stu的对象
+// 2.第二个弊端: 创建出来两个stu的对象（继续看下面）
 var stu1 = new Student("hhh", 18, ["lilei"], 111)
 var stu2 = new Student("kobe", 30, ["james"], 112)
 
-// // 直接修改对象上的属性, 是给本对象添加了一个新属性
+// 直接修改对象上的属性, 是给本对象添加了一个新属性
 stu1.name = "www"
 console.log(stu2.name) // kobe
 
-// // 获取引用, 修改引用中的值, 会相互影响
+// 获取引用, 修改引用中的值, 不会相互影响
 stu1.friends.push("lucy")
 
 console.log(stu1.friends) // [ 'lilei', 'lucy' ]

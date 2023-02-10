@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style type="text/css">
+            #a{
+                width: 100px;
+                height: 100px;
+                background: red;
+            }
+            #b{
+                width: 50px;    
+                height: 50px;
+                background: green;
+            }
+            #c {
+              width: 30px;
+              height: 30px;
+              background-color: skyblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='a'>
+            <div id='b'>
+                <p id="c">111</p>
+            </div>
+            
+        </div>
+    </body>
+    <script type="text/javascript">
+        var a=document.getElementById('a');
+        var b=document.getElementById('b');
+        var c=document.getElementById('c');
+        a.addEventListener('click',function(){
+            console.log('a');
+            event.stopPropagation()
+        },true);
+
+        b.addEventListener('click',function(){
+            console.log('b')
+        },true);
+
+        c.onclick=function(event){
+            console.log('c')
+        }
+        
+    </script>
+</html>

@@ -23,5 +23,15 @@ function sum(num1, num2, num3) {
 
 sum.call("call", 20, 30, 40)
 sum.apply("apply", [20, 30, 40])
-
+sum1 = sum.bind("bind");
+sum1()
+sum1.call("call", 20, 30, 40)
+sum1.apply("apply", [20, 30, 40])
+/* 
+90 [String: 'call']
+90 [String: 'apply']
+NaN [String: 'bind']
+90 [String: 'bind']
+90 [String: 'bind']
+*/
 // 3.call和apply在执行函数时,是可以明确的绑定this, 这个绑定规则称之为显示绑定

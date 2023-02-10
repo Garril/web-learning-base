@@ -1,0 +1,32 @@
+{
+  "name": "js_learning",
+  "version": "1.0.0",
+  "description": "Record learning JS, notes, exercises and self-testing demo",
+  "main": "compare.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "SET NODE_OPTIONS=--openssl-legacy-provider &&  cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Garril/JS_Learning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Garril/JS_Learning/issues"
+  },
+  "homepage": "https://github.com/Garril/JS_Learning#readme",
+  "devDependencies": {
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

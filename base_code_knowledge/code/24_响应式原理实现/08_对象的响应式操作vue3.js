@@ -31,8 +31,9 @@ class Depend {
 
 // 封装一个响应式的函数
 function watchFn(fn) {
-  activeReactiveFn = fn
-  fn()
+  activeReactiveFn = fn // fn会调用到监听的数据（这里函数还没执行）
+  // 在 fn 执行的过程中，就会去调用对象这个key的getter，然后把activeReactiveFn加入到对应的depend
+  fn() 
   activeReactiveFn = null
 }
 
@@ -101,3 +102,23 @@ watchFn(() => {
 })
 
 foo.name = "bar"
+
+/* 
+如果自己实现一个vue3的响应式，思路如下：
+1、每个对象对应有自己的map，然后用全局的weakmap保存 object-map
+2、对象的每个属性，对应自己的一个depend类，用对象对应的map保存： key-depend
+3、定义class Depend：维护一个Set（set是一种优化，也可以用数组）
+    定义两个方法，一个depend去添加更新函数到set中，一个notify去遍历执行 set 内的函数
+4、封装一个函数watchFn（fn），用于收集更新函数（定义全局变量 foo，赋值为参数fn，然后执行fn）
+    在 fn 执行的过程中，就会去调用对象这个key的getter，然后把activeReactiveFn加入到对应的depend
+
+定下实现响应式的函数：
+  function reactive(obj) { return new Proxy ( obj,    get: function(target, key, receiver) {....}, set: function(target, key, receiver) {....}    ) }
+  然后我们需要在get和set里面操作：
+  在get里面，我们需要通过 target和key，获取对应的depend，把对应的更新函数给加入到自己depend的set里面
+  最后 return Reflect.get(target, key, receiver) ---- 如果target对象中指定了getter，receiver则为getter调用时的this值。
+  在set里面，我们需要 Reflect.set(target, key, newValue, receiver)
+  然后获取到对应属性的 depend，去调用notify，遍历执行更新函数
+
+注意： map.set而不是map.add，他没有add方法
+*/
