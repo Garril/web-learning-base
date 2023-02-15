@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo2</title>
+
+</head>
+<body>
+
+    <script>
+        /* let tel = "010-2145784";
+        console.log(/(010|020)\-\d{7,8}/.test(tel));
+        [] 原子表    ()原子组   */
+        
+        /* 对 match 的补充
+        该方法类似 indexOf() 和 lastIndexOf()，但是它返回指定的值，而不是字符串的位置。
+        stringObject.match(regexp)
+        必需。规定要匹配的模式的 RegExp 对象。如果该参数不是 RegExp 对象，则需要首先把它传递给 RegExp 构造函数，将其转换为 RegExp 对象。
+        stringObject.match(searchvalue)
+        必需。规定要检索的字符串值。
+        
+        存放匹配结果的数组。该数组的内容依赖于 regexp 是否具有全局标志 g。*/
+        console.log("原子表匹配");
+        let reg = /[134523456]/;
+        let reg2 =/[134523456]/g;
+        let te = "45623888"; // 如果，reg不加全局g，不管填多少，都只匹配第一个数字
+        console.log("reg.test(te)  "+reg.test(te));
+        console.log("reg2.test(te)  "+reg2.test(te));
+        console.log("te.match(reg)  "+te.match(reg));
+        console.log("te.match(reg2)  "+te.match(reg2));
+        console.log("after connecting   "+te.match(reg2).join(""));
+
+        console.log("\n ----------------\n原子组匹配");
+        let yreg = /(45|67)/;
+        let yreg2 = /(45|67)/g;
+        let te2 = "456723485";
+        console.log("yreg.test(te2)  "+yreg.test(te2));
+        console.log("yreg2.test(te2)  "+yreg2.test(te2));
+        console.log("te2.match(yreg)  "+te2.match(yreg));// 同上，yreg不加全局g，只匹配45。
+        console.log("te2.match(yreg2)  "+te2.match(yreg2));
+    </script>    
+</body>
+</html>

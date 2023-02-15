@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo5</title>
+</head>
+<body>
+    <script>
+        let hd=`
+        #1 js,10 #
+        #2 php,20 #
+        #3 node,30 # no
+        #4 vue,40 #
+        `;
+        let lesson = hd.match(/^\s*#\d+\s+.+\s+#$/mg).map(v=>{
+            v=v.replace(/\s*#\d+\s+/,"").replace(/\s+#/,"");
+            console.log(v);
+            [name,num]=v.split(",");
+            return {name,num};
+        });
+        console.log(lesson); // 一个对象数组
+        console.log(lesson[0]);
+
+        console.log(JSON.stringify(lesson)); // 一个字符串
+        console.log(JSON.stringify(lesson)[0]);
+
+/*         var a=0;
+        {
+            a=2;
+            function a(){};
+            a=3;
+        }
+        console.log(a); */
+/*         var foo = { n: 1 };
+        (function (foo) {
+            var foo = { n: 2 };
+            console.log("foo.n1=" + foo.n);  //  2 
+            foo.n = 3;
+            console.log("foo.n2=" + foo.n);  //  3
+        })(foo);
+        console.log("foo.n3=" + foo.n); //  1 */
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Finally-PictureChange</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        #box {
+            margin: 20px auto;
+            height: 550px;
+            width: 380px;
+            background-color: #ccc;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        ul>li {
+            margin: 10px auto;
+            padding: 20px 0 0 45px;
+            float: left;
+        }
+        
+        a {
+            text-decoration: none;
+            font-size: 15px;
+            padding: 3px 7px;
+            border: 1px solid black;
+            border-radius: 6px;
+        }
+        
+        a:active {
+            color: transparent;
+        }
+        
+        p {
+            margin-left: 130px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <h1>不同文字对应不同的图片</h1>
+        <ul id="imagegallery">
+            <li>
+                <a href="IMG_1562.JPG" title="The first head">头1</a>
+            </li>
+            <li>
+                <a href="IMG_1869.JPG" title="The second head">头2</a>
+            </li>
+            <li>
+                <a href="IMG_2114.JPG" title="The third head">头3</a>
+            </li>
+            <li>
+                <a href="IMG_2206.JPG" title="The fouth head">头4</a>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        // addLoadEvent(func)
+        function addLoadEvent(func) {
+            var oldonload = window.onload;
+            if (typeof oldonload !== 'function') {
+                window.onload = func;
+            } else { //  注意点一：
+                window.onload = function() {
+                    oldonload();
+                    func();
+                }
+            }
+        }
+        //insertAfter(newElement,targetElement)
+        function insertAfter(newElement, targetElement) {
+            var parent = targetElement.parentNode;
+            if (parent.lastChild == targetElement) {
+                parent.appendChild(newElement);
+            } else {
+                parent.insertBefore(newElement, targetElement.nextSibling);
+            }
+        }
+        //创建 并插入 img 和 p 元素
+        function preparePlaceholder() {
+            if (!document.getElementById) {
+                return false;
+            }
+            if (!document.getElementById("imagegallery")) {
+                return false;
+            }
+            if (!document.createTextNode) {
+                return false;
+            }
+            if (!document.createElement) {
+                return false;
+            }
+            var placeholder = document.createElement("img");
+            placeholder.setAttribute("id", "placeholder");
+            placeholder.setAttribute("src", "IMG_1562.JPG");
+            placeholder.style.height = 380 + 'px';
+            placeholder.style.width = 380 + 'px';
+
+            var description = document.createElement("p");
+            description.setAttribute("id", "description");
+            var descriptext = document.createTextNode("Choose an img");
+            description.appendChild(descriptext);
+
+            var gallery = document.getElementById('imagegallery');
+            insertAfter(placeholder, gallery);
+            insertAfter(description, placeholder);
+        }
+        //为 a 标签添加相应的 onclick 行为
+        function prepareGallery() {
+            if (!document.getElementsByTagName) {
+                return false;
+            }
+            if (!document.getElementById("imagegallery")) {
+                return false;
+            }
+            var gallery = document.getElementById("imagegallery");
+            var links = gallery.getElementsByTagName('a');
+            for (var i = 0; i < links.length; i++) {
+                links[i].onclick = function() {
+                    return showPic(this); // 注意点二
+                }
+                links[i].onkeypress = links[i].onclick;
+            }
+        }
+        // 点击 a 标签时的行为  showPic（thu）函数
+        function showPic(thu) {
+            if (!document.getElementById("placeholder")) {
+                return false;
+            }
+            if (!document.getElementById("description")) {
+                return false;
+            }
+            var source = thu.getAttribute("href");
+            var placeholder = document.getElementById("placeholder");
+            placeholder.setAttribute("src", source); //注意点三
+
+            if (thu.getAttribute("title")) {
+                var text = thu.getAttribute("title");
+            } else {
+                var text = "";
+            }
+            var description = document.getElementById("description");
+            if (description.firstChild.nodeType == 3) {
+                description.firstChild.nodeValue = text;
+            }
+            return false;
+        }
+        //window.onload
+        addLoadEvent(prepareGallery);
+        addLoadEvent(preparePlaceholder);
+    </script>
+</body>
+
+</html>
+<!-- function showPic(thu) {
+        var source = thu.getAttribute("href");
+        var placeholder = document.getElementById("placeholder");
+        placeholder.setAttribute("src", source);
+        var description = document.getElementById("description");
+        if (thu.getAttribute("title")) {
+            text = thu.getAttribute("title");
+        } else {
+            text = "";
+        }
+        if (description.firstChild.nodeType == 3) {
+            description.firstChild.nodeValue = text;
+        }
+        return false;
+}
+ -->

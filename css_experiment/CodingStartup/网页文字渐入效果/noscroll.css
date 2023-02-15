@@ -1,0 +1,37 @@
+body {
+    background-color: black;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    font-size: 48px;
+    color: #ffffff;
+    letter-spacing: -0.3px;
+    
+    /* 开始关键部分，设定一个渐层颜色的背景 */
+    /* 渐层的倾斜度75deg，颜色分4段 */
+    background-image: linear-gradient(75deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 33.33%, rgba(255, 255, 255, 0) 66.67%, rgba(255, 255, 255, 0) 100%);
+    /* 水平方向300%，垂直100% ，将背景的渐层颜色拉到三倍宽度*/
+    background-size: 300% 100%;
+    /* background-position-x为0%，整行文字被白色覆盖 
+        50%，指的是33.3%~66.67%之间的颜色
+        100%，指的是66.67%~100%之间的颜色  */
+    background-position-x: 100%;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    transition: 2s background-position-x ease-in-out;
+}
+
+h1:hover {
+    background-position-x: 0%;
+}

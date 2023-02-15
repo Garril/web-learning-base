@@ -1,0 +1,49 @@
+body {
+    /* Edge 默认为 8px*/
+    margin: 4px;
+    font-family: Helvetica;
+}
+
+.masonry {
+    column-count: 4;
+    /* 分四列 */
+    column-gap: 0;
+    /* column-gap 为 0，则竖直方向列间距 为 item 的 padding ，不会太宽*/
+}
+
+.item {
+    /* 对应了 body 中 margin 为 4px */
+    padding: 2px;
+    /* 对应 伪元素开启绝对定位 */
+    position: relative;
+    counter-increment: item-counter;
+}
+
+.item img {
+    /* 给 img 设置 display 属性，为了除去图片下方原有的文字占有位 */
+    display: block;
+    /* 高度不做要求，默认。
+    宽度要统一，为父元素 item 的宽度---》此时 item 将body均分为四列*/
+    /* 思考： 给父元素 item 设置font-size：0px；也可以消除 img 自带的
+    文字占有位，但是，如果设置了，那么添加到item的伪元素继承了font-size
+    作为数字显示不出来*/
+    width: 100%;
+    height: auto;
+}
+
+.item::after {
+    position: absolute;
+    display: block;
+    /* left 无所谓，top等于2，对齐了item的padding*/
+    top: 2px;
+    left: 2px;
+    width: 24px;
+    height: 24px;
+    /* 水平居中 */
+    text-align: center;
+    /* 垂直居中 */
+    line-height: 24px;
+    background-color: #000000;
+    color: #ffffff;
+    content: counter(item-counter);
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Final_animation</title>
+    <script src="Third_animation.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        #slideshow {
+            width: 50px;
+            height: 100px;
+            position: relative;
+            left: 50px;
+            top: 25px;
+            overflow: hidden;
+        }
+        
+        h1 {
+            font-weight: bolder;
+            font-size: 50px;
+            margin: 20px 0 0 60px;
+        }
+        
+        p {
+            font-size: 20px;
+            margin: 20px 0 0 40px;
+        }
+        
+        ol {
+            list-style: none;
+            margin: 20px 0 0 60px;
+        }
+        
+        ol>li>a {
+            text-decoration: none;
+            font-size: 20px;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+            color: red;
+        }
+        
+        #slideshow {
+            padding: 20px 0 0 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Web Design</h1>
+    <p>These are the things you should know.</p>
+    <ol id="linklist">
+        <li>
+            <a href="#">Structure</a>
+        </li>
+        <li>
+            <a href="#">Presentation</a>
+        </li>
+        <li>
+            <a href="#">Behavior</a>
+        </li>
+    </ol>
+    <div id="slideshow">
+        <img src="Third_picture.png" alt="building blocks of web design" id="preview">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+body {
+    margin: 4px;
+    font-family: Helvetica;
+}
+
+.masonry {
+    /* 设置display：flex；后，所有图片横向排列在一行
+    设置 flex-direction： column；变成一列
+    flex-wrap是为了能换行（对应父元素高度），而不堆在一行或者一列
+    这里因为 父元素高度没设置，所以所有图片还是在一行，
+    被撑起来了*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 2145px;
+    /* 加入高度后，就差将图片的宽度调整下
+    这里的高度，如果不够，比如 height 为 1000px的时候
+    放不下的图片就会被挤到旁边去，即，容纳器 item的高度
+    定好了，但是宽度没定，随子元素们的需求扩张
+    ---》 此方法需要调整高度，否则会增加 竖直方向上 列的数量
+    而column就不用，因为，列已经定好了是 4
+    */
+}
+
+.item {
+    position: relative;
+    width: 25%;
+    padding: 2px;
+    box-sizing: border-box;
+    counter-increment: item-counter;
+}
+
+.item img {
+    display: block;
+    /* 完全继承父元素宽度*/
+    width: 100%;
+    height: 100%;
+}
+
+.item::after {
+    position: absolute;
+    display: block;
+    /* left 无所谓，top等于2，对齐了item的padding*/
+    top: 2px;
+    left: 2px;
+    width: 24px;
+    height: 24px;
+    /* 水平居中 */
+    text-align: center;
+    /* 垂直居中 */
+    line-height: 24px;
+    background-color: #000000;
+    color: #ffffff;
+    content: counter(item-counter);
+}
+
+
+/* 因为 column和 flexbox 方法做的 效果，排序都是
+从上到下，再从左到右，而抛开JS ，column做不到，而
+flexbox可以利用 order 做到*/
+
+.item:nth-child(4n+1) {
+    order: 1;
+}
+
+.item:nth-child(4n+2) {
+    order: 2;
+}
+
+.item:nth-child(4n+3) {
+    order: 3;
+}
+
+.item:nth-child(4n) {
+    order: 4;
+}
+
+
+/* 此时，序号是从左到右，再从上到下，但是，
+对高度或者图片的高度又有要求
+比如这里如果设置高度为2500px，显示出来的效果
+2号在第一列的最后一行上，而5号在第二列的第一行*/

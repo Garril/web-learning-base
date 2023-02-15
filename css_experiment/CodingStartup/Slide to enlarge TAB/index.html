@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Slide to enlarge TAB</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <ul class="emojis">
+        <li>👍</li>
+        <li>❤️</li>
+        <li>☺️</li>
+        <li>😍</li>
+        <li>✌️</li>
+    </ul>
+
+    <svg viewbox="0 0 300 162">
+        <filter id="mix">
+            <fegaussianblur in="SourceGraphic" result="blur" stddeviation="5" />
+            <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 60 -36" />
+        </filter>
+        
+        <g filter="url(#mix)">
+            <rect width="300" height="50" x="0" y="50" rx="25" fill="#e3e3e3" />
+            <circle cx="40" cy="75" fill="#e3e3e3" id="pop" />
+        </g>
+    </svg>
+    <script src="index.js"></script>
+</body>
+
+</html>

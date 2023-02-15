@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo3</title>
+</head>
+<body>
+    
+    <script>
+        let price = "abc12.56"; // 没有限制边界
+        console.log(/\d+\.\d+/.test(price));
+        
+        let reg = new RegExp("\d+\.\d+");
+        /* console.log(reg);或者console.log("\d+\.\d+");  控制台输出: /d+.d+/  */
+        console.log(reg.test(price));
+        console.log("\n思考为什么对象reg.test为false，字面量中就为true,结合上面的注释\n");
+
+        /* 因为：在字符串里面，"d"表示就是一个普通的字符串d，你把他转换成"\d"，他也是d。 
+            "\d"=="d"; 还是成立。
+            所以：new RegExp("\d+\.\d+");   其实就相当于，new RegExp("d+.d+");
+        */
+        let reg2 =new RegExp("\\d+\\.\\d+"); /*这样改*/
+        console.log("\\d+\\.\\d+"); // 控制台输出  \d+\.\d+
+        console.log(reg2.test(price));
+
+        let web="https://www.bilibili.com";
+        console.log(/https?:\/\/\w+\.\w+\.\w+/.test(web));
+        console.log("/https?:\/\/\w+\.\w+\.\w+/");
+        console.log("/https?:\/\/\\w+\\.\\w+\\.\\w+/");
+        let reg3=new RegExp("https?:\/\/\\w+\\.\\w+\\.\\w+"); 
+        // 记住了，RegExp中直接加引号，外边的/。。。/不用加了
+        console.log(reg3.test(web));
+    </script>
+</body>
+</html>

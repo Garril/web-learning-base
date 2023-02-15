@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+ul.slides {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s transform ease-in-out;
+}
+
+li.slide:nth-of-type(2){
+    left: 100%;
+}
+li.slide:nth-of-type(3){
+    left: 200%;
+}
+
+input[type="radio"] {
+    position: relative;
+    z-index: 100;
+    display: none;
+}
+
+.controls {
+    position: absolute;
+    width: 100%;
+    bottom: 5px;
+    text-align: center;
+}
+
+.controls label {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background-color: #eee;
+    border-radius: 50%;
+    margin: 0 7px;
+    border: 2px solid #fff;
+}
+
+.slides input[type="radio"]:nth-of-type(1):checked ~ .controls label:nth-of-type(1) {
+    background-color: black;
+}
+.slides input[type="radio"]:nth-of-type(2):checked ~ .controls label:nth-of-type(2) {
+    background-color: black;
+}
+.slides input[type="radio"]:nth-of-type(3):checked ~ .controls label:nth-of-type(3) {
+    background-color: black;
+}
+.slides input[type="radio"]:nth-of-type(1):checked ~ .slide {
+    transform: translateX(0%);
+}
+.slides input[type="radio"]:nth-of-type(2):checked ~ .slide {
+    transform: translateX(-100%);
+}
+.slides input[type="radio"]:nth-of-type(3):checked ~ .slide {
+    transform: translateX(-200%);
+}
+

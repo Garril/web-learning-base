@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>improveOnce-PictureChange</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        #box {
+            margin: 20px auto;
+            height: 550px;
+            width: 380px;
+            background-color: #ccc;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        ul>li {
+            margin: 10px auto;
+            padding: 20px 0 0 45px;
+            float: left;
+        }
+        
+        a {
+            text-decoration: none;
+            font-size: 15px;
+            padding: 3px 7px;
+            border: 1px solid black;
+            border-radius: 6px;
+        }
+        
+        a:active {
+            color: transparent;
+        }
+        
+        p {
+            margin-left: 130px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div id="box">
+        <h1>不同文字对应不同的图片</h1>
+        <ul id="imagegallery">
+            <li>
+                <a href="IMG_1562.JPG" title="The first head">头1</a>
+            </li>
+            <li>
+                <a href="IMG_1869.JPG" title="The second head">头2</a>
+            </li>
+            <li>
+                <a href="IMG_2114.JPG" title="The third head">头3</a>
+            </li>
+            <li>
+                <a href="IMG_2206.JPG" title="The fouth head">头4</a>
+            </li>
+        </ul>
+        <img src="IMG_1562.JPG" width="300px" height="300px" style="margin: 20px 30px;" id="placeholder">
+        <p id="description">Choose an image</p>
+    </div>
+    <script type="text/javascript">
+        window.onload = prepareGallery; //如果没加，那JS的效果显示，无
+
+        function ChangePic(thu) {
+            if (!document.getElementById("placeholder")) { //保证占位符---图片位置 是否存在。
+                return false; // 不存在返回false ，表示转换图片失败
+            }
+            var a = thu.href; // var a = thu.getAttribute('href');
+            var b = document.getElementById('placeholder');
+            b.setAttribute("src", a);
+
+            if (document.getElementById("description")) { // 检测图片描述部分的父元素标签是否存在
+                var c = thu.title ? thu.title : "";
+                // var c = thu.getAttribute('title') ? thu.getAttribute('title') : ""; 
+                // 如果text为null，就赋予“ ” ，如果有内容，则不变
+                var d = document.getElementById("description");
+                d.innerText = c;
+            }
+            return true; // 如果运行切换图片后，返回true
+        }
+
+        function prepareGallery() {
+            if (!document.getElementById) {
+                return false;
+            }
+            if (!document.getElementsByTagName) {
+                return false;
+            }
+            if (!document.getElementById('imagegallery')) {
+                return false;
+            }
+            var gallery = document.getElementById('imagegallery');
+            var links = gallery.getElementsByTagName('a');
+            for (var i = 0; i < links.length; i++) {
+                links[i].onclick = function() {
+                        ChangePic(this);
+                        return false;
+                        // 上面两行可以 改进 为：
+                        // return !ChangePic(this); 如果图片转化成功返回 false
+                        // 这样，如果图片切换失败。那么ChangePic会返回一个false。
+                        // onclick事件则返回true。使得a的点击事件为默认的情况--》跳转到图片连接
+                    }
+                    // links[i].onkeypress = links[i].onclick;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            height: 400px;
+            width: 300px;
+            text-align: center;
+            margin: 100px auto;
+            background-color: gray;
+            padding-top: 9px;
+        }
+        
+        #container>p {
+            padding-bottom: 7px;
+        }
+        
+        #container>p>input {
+            margin-left: 5px;
+        }
+        
+        a {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <p>
+            <a onclick="Add(this);">+</a>
+            <input type="text" name="" id="" value="" placeholder="请输入" />
+        </p>
+    </div>
+
+    <script src="jquery-1.x-git.min.js"></script>
+    <script type="text/javascript">
+        function Add(thu) {
+            var newp = $(thu).parent().clone();
+            newp.find('a').text('--');
+            newp.find('a').attr('onclick', 'Remove(this);');
+            $(thu).parent().parent().append(newp);
+        }
+
+        function Remove(thu) {
+            $(thu).parent().remove();
+        }
+    </script>
+</body>
+
+</html>

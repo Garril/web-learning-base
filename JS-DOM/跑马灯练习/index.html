@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+				#welcome {
+					display: inline-block;
+					background-color: skyblue;
+					font-size: 30px;
+				}
+		</style>
+	</head>
+	<body>
+			<div id="welcome">Welcome To XXX!</div>
+			
+			
+			<script type="text/javascript">
+				
+				setInterval("atry();",1000);
+				
+			function atry() {
+				var string01 = document.getElementById('welcome');
+				var text = string01.innerText;
+				var string011 = text.charAt(0);
+				var string012 = text.substring(1,string01.length);
+				var new_string01 = string012 + string011; 
+				/* alert(new_string01); */
+				string01.innerText = new_string01;
+				}
+				
+			</script>
+	</body>
+</html>

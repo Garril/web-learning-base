@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS轮播图</title>
+    <link rel="stylesheet" href="bottom-control.css">
+</head>
+
+<body>
+    <ul class="slides">
+        <input type="radio" id="control_1" name="control" checked>
+        <input type="radio" id="control_2" name="control">
+        <input type="radio" id="control_3" name="control">
+
+        <li class="slide">1</li>
+        <li class="slide">2</li>
+        <li class="slide">3</li>
+
+        <div class="control-visible">
+            <label for="control_1"></label>
+            <label for="control_2"></label>
+            <label for="control_3"></label>
+        </div>
+    </ul>
+</body>
+<!-- radio是可替换元素，他的大部分样式是不可修改的，
+    大部分样式由浏览器决定，兼容性极低。 -->
+
+</html>

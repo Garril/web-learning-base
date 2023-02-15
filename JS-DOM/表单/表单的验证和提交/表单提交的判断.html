@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>用JS判断表单要提交的内容</title>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		 <form action="https://cn.bing.com/" method="post">
+		 	<input type="text" id="content">
+		 	<input type="submit" onclick = "return Judge();" value="提交"/>
+		 </form>
+		 
+		<script type="text/javascript">
+			function Judge() {
+				var long = document.getElementById('content').value.length;
+				if(long > 0) {
+					return true;
+				}else {
+					alert("内容不能为空");
+					return false;
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			#container {
+				width: 250px;
+				height: 100px;
+				margin-top: 200px;
+				margin-left: 20px;
+			}
+			#container div {
+				margin-bottom: 7px;
+			}
+			.item {
+				position: relative;
+			}
+			.item span {
+				position: absolute;
+				font-size: 5px;
+				color: red;
+			}
+
+		</style>
+	</head>
+	<body>
+		
+		<div id="container">
+				<form action="">
+					 <div class="item">
+						 <input type="text" name="username" class="content" label="用户名" placeholder="请输入用户名" onfocus="this.removeAttribute('placeholder')"/>
+						 <!-- <span>用户名不能为空</span> -->
+					 </div>
+					 <div class="item">
+						 <input type="text" name="password"  class="content" label="密码" placeholder="请输入密码" onfocus="this.removeAttribute('placeholder')"/>
+						 <!-- <span>密码不能为空</span> -->
+					 </div>					 
+					 <input type="submit"  value="提交" onclick="return CheckedText();"/>
+				</form>			
+		</div>
+		
+		<script src="jquery-1.x-git.min.js"></script>
+		<script type="text/javascript">
+							
+			function CheckedText() {
+					var flag = true;
+					$('form .item span').remove();
+					$('form .content').each(function() {
+					var value = $(this).val();
+					if(value.length <= 0) {
+						var label = $(this).attr('label');
+						var tag = document.createElement('span');
+						tag.innerText = label + "不能为空";
+						$(this).after(tag);
+						flag = false;
+					}
+				});
+				 return flag;
+			 }
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo4</title>
+</head>
+<body>
+    <input type="text" name="user" id="">
+    <script>
+        // 边界问题
+        let hd="33343";
+        console.log(/^\d+$/.test(hd));
+        /* +号别少，单纯的/^\d$/表示，只有一个数字  
+        而加上后，表示，有一个或者多个数字，且起始和结束都是为数字*/
+        document.querySelector("[name='user']").addEventListener("keyup",function(){
+            console.log(this.value.match(/[a-z]{3,6}/i));
+            console.log((this.value.match(/[a-z]{3,6}/i))instanceof Array);
+            // input内有1-2个字母，控制台输出null。
+            // 3个开始输出一个数组对象
+            // 6个是极限，但是 输入7个也是显示6个， 匹配是算作成功的 ！！
+            console.log(this.value.match(/^[a-z]{3,6}$/i));
+            console.log("\n");
+            // i表示大小写匹配
+        })
+        //  hundred 2020  ，/\d/   匹配 数组对象 2
+        // /\d+/g 匹配 数组 含 一个 2020
+        //  /\d/g 匹配 数组含 四个  2 0 2 0
+        
+    </script>
+</body>
+</html> 

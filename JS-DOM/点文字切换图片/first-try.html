@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>First-PictureChange</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        h1 {
+            margin: 20px 0 0 30px;
+        }
+        
+        ul {
+            margin-left: 60px;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+        
+        ul>li {
+            margin-bottom: 5px;
+        }
+        
+        a {
+            color: rgba(0, 0, 0, 0.966);
+        }
+        
+        #description {
+            margin-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>不同文字对应不同的图片</h1>
+    <ul>
+        <li>
+            <a href="IMG_1562.JPG" title="The first head" onclick="ChangePic(this); return false;">头1</a>
+        </li>
+        <li>
+            <a href="IMG_1869.JPG" title="The second head" onclick="ChangePic(this); return false; ">头2</a>
+        </li>
+        <li>
+            <a href="IMG_2114.JPG" title="The third head" onclick="ChangePic(this); return false;">头3</a>
+        </li>
+
+        <li>
+            <a href="IMG_2206.JPG" title="The fouth head" onclick="ChangePic(this); return false;">头4</a>
+        </li>
+    </ul>
+    <img src="IMG_1562.JPG" width="300px" height="300px" style="margin: 20px 30px;" id="placeholder">
+    <p id="description">对图片的描述</p>
+
+    <script type="text/javascript">
+        function ChangePic(thu) {
+            var hr = thu.getAttribute("href");
+            var place = document.getElementById('placeholder');
+            place.setAttribute("src", hr);
+
+            var description = document.getElementById('description');
+            var text = thu.getAttribute("title");
+            description.firstChild.nodeValue = text;
+        }
+    </script>
+</body>
+
+</html>

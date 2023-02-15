@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="navigator" >
+        dskka15adlkl45665kjd123jk
+    </div>
+    
+    <script>
+        let lostrin = "dskka15adlkl45665kjd123";        
+        
+        
+        console.log("取出字符串中所有的数字\n\n1--非正则实现");
+        let nums=[...lostrin].filter(a=>!Number.isNaN(parseInt(a)));
+        console.log(nums.join(''));
+
+        console.log("1--正则实现");
+        console.log(lostrin.match(/\d/g).join(""));
+
+        /*  let a='k'; 
+            console.log(/k/.test(lostrin));  
+        这种情况下，如果将/k/变成a，报错，也就是说没法放变量进去  
+        要放变量-》有两种方法
+        1. 数据绑定 以及利用： eval->将字符串变成js表达式 
+            console.log(eval(`/${a}/`).test(lostrin)); 
+        2. new RegExp中第一个参数可以传递变量
+            let a2='k';
+            let reg = new RegExp(a2,'g');
+            console.log(reg.test(lostrin));
+        */
+        console.log("----------------------------------------\n\n根据用户输入的字母/数字，改变内容在文中的颜色,支持输入正则eg:\w,\d");
+        // replace 的运用
+        // console.log("dsdsa15adlkl45665djd123".replace(/\d/g,"@")); 将数字都替换成 @
+        // 注意: /\w/g，\w匹配单词英文数字下划线都匹配，所以数字也会变成@
+        /* 等价的代码： 
+            console.log("dsdsa15adlkl45665djd123".replace(/\d/g,search=>{
+            return "@";
+        })); */
+
+        let con=prompt("please input ：.....");
+        let regex2 = new RegExp(con,"g");
+         //console.log(regex2); 输入33，regex2：/33/g
+        let div = document.querySelector("div");
+        div.innerHTML=div.innerHTML.replace(regex2,search=>{
+            return `<span style="color:red;font-size: 50px;">${search}</span>`;
+        })
+    </script>
+</body>
+</html>

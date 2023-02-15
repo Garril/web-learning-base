@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul.stacks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+ul.stacks li {
+    background-color: #cccccc;
+    flex: 1;
+    overflow: hidden;
+}
+
+ul.stacks li::after {
+    content: '';
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(index-pict.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+ul.stacks li:nth-child(2)::after {
+    left: -10vw;
+    transition-delay: .06s;
+}
+
+ul.stacks li:nth-child(3)::after {
+    left: -20vw;
+    transition-delay: .12s;
+}
+
+ul.stacks li:nth-child(4)::after {
+    transition-delay: .18s;
+    left: -30vw;
+}
+
+ul.stacks li:nth-child(5)::after {
+    transition-delay: .24s;
+    left: -40vw;
+}
+
+ul.stacks li:nth-child(6)::after {
+    transition-delay: .3s;
+    left: -50vw;
+}
+
+ul.stacks li:nth-child(7)::after {
+    transition-delay: .36s;
+    left: -60vw;
+}
+
+ul.stacks li:nth-child(8)::after {
+    transition-delay: .42s;
+    left: -70vw;
+}
+
+ul.stacks li:nth-child(9)::after {
+    transition-delay: .48s;
+    left: -80vw;
+}
+
+ul.stacks li:nth-child(10)::after {
+    left: -90vw;
+    transition-delay: .54s;
+}
+
+ul.stacks li {
+    transition: 1s transform ease-in-out;
+}
+
+ul.stacks:hover li {
+    transform: translatey(-100vh);
+}

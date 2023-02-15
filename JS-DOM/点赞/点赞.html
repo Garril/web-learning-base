@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>点赞</title>
+    <style type="text/css">
+        .a_container {
+            padding: 38px;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a_container"><a href="#" onclick="Favor(this);">点赞</a></div>
+    <div class="a_container"><a href="#" onclick="Favor(this);">投币</a></div>
+    <div class="a_container"><a href="#" onclick="Favor(this);">收藏</a></div>
+    <script type="text/javascript">
+        function Favor(can) {
+            var top = 25;
+            var left = 87;
+            var fontSize = 28;
+            var op = 1;
+
+            var tag = document.createElement('span');
+            tag.innerText = '+1';
+            tag.style.position = 'absolute';
+            tag.style.top = top + 'px';
+            tag.style.left = left + 'px';
+            tag.style.opacity = op;
+            tag.style.fontSize = fontSize + 'px';
+
+            can.parentElement.appendChild(tag);
+
+            var interval = setInterval(function() {
+                top -= 10;
+                left += 10;
+                op -= 0.1;
+                fontSize += 5;
+
+                tag.style.top = top + 'px';
+                tag.style.left = left + 'px';
+                tag.style.opacity = op;
+                tag.style.fontSize = fontSize + 'px';
+
+                if (op <= 0.2) {
+                    clearInterval(interval);
+                    can.parentElement.removeChild(tag);
+                }
+            }, 50);
+
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>点赞练习</title>
+		<style type="text/css">			
+			.a_container {
+					padding: 20px;
+					position: relative;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="a_container">
+			<a onclick="Favor(this);">点赞</a>
+		</div>
+		<div class="a_container">
+			<a onclick="Favor(this);">点赞</a>
+		</div>
+		<div class="a_container">
+			<a onclick="Favor(this);">点赞</a>
+		</div>		
+		<script type="text/javascript">
+			function Favor(ths) {
+				var top = 25;
+				var left = 87;
+				var fontSize = 28;
+				var op = 1;
+				
+				var tag = document.createElement('span');
+				tag.innerText = '+1';
+				tag.style.position = 'absolute';
+				tag.style.top = top + 'px';
+				tag.style.left = left + 'px'; 
+				tag.style.opacity = op;
+				tag.style.fontSize = fontSize + 'px';
+				ths.parentElement.appendChild(tag);
+				
+				var interval = setInterval(function(){
+						top -= 10;
+						left += 10;
+						fontSize += 5;
+						op -= 0.1;
+						
+						tag.style.top = top + 'px';
+						tag.style.left = left + 'px'; 
+						tag.style.opacity = op;
+						tag.style.fontSize = fontSize + 'px';
+						
+						if(op <= 0.2){
+							clearInterval(interval);
+							ths.parentElement.removeChild(tag);
+						}						
+						},50);
+				}
+		</script>
+	</body>
+</html> -->
