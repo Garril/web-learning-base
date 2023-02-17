@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.img {
+  background-position: 0 0;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 680px;
+  width: 100%;
+}
+.img_1 {
+  background-image: url('../../img/bg1.jpg');
+}
+.img_2 {
+  background-image: url('../../img/bg2.jpg');
+}
+.img_3 {
+  background-image: url('../../img/bg3.jpg');
+}
+.img_4 {
+  background-image: url('../../img/bg4.jpg');
+}
+.text {
+  position: relative;
+  top: 480px;
+  font-size: 55px;
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+}
+.bg_text {
+  text-align: center;
+  font-size: 46px;
+  font-weight: bolder;
+  height: 120px;
+  line-height: 120px;
+  background-color: rgb(166,168,240);
+  color: white;
+}
