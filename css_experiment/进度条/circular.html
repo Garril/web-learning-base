@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>circular</title>
+    <style>
+      .circle-process {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        overflow: hidden;
+      }
+      .circle-process-inner {
+        width: 260px;
+        height: 260px;
+        background-color: #fff;
+        z-index: 3;
+        border-radius: 100%;
+      }
+      .circle-sk1,
+      .circle-sk2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        clip: rect(0px, 150px, 300px, 0px);
+      }
+      .circle-sk1 {
+        z-index: 1;
+      }
+      .circle-sk2 {
+        z-index: 2;
+      }
+
+      .circle-bg1 {
+        background: #4886ff;
+      }
+
+      .circle-bg1 .circle-sk1,
+      .circle-bg1 .circle-sk2 {
+        background: #ccc;
+      }
+
+      .circle-bg2 {
+        background: #ccc;
+      }
+
+      .circle-bg2 .circle-sk1,
+      .circle-bg2 .circle-sk2 {
+        background: #4886ff;
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <!--  进度小于50%时（也就是角度大于180度） 使用circle-bg1 否则使用circle-bg2  -->
+    <!--  进度小于50%时 rotate的值计算公式是：(360 * percent / 100) - 180)  -->
+    <!--  进度大于50%时 rotate的值计算公式是：(360 * (percent - 100) / 100)  -->
+    <div class="circle-process circle-bg1">
+      <div class="circle-sk1"></div>
+      <div class="circle-sk2" style="transform: rotate(-90deg)"></div>
+      <div class="circle-process-inner"></div>
+    </div>
+
+    <div class="circle-process circle-bg2">
+      <div class="circle-sk1"></div>
+      <div class="circle-sk2" style="transform: rotate(-150deg)"></div>
+      <div class="circle-process-inner"></div>
+    </div>
+
+    <div class="circle-process circle-bg2">
+      <div class="circle-sk1"></div>
+      <div class="circle-sk2" style="transform: rotate(-80deg)"></div>
+      <div class="circle-process-inner"></div>
+    </div>
+
+    <div class="circle-process circle-bg2">
+      <div class="circle-sk1"></div>
+      <div class="circle-sk2" style="transform: rotate(-0deg)"></div>
+      <div class="circle-process-inner"></div>
+    </div>
+
+  </body>
+</html>
