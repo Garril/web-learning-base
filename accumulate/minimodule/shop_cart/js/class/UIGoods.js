@@ -1,7 +1,7 @@
 // 单件商品的数据
 class UIGoods {
-  constructor(g) {
-    this.data = g;
+  constructor(goodInfo) {
+    this.data = Object.assign({ price: 0, choose: 0 }, goodInfo);
     this.choose = 0;
   }
   // 获取总价

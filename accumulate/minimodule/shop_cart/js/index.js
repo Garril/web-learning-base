@@ -1,4 +1,6 @@
-const ui = new UI();
+
+const uiData = new UIData(shopData);
+const ui = new UI(uiData);
 
 // 事件
 ui.doms.goodsContainer.addEventListener('click', function (e) {
