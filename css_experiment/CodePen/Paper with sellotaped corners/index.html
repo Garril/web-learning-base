@@ -1,20 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>paper</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+  <title>paper</title>
 </head>
+
 <body>
-    <div class="paper pink">
-        <div class="tape-section"></div>
-        <p>drink more water</p>
-        <div class="tape-section"></div>
-    </div>
-    <div class="paper blue">
-        <div class="top-tape"></div>
-        <p>code more pens</p>
-    </div>
+  <div class="paper pink" id="first">
+    <div class="tape-section"></div>
+    <p>drink more water</p>
+    <div class="tape-section"></div>
+  </div>
+  <div class="paper blue" id="second">
+    <div class="top-tape"></div>
+    <p>code more pens</p>
+  </div>
+  <button id="pz">拍照</button>
+  <button id="sys">扫一扫</button>
+  <div id="info"></div>
+  <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+  <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+  <script>
+    function setInfo(val) {
+      document.getElementById("info").textContent = val;
+    }
+    function bindEvent(id, event, cb) {
+      document.getElementById(id).addEventListener(event, cb);
+    }
+    document.getElementById("first").addEventListener("click", function () {
+      console.log("wx.miniProgram", wx.miniProgram);
+      console.log("wx", wx);
+      // 无用销毁后，回退才有
+      // wx.miniProgram.postMessage('test', { age: 18, name: 'hhh' });
+      /*    wx的api调了无用
+      console.log("wx", wx);
+      wx.chooseImage({
+        count: 1,
+        sizeType: ['original', 'compressed'],
+        sourceType: ['album', 'camera'],
+        success(res) {
+          // tempFilePath可以作为img标签的src属性显示图片
+          console.log(res);
+        }
+      }) */
+
+      // 获取权限
+      wx.config({
+        debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId: "wx49eb93dfb1cfa255", // 必填，公众号的唯一标识
+        timestamp: "", // 必填，生成签名的时间戳
+        nonceStr: "", // 必填，生成签名的随机串
+        signature: "", // 必填，签名
+        jsApiList: ["chooseImage", "scanQRCode"], // 必填，需要使用的JS接口列表
+      });
+      // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+      wx.ready(function (e) {
+        console.log("ready", e);
+        wx.checkJsApi({
+          jsApiList: ["chooseImage", "scanQRCode"], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+          success: function (res) {
+            // 以键值对的形式返回，可用的api值true，不可用为false
+            // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
+            setInfo("succ", res);
+            // 如果拍照支持的话
+            if (res.checkResult.chooseImage) {
+              bindEvent("pz", "click", () => {
+                wx.chooseImage({
+                  count: 5,
+                  sizeType: ["original", "compressed"],
+                  sourceType: ["camera"],
+                  success: function (imgRes) {
+                    // tempFilePath可以作为img标签的src属性显示图片
+                    const tempFilePaths = imgRes.tempFilePaths;
+                    console.log("imgRes", imgRes);
+                    console.log("tempFilePaths", tempFilePaths);
+                  },
+                });
+              });
+            } else {
+              bindEvent("pz", "click", () => {
+                console.log("不支持拍照");
+              });
+            }
+            // 如果扫一扫支持的话
+            if (res.checkResult.scanQRCode) {
+              bindEvent("pz", "click", () => {
+                wx.scanCode({
+                  // onlyFromCamera: true, 只允许从相机扫码
+                  // 允许相机和相册
+                  success(smRes) {
+                    console.log(smRes);
+                  },
+                });
+              });
+            } else {
+              bindEvent("sys", "click", () => {
+                console.log("不支持扫一扫");
+              });
+            }
+          },
+        });
+      });
+      wx.error(function (err) {
+        setInfo("err: ", err);
+        // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+      });
+    });
+    document.getElementById("second").addEventListener("click", function () {
+      wx.miniProgram.navigateBack();
+    });
+  </script>
 </body>
+
 </html>
