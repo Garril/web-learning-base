@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图片像素动画</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <div id="pixel"></div>
+  </div>
+
+  <script>
+    const w = 30, h = 30;
+    let $pixel;
+
+    function pixel() {
+      for (let i = 0; i < h; i++) {
+        for (let j = 0; j < w; j++) {
+          let span = document.createElement('span');
+          $pixel.appendChild(span);
+          span.style.left = j * 10 + 'px';
+          span.style.top = i * 10 + 'px';
+          span.style.backgroundPosition = -j * 10 + 'px ' + -i * 10 + 'px,center';
+          const randomFixed = Math.random().toFixed(2);
+          span.style.animationDelay = randomFixed + 's';
+        }
+      }
+    }
+    window.onload = function () {
+      $pixel = document.getElementById('pixel');
+      pixel()
+    }
+
+  </script>
+</body>
+
+</html>

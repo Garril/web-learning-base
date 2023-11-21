@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3555577 */
+  src: url('//at.alicdn.com/t/c/font_3555577_me2a6tdmvu8.woff2?t=1660540500882') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3555577_me2a6tdmvu8.woff?t=1660540500882') format('woff'),
+       url('//at.alicdn.com/t/c/font_3555577_me2a6tdmvu8.ttf?t=1660540500882') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-jianhao:before {
+  content: "\e729";
+}
+
+.i-jiajianzujianjiahao:before {
+  content: "\e64d";
+}
+
+.i-gouwuchefill:before {
+  content: "\e73c";
+}
+
+.i-tuodong:before {
+  content: "\e604";
+}
+
+.i-tuodong1:before {
+  content: "\e656";
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 0.125vw;
+}
+body {
+  font-size: 35rem;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  font-family: 'Microsoft Yahei', 'sans-serif';
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.iconfont {
+  font-size: inherit;
+}
