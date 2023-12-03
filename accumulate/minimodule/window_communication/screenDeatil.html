@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MultiBroswer</title>
+  <style>
+    :root {
+      --offset-x: 0;
+      --offset-y: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .circle {
+      width: 400px;
+      height: 400px;
+      background-color: #000;
+      background-image: url(/img/pic1.png);
+      background-size: cover;
+      background-position: center center;
+      border-radius: 50%;
+      position: absolute;
+      top: calc(100px + var(--offset-y));
+      left: calc(100px + var(--offset-x));
+    }
+
+    #getAuthBtn {
+      position: fixed;
+      right: 0;
+      top: 0;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="circle"></div>
+  <button id="getAuthBtn">授权</button>
+  <script>
+    // 理解为，通过api计算，把图片绝对固定在了屏幕的某个位置
+    // 随着屏幕的移动，改变了偏移量去计算图片新位置。
+    window.onload = function () {
+      let availTop = 0;
+      let availLeft = 0;
+      const circle = document.querySelector(".circle");
+      function updateUI() {
+        const screenX = window.screenX;
+        const screenY = window.screenY;
+        // console.log("screenX,screenY:", screenX, screenY);
+        circle.style.setProperty('--offset-x', `${availLeft - screenX}px`);
+        circle.style.setProperty('--offset-y', `${availTop - screenY}px`);
+        window.requestAnimationFrame(updateUI);
+      }
+      const fn = async () => {
+        const screenDeatails = await window.getScreenDetails();
+        availTop = screenDeatails.currentScreen.availTop;
+        availLeft = screenDeatails.currentScreen.availLeft;
+        // console.log(screenDeatails.currentScreen);
+        // console.log("availTop,availLeft:", availTop, availLeft);
+        window.requestAnimationFrame(updateUI);
+      };
+      document.getElementById('getAuthBtn').addEventListener('click', function () {
+        // 全屏下 window.screenY 在 window 为0，mac可能不是，用新api
+        // getScreenDetail获取荧幕，但是需要授权
+        // window下availTop和availLeft都为0，视口偏移量，还可以获取全屏的宽度和高度
+        fn();
+      })
+      fn();
+    }
+  </script>
+</body>
+
+</html>

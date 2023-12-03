@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>withDrag</title>
+  <style>
+    #myPic {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    body {
+      height: 100vh;
+      overflow: hidden;
+      width: 100vw;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="/img/pic1.png" alt="" id="myPic" draggable="true" />
+  <script>
+    // 视口转为屏幕坐标（坐标轴应该为屏幕）
+    function clientToScreen(x, y) {
+      // 屏幕偏移量+视口偏移量
+      const screenX = x + window.screenX;
+      // y轴的话，还要加上视口与屏幕中间的网页tab
+      // 计算barHeight
+      const barHeight = window.outerHeight - window.innerHeight;
+      const screenY = y + window.screenY + barHeight;
+      return {
+        x: screenX,
+        y: screenY,
+      };
+    }
+    // 屏幕到视口
+    function screenToClient(x, y) {
+      const clientX = x - window.screenX;
+      const barHeight = window.outerHeight - window.innerHeight;
+      const clientY = y - window.screenY - barHeight;
+      return {
+        x: clientX,
+        y: clientY,
+      };
+    }
+    // 在拖动的时候，改变了视口中图片的位置
+    // 把视口坐标转化为屏幕坐标，屏幕坐标再通知其他页面
+    // 其他页面把屏幕坐标转化为对应的、自己的视口坐标
+
+    // 广播，每个页面建立同频道
+    const channel = new BroadcastChannel("my_channel");
+    const myPic = document.getElementById("myPic");
+
+    channel.onmessage = (e) => {
+      const { x, y } = screenToClient(e.data.x, e.data.y);
+      myPic.style.left = `${x}px`;
+      myPic.style.top = `${y}px`;
+    };
+
+    myPic.onmousedown = (e) => {
+      const x = e.pageX - myPic.offsetLeft;
+      const y = e.pageY - myPic.offsetTop;
+      window.onmousemove = (event) => {
+        const cx = event.pageX - x;
+        const cy = event.pageY - y;
+        myPic.style.left = cx + "px";
+        myPic.style.top = cy + "px";
+        const screenPoints = clientToScreen(cx, cy);
+        channel.postMessage(screenPoints);
+      };
+      window.onmouseup = () => {
+        window.onmousemove = null;
+        window.onmouseup = null;
+      };
+    };
+    document.ondragstart = function (e) {
+      e.preventDefault();
+    };
+    document.ondragend = function (e) {
+      e.preventDefault();
+    };
+  </script>
+</body>
+
+</html>
