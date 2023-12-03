@@ -25,3 +25,30 @@ let value2: number;
 */
 let value3!:number
 console.log(value3); // undefined 编译正确
+
+
+class C {
+  foo: number;
+  bar = "hello";
+  baz: boolean;
+  constructor() {
+    this.foo = 42;
+  }
+}
+// 首先编辑器会报错： 属性“baz”没有初始化表达式，且未在构造函数中明确赋值。ts(2564)
+// 属性 baz 冒号之前加上 ! ,这样就不会报错了
+class C1 {
+  foo: number;
+  bar = "hello";
+  baz!: boolean;
+  constructor() {
+    this.foo = 42;
+  }
+}
+// 强制链式调用
+// 这里 Error对象定义的stack是可选参数，如果这样写的话编译器会提示
+// 出错 TS2532: Object is possibly 'undefined'.
+// new Error().stack.split('\n');
+
+// 我们确信这个字段100%出现，那么就可以添加！，强调这个字段一定存在
+new Error().stack!.split('\n');

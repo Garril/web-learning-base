@@ -15,7 +15,7 @@ promise.then(res => {
 err: then rejected status
 
 .catch 是 es6的语法糖
-捕获两个地方:
+只捕获一个地方:
   1、优先捕获第8行promise里面的reject：
     你return一个promise，且没有实现then/catch。
     那么内部决定后面的promise的状态。

@@ -16,7 +16,7 @@ function throttle(fn, interval, options) {
       // 2.4.保留上次触发的时间
       lastTime = nowTime
     }
-  } 
+  }
 
   return _throttle
 }
