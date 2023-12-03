@@ -38,7 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
     audio: document.querySelector('audio'),
     ul: document.querySelector('.container ul'),
     container: document.querySelector('.container'),
+    canvas: document.querySelector('#mycanvas')
   };
+  const ctx = doms.canvas?.getContext('2d');
   // 获取解析后的歌词数据
   const lyricData = parseLrc();
   // 根据歌词数据创建li
@@ -72,5 +74,74 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   // 记得别把setOffset()丢进去。
   doms.audio.addEventListener('timeupdate', setOffset);
+
+
+  // canvas部分
+  let isInit = false;
+  let dataArray, analyser;
+  doms.audio.onplay = () => {
+    if (isInit) return;
+    // 初始化
+    isInit = true;
+
+    const audioCtx = new AudioContext(); // 创建音频上下文
+    const source = audioCtx.createMediaElementSource(doms.audio); // 1、创建音频源节点,以他的数据作为来源
+    // 每次处理音频，比如音色、混响的过程都算一个节点，每次产生新节点，最后输出。
+    // 2、创建分析器（分析音频数据里的各种波形）
+    analyser = audioCtx.createAnalyser();
+    // 分析器将源（时域图）=》通过频谱分析，转到 分析波形（频域图）
+    analyser.fftSize = 512; // 需要是:2^n，越大越细致，默认2048
+    // 数组保存分析后的数据，每一项表示一个无符号8位整数
+    dataArray = new Uint8Array(analyser.frequencyBinCount);
+    // 3、连接音频源和分析器
+    source.connect(analyser);
+    // 4、连接分析器到输出设备
+    analyser.connect(audioCtx.destination);
+
+    ctx.fillStyle = '#3f85ff';
+    // 单边，无对称
+    // function draw() {
+    //   requestAnimationFrame(draw);
+    //   const { width, height } = doms.canvas;
+    //   ctx.clearRect(0, 0, width, height);
+    //   // 把分析器节点当前分析出的数据，存数组中
+    //   analyser.getByteFrequencyData(dataArray);
+    //   // 长度切一半多是因为，后面的波段几乎没用到，人耳听不到
+    //   const len = dataArray.length / 2.5;
+    //   const barWidth = width / len;
+    //   for (let i = 0; i < len; i++) {
+    //     const itemData = dataArray[i];
+    //     const barHeight = (itemData / 255) * height;
+    //     const x = i * barWidth;
+    //     const y = height - barHeight;
+    //     // barWidth - 2 留空隙
+    //     ctx.fillRect(x, y, barWidth - 2, barHeight);
+    //   }
+    // }
+    function draw() {
+      requestAnimationFrame(draw);
+      const { width, height } = doms.canvas;
+      ctx.clearRect(0, 0, width, height);
+      // 把分析器节点当前分析出的数据，存数组中
+      analyser.getByteFrequencyData(dataArray);
+      // 长度切一半多是因为，后面的波段几乎没用到，人耳听不到
+      const len = dataArray.length / 2.5;
+      // 除以2，搞对称
+      const barWidth = width / len / 2;
+      for (let i = 0; i < len; i++) {
+        const itemData = dataArray[i];
+        const barHeight = (itemData / 255) * height;
+        // 左边
+        const x1 = width / 2 - (i + 1) * barWidth;
+        // 右边
+        const x2 = i * barWidth + width / 2;
+        const y = height - barHeight;
+        // barWidth - 2 留空隙
+        ctx.fillRect(x1, y, barWidth - 2, barHeight);
+        ctx.fillRect(x2, y, barWidth - 2, barHeight);
+      }
+    }
+    draw();
+  }
 });
 

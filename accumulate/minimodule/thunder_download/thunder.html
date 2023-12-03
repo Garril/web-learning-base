@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>thunder_download</title>
+</head>
+
+<body>
+  <a href="http://localhost:8000/xxx.png">超链接下载</a>
+  <a data-thunder href="http://localhost:8000/xxx.png">迅雷下载</a>
+  <script>
+    const links = document.querySelectorAll('a[data-thunder]');
+    for (const link of links) {
+      const base64 = btoa(`${link.href}`);
+      link.href = `thunder://${base64}`;
+    }
+  </script>
+</body>
+
+</html>
