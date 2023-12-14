@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "commit": "SET NODE_OPTIONS=--openssl-legacy-provider &&  cz"
+    "commit": "SET NODE_OPTIONS=--openssl-legacy-provider &&  cz",
+    "sync": "git reset --hard origin/main"
   },
   "repository": {
     "type": "git",
