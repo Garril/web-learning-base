@@ -87,6 +87,16 @@ function pluginController(slider) {
       if (selected) selected.className = 'slide-list__control-buttons';
       buttons[idx].className = 'slide-list__control-buttons--selected';
     });
+
+    const previous = slider.container.querySelector('.slider-list__item');
+    if (previous) {
+      previous.addEventListener('mouseenter', () => {
+        slider.stop();
+      });
+      previous.addEventListener('mouseleave', () => {
+        slider.start();
+      });
+    }
   }
 }
 // 左箭头插件化
@@ -130,5 +140,14 @@ function pluginRandomGet(slider) {
 }
 
 const slider = new Slider('my-slider');
-slider.registerPlugins(pluginController, pluginPrevious, pluginNext, pluginRandomGet);
+slider.registerPlugins(pluginController, pluginPrevious, pluginNext);
+const items = slider.items;
+if (items) {
+  items.addEventListener('mouseenter', () => {
+    slider.stop();
+  });
+  items.addEventListener('mouseleave', () => {
+    slider.start();
+  });
+}
 slider.start();
