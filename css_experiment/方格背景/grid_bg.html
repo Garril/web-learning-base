@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>方格背景</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    #box {
+      background-image: linear-gradient(to right top, #000 25%, transparent 0),
+        linear-gradient(to right top, transparent 75%, #000 0),
+        linear-gradient(to right top, #000 25%, transparent 0),
+        linear-gradient(to right top, transparent 75%, #000 0);
+      background-position: 0 0, 0 0, 50px 50px, 50px 50px;
+      background-size: 100px 100px;
+      /* background-repeat: no-repeat; 可以no-repeat看看单独是长什么样子 */
+
+      /* 缩写 
+      background-image:
+        linear-gradient(45deg, #000 25%, transparent 0, transparent 75%, #000 0),
+        linear-gradient(45deg, #000 25%, transparent 0, transparent 75%, #000 0);
+      background-position: 0 0, 50px 50px;
+      background-size: 100px 100px;
+      
+      解析案例：
+      linear-gradient(to right top, #000 25%, transparent 0);
+        to right top 从左下角开始，转为角度的话为 45deg。如果没有指定，则默认为 to bottom。
+        to top、to bottom、to left 和 to right 分别等价于 0deg、180deg、270deg 和 90deg。
+      案例中第一个颜色为#000黑色，到25%，之后透明色
+      
+      像 #000 25%, red 75%; 这样，他默认会有渐变的效果，如果两个数字中间有传数字，比如
+        #000 25%, 25%,red 75%; 的 25%,表示渐变的点在25%，
+        如果小于等于25%不渐变，边缘就是线，如果大于red的75%，就会扩大#000的区域到75%，依次类推。
+
+      设置颜色比如transparent/red/green 为0/0%，就好比说如果有区域的话就用剩余的颜色去占满，然后边界只是一条直线。
+      */
+
+      width: 70vw;
+      height: 70vh;
+      box-sizing: border-box;
+      border: 1px solid skyblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box"></div>
+</body>
+
+</html>
