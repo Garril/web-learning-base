@@ -1,0 +1,2489 @@
+[
+  {
+    "addrno": "440000",
+    "addrnm": "广东省",
+    "children": [
+      {
+        "addrno": "440100",
+        "addrnm": "广州市",
+        "children": [
+          {
+            "addrno": "440118",
+            "addrnm": "增城区",
+            "children": [
+              { "addrno": "440118004", "addrnm": "永宁街道" },
+              { "addrno": "440118001", "addrnm": "荔城街道" },
+              { "addrno": "440118003", "addrnm": "朱村街道" },
+              { "addrno": "440118002", "addrnm": "增江街道" },
+              { "addrno": "440118006", "addrnm": "宁西街道" },
+              { "addrno": "440118005", "addrnm": "荔湖街道" },
+              { "addrno": "440118100", "addrnm": "正果镇" },
+              { "addrno": "440118104", "addrnm": "派潭镇" },
+              { "addrno": "440118106", "addrnm": "仙村镇" },
+              { "addrno": "440118105", "addrnm": "小楼镇" },
+              { "addrno": "440118103", "addrnm": "中新镇" },
+              { "addrno": "440118101", "addrnm": "石滩镇" },
+              { "addrno": "440118102", "addrnm": "新塘镇" }
+            ]
+          },
+          {
+            "addrno": "440117",
+            "addrnm": "从化区",
+            "children": [
+              { "addrno": "440117003", "addrnm": "江埔街道" },
+              { "addrno": "440117002", "addrnm": "城郊街道" },
+              { "addrno": "440117001", "addrnm": "街口街道" },
+              { "addrno": "440117102", "addrnm": "吕田镇" },
+              { "addrno": "440117101", "addrnm": "良口镇" },
+              { "addrno": "440117103", "addrnm": "太平镇" },
+              { "addrno": "440117100", "addrnm": "温泉镇" },
+              { "addrno": "440117104", "addrnm": "鳌头镇" }
+            ]
+          },
+          {
+            "addrno": "440115",
+            "addrnm": "南沙区",
+            "children": [
+              { "addrno": "440115003", "addrnm": "龙穴街道" },
+              { "addrno": "440115002", "addrnm": "珠江街道" },
+              { "addrno": "440115001", "addrnm": "南沙街道" },
+              { "addrno": "440115106", "addrnm": "榄核镇" },
+              { "addrno": "440115103", "addrnm": "黄阁镇" },
+              { "addrno": "440115101", "addrnm": "横沥镇" },
+              { "addrno": "440115104", "addrnm": "东涌镇" },
+              { "addrno": "440115105", "addrnm": "大岗镇" },
+              { "addrno": "440115102", "addrnm": "万顷沙镇" }
+            ]
+          },
+          {
+            "addrno": "440105",
+            "addrnm": "海珠区",
+            "children": [
+              { "addrno": "440105010", "addrnm": "沙园街道" },
+              { "addrno": "440105009", "addrnm": "龙凤街道" },
+              { "addrno": "440105012", "addrnm": "凤阳街道" },
+              { "addrno": "440105011", "addrnm": "南石头街道" },
+              { "addrno": "440105008", "addrnm": "南华西街道" },
+              { "addrno": "440105005", "addrnm": "滨江街道" },
+              { "addrno": "440105004", "addrnm": "江南中街道" },
+              { "addrno": "440105007", "addrnm": "海幢街道" },
+              { "addrno": "440105006", "addrnm": "素社街道" },
+              { "addrno": "440105018", "addrnm": "官洲街道" },
+              { "addrno": "440105017", "addrnm": "华洲街道" },
+              { "addrno": "440105014", "addrnm": "江海街道" },
+              { "addrno": "440105013", "addrnm": "瑞宝街道" },
+              { "addrno": "440105016", "addrnm": "南洲街道" },
+              { "addrno": "440105015", "addrnm": "琶洲街道" },
+              { "addrno": "440105003", "addrnm": "昌岗街道" },
+              { "addrno": "440105002", "addrnm": "新港街道" },
+              { "addrno": "440105001", "addrnm": "赤岗街道" }
+            ]
+          },
+          {
+            "addrno": "440106",
+            "addrnm": "天河区",
+            "children": [
+              { "addrno": "440106001", "addrnm": "五山街道" },
+              { "addrno": "440106003", "addrnm": "车陂街道" },
+              { "addrno": "440106002", "addrnm": "员村街道" },
+              { "addrno": "440106011", "addrnm": "棠下街道" },
+              { "addrno": "440106010", "addrnm": "兴华街道" },
+              { "addrno": "440106013", "addrnm": "猎德街道" },
+              { "addrno": "440106012", "addrnm": "天园街道" },
+              { "addrno": "440106009", "addrnm": "林和街道" },
+              { "addrno": "440106006", "addrnm": "石牌街道" },
+              { "addrno": "440106004", "addrnm": "沙河街道" },
+              { "addrno": "440106008", "addrnm": "天河南街道" },
+              { "addrno": "440106007", "addrnm": "沙东街道" },
+              { "addrno": "440106020", "addrnm": "前进街道" },
+              { "addrno": "440106019", "addrnm": "长兴街道" },
+              { "addrno": "440106022", "addrnm": "新塘街道" },
+              { "addrno": "440106021", "addrnm": "珠吉街道" },
+              { "addrno": "440106018", "addrnm": "龙洞街道" },
+              { "addrno": "440106015", "addrnm": "元岗街道" },
+              { "addrno": "440106014", "addrnm": "冼村街道" },
+              { "addrno": "440106017", "addrnm": "凤凰街道" },
+              { "addrno": "440106016", "addrnm": "黄村街道" }
+            ]
+          },
+          {
+            "addrno": "440103",
+            "addrnm": "荔湾区",
+            "children": [
+              { "addrno": "440103012", "addrnm": "站前街道" },
+              { "addrno": "440103011", "addrnm": "西村街道" },
+              { "addrno": "440103014", "addrnm": "白鹤洞街道" },
+              { "addrno": "440103013", "addrnm": "桥中街道" },
+              { "addrno": "440103010", "addrnm": "南源街道" },
+              { "addrno": "440103007", "addrnm": "龙津街道" },
+              { "addrno": "440103006", "addrnm": "逢源街道" },
+              { "addrno": "440103009", "addrnm": "彩虹街道" },
+              { "addrno": "440103008", "addrnm": "金花街道" },
+              { "addrno": "440103021", "addrnm": "东沙街道" },
+              { "addrno": "440103020", "addrnm": "海龙街道" },
+              { "addrno": "440103022", "addrnm": "中南街道" },
+              { "addrno": "440103019", "addrnm": "东漖街道" },
+              { "addrno": "440103016", "addrnm": "花地街道" },
+              { "addrno": "440103015", "addrnm": "冲口街道" },
+              { "addrno": "440103018", "addrnm": "茶滘街道" },
+              { "addrno": "440103017", "addrnm": "石围塘街道" },
+              { "addrno": "440103005", "addrnm": "昌华街道" },
+              { "addrno": "440103002", "addrnm": "岭南街道" },
+              { "addrno": "440103001", "addrnm": "沙面街道" },
+              { "addrno": "440103004", "addrnm": "多宝街道" },
+              { "addrno": "440103003", "addrnm": "华林街道" }
+            ]
+          },
+          {
+            "addrno": "440104",
+            "addrnm": "越秀区",
+            "children": [
+              { "addrno": "440104013", "addrnm": "梅花村街道" },
+              { "addrno": "440104012", "addrnm": "农林街道" },
+              { "addrno": "440104015", "addrnm": "华乐街道" },
+              { "addrno": "440104014", "addrnm": "黄花岗街道" },
+              { "addrno": "440104011", "addrnm": "东山街道" },
+              { "addrno": "440104005", "addrnm": "流花街道" },
+              { "addrno": "440104004", "addrnm": "六榕街道" },
+              { "addrno": "440104010", "addrnm": "人民街道" },
+              { "addrno": "440104007", "addrnm": "光塔街道" },
+              { "addrno": "440104024", "addrnm": "建设街道" },
+              { "addrno": "440104022", "addrnm": "矿泉街道" },
+              { "addrno": "440104021", "addrnm": "登峰街道" },
+              { "addrno": "440104018", "addrnm": "珠光街道" },
+              { "addrno": "440104017", "addrnm": "大塘街道" },
+              { "addrno": "440104020", "addrnm": "白云街道" },
+              { "addrno": "440104019", "addrnm": "大东街道" },
+              { "addrno": "440104003", "addrnm": "北京街道" },
+              { "addrno": "440104001", "addrnm": "洪桥街道" }
+            ]
+          },
+          {
+            "addrno": "440113",
+            "addrnm": "番禺区",
+            "children": [
+              { "addrno": "440113003", "addrnm": "钟村街道" },
+              { "addrno": "440113002", "addrnm": "沙湾街道" },
+              { "addrno": "440113011", "addrnm": "石壁街道" },
+              { "addrno": "440113010", "addrnm": "洛浦街道" },
+              { "addrno": "440113102", "addrnm": "石碁镇" },
+              { "addrno": "440113012", "addrnm": "大龙街道" },
+              { "addrno": "440113009", "addrnm": "小谷围街道" },
+              { "addrno": "440113006", "addrnm": "沙头街道" },
+              { "addrno": "440113005", "addrnm": "市桥街道" },
+              { "addrno": "440113008", "addrnm": "桥南街道" },
+              { "addrno": "440113007", "addrnm": "东环街道" },
+              { "addrno": "440113004", "addrnm": "大石街道" },
+              { "addrno": "440113105", "addrnm": "化龙镇" },
+              { "addrno": "440113104", "addrnm": "新造镇" },
+              { "addrno": "440113106", "addrnm": "石楼镇" },
+              { "addrno": "440113103", "addrnm": "南村镇" }
+            ]
+          },
+          {
+            "addrno": "440114",
+            "addrnm": "花都区",
+            "children": [
+              { "addrno": "440114002", "addrnm": "新雅街道" },
+              { "addrno": "440114001", "addrnm": "新华街道" },
+              { "addrno": "440114004", "addrnm": "秀全街道" },
+              { "addrno": "440114003", "addrnm": "花城街道" },
+              { "addrno": "440114104", "addrnm": "花山镇" },
+              { "addrno": "440114105", "addrnm": "花东镇" },
+              { "addrno": "440114107", "addrnm": "炭步镇" },
+              { "addrno": "440114109", "addrnm": "狮岭镇" },
+              { "addrno": "440114103", "addrnm": "梯面镇" },
+              { "addrno": "440114108", "addrnm": "赤坭镇" }
+            ]
+          },
+          {
+            "addrno": "440111",
+            "addrnm": "白云区",
+            "children": [
+              { "addrno": "440111009", "addrnm": "同和街道" },
+              { "addrno": "440111008", "addrnm": "新市街道" },
+              { "addrno": "440111011", "addrnm": "永平街道" },
+              { "addrno": "440111010", "addrnm": "京溪街道" },
+              { "addrno": "440111007", "addrnm": "棠景街道" },
+              { "addrno": "440111004", "addrnm": "景泰街道" },
+              { "addrno": "440111003", "addrnm": "松洲街道" },
+              { "addrno": "440111006", "addrnm": "黄石街道" },
+              { "addrno": "440111005", "addrnm": "同德街道" },
+              { "addrno": "440111018", "addrnm": "白云湖街道" },
+              { "addrno": "440111017", "addrnm": "鹤龙街道" },
+              { "addrno": "440111020", "addrnm": "龙归街道" },
+              { "addrno": "440111019", "addrnm": "石门街道" },
+              { "addrno": "440111016", "addrnm": "云城街道" },
+              { "addrno": "440111013", "addrnm": "均禾街道" },
+              { "addrno": "440111012", "addrnm": "嘉禾街道" },
+              { "addrno": "440111015", "addrnm": "金沙街道" },
+              { "addrno": "440111014", "addrnm": "石井街道" },
+              { "addrno": "440111002", "addrnm": "三元里街道" },
+              { "addrno": "440111021", "addrnm": "大源街道" },
+              { "addrno": "440111108", "addrnm": "钟落潭镇" },
+              { "addrno": "440111103", "addrnm": "人和镇" },
+              { "addrno": "440111113", "addrnm": "江高镇" },
+              { "addrno": "440111107", "addrnm": "太和镇" }
+            ]
+          },
+          {
+            "addrno": "440112",
+            "addrnm": "黄埔区",
+            "children": [
+              { "addrno": "440112016", "addrnm": "长岭街道" },
+              { "addrno": "440112012", "addrnm": "萝岗街道" },
+              { "addrno": "440112011", "addrnm": "夏港街道" },
+              { "addrno": "440112015", "addrnm": "永和街道" },
+              { "addrno": "440112014", "addrnm": "联和街道" },
+              { "addrno": "440112007", "addrnm": "穗东街道" },
+              { "addrno": "440112006", "addrnm": "文冲街道" },
+              { "addrno": "440112010", "addrnm": "长洲街道" },
+              { "addrno": "440112008", "addrnm": "南岗街道" },
+              { "addrno": "440112005", "addrnm": "大沙街道" },
+              { "addrno": "440112001", "addrnm": "黄埔街道" },
+              { "addrno": "440112003", "addrnm": "鱼珠街道" },
+              { "addrno": "440112002", "addrnm": "红山街道" },
+              { "addrno": "440112100", "addrnm": "新龙镇" },
+              { "addrno": "440112017", "addrnm": "宁西街道" },
+              { "addrno": "440112013", "addrnm": "云埔街道" },
+              { "addrno": "440112018", "addrnm": "龙湖街道" }
+            ]
+          }
+        ]
+      },
+      {
+        "addrno": "440200",
+        "addrnm": "韶关市",
+        "children": [
+          {
+            "addrno": "440281",
+            "addrnm": "乐昌市",
+            "children": [
+              { "addrno": "440281001", "addrnm": "乐城街道" },
+              { "addrno": "440281106", "addrnm": "梅花镇" },
+              { "addrno": "440281119", "addrnm": "白石镇" },
+              { "addrno": "440281113", "addrnm": "沙坪镇" },
+              { "addrno": "440281115", "addrnm": "秀水镇" },
+              { "addrno": "440281110", "addrnm": "黄圃镇" },
+              { "addrno": "440281108", "addrnm": "坪石镇" },
+              { "addrno": "440281112", "addrnm": "两江镇" },
+              { "addrno": "440281118", "addrnm": "庆云镇" },
+              { "addrno": "440281107", "addrnm": "三溪镇" },
+              { "addrno": "440281114", "addrnm": "云岩镇" },
+              { "addrno": "440281102", "addrnm": "北乡镇" },
+              { "addrno": "440281111", "addrnm": "五山镇" },
+              { "addrno": "440281103", "addrnm": "九峰镇" },
+              { "addrno": "440281117", "addrnm": "大源镇" },
+              { "addrno": "440281104", "addrnm": "廊田镇" },
+              { "addrno": "440281105", "addrnm": "长来镇" }
+            ]
+          },
+          {
+            "addrno": "440282",
+            "addrnm": "南雄市",
+            "children": [
+              { "addrno": "440282001", "addrnm": "雄州街道" },
+              { "addrno": "440282116", "addrnm": "古市镇" },
+              { "addrno": "440282115", "addrnm": "主田镇" },
+              { "addrno": "440282118", "addrnm": "全安镇" },
+              { "addrno": "440282120", "addrnm": "百顺镇" },
+              { "addrno": "440282106", "addrnm": "邓坊镇" },
+              { "addrno": "440282113", "addrnm": "珠玑镇" },
+              { "addrno": "440282121", "addrnm": "澜河镇" },
+              { "addrno": "440282122", "addrnm": "帽子峰镇" },
+              { "addrno": "440282110", "addrnm": "水口镇" },
+              { "addrno": "440282112", "addrnm": "湖口镇" },
+              { "addrno": "440282109", "addrnm": "南亩镇" },
+              { "addrno": "440282111", "addrnm": "江头镇" },
+              { "addrno": "440282107", "addrnm": "油山镇" },
+              { "addrno": "440282104", "addrnm": "坪田镇" },
+              { "addrno": "440282103", "addrnm": "界址镇" },
+              { "addrno": "440282105", "addrnm": "黄坑镇" },
+              { "addrno": "440282100", "addrnm": "乌迳镇" }
+            ]
+          },
+          {
+            "addrno": "440205",
+            "addrnm": "曲江区",
+            "children": [
+              { "addrno": "440205001", "addrnm": "松山街道" },
+              { "addrno": "440205104", "addrnm": "枫湾镇" },
+              { "addrno": "440205105", "addrnm": "小坑镇" },
+              { "addrno": "440205106", "addrnm": "沙溪镇" },
+              { "addrno": "440205103", "addrnm": "大塘镇" },
+              { "addrno": "440205110", "addrnm": "白土镇" },
+              { "addrno": "440205100", "addrnm": "马坝镇" },
+              { "addrno": "440205108", "addrnm": "乌石镇" },
+              { "addrno": "440205119", "addrnm": "罗坑镇" },
+              { "addrno": "440205109", "addrnm": "樟市镇" }
+            ]
+          },
+          {
+            "addrno": "440222",
+            "addrnm": "始兴县",
+            "children": [
+              { "addrno": "440222203", "addrnm": "深渡水瑶族乡" },
+              { "addrno": "440222108", "addrnm": "沈所镇" },
+              { "addrno": "440222107", "addrnm": "城南镇" },
+              { "addrno": "440222105", "addrnm": "司前镇" },
+              { "addrno": "440222106", "addrnm": "隘子镇" },
+              { "addrno": "440222101", "addrnm": "马市镇" },
+              { "addrno": "440222103", "addrnm": "顿岗镇" },
+              { "addrno": "440222104", "addrnm": "罗坝镇" },
+              { "addrno": "440222102", "addrnm": "澄江镇" },
+              { "addrno": "440222100", "addrnm": "太平镇" }
+            ]
+          },
+          {
+            "addrno": "440204",
+            "addrnm": "浈江区",
+            "children": [
+              { "addrno": "440204002", "addrnm": "车站街道" },
+              { "addrno": "440204001", "addrnm": "东河街道" },
+              { "addrno": "440204006", "addrnm": "风采街道" },
+              { "addrno": "440204100", "addrnm": "新韶镇" },
+              { "addrno": "440204101", "addrnm": "乐园镇" },
+              { "addrno": "440204103", "addrnm": "犁市镇" },
+              { "addrno": "440204104", "addrnm": "十里亭镇" },
+              { "addrno": "440204102", "addrnm": "花坪镇" }
+            ]
+          },
+          {
+            "addrno": "440203",
+            "addrnm": "武江区",
+            "children": [
+              { "addrno": "440203002", "addrnm": "惠民街道" },
+              { "addrno": "440203001", "addrnm": "新华街道" },
+              { "addrno": "440203102", "addrnm": "重阳镇" },
+              { "addrno": "440203103", "addrnm": "龙归镇" },
+              { "addrno": "440203104", "addrnm": "江湾镇" },
+              { "addrno": "440203100", "addrnm": "西联镇" },
+              { "addrno": "440203101", "addrnm": "西河镇" }
+            ]
+          },
+          {
+            "addrno": "440233",
+            "addrnm": "新丰县",
+            "children": [
+              { "addrno": "440233101", "addrnm": "黄磜镇" },
+              { "addrno": "440233001", "addrnm": "丰城街道" },
+              { "addrno": "440233106", "addrnm": "回龙镇" },
+              { "addrno": "440233105", "addrnm": "遥田镇" },
+              { "addrno": "440233103", "addrnm": "梅坑镇" },
+              { "addrno": "440233104", "addrnm": "沙田镇" },
+              { "addrno": "440233102", "addrnm": "马头镇" }
+            ]
+          },
+          {
+            "addrno": "440224",
+            "addrnm": "仁化县",
+            "children": [
+              { "addrno": "440224001", "addrnm": "丹霞街道" },
+              { "addrno": "440224108", "addrnm": "董塘镇" },
+              { "addrno": "440224104", "addrnm": "长江镇" },
+              { "addrno": "440224102", "addrnm": "闻韶镇" },
+              { "addrno": "440224106", "addrnm": "红山镇" },
+              { "addrno": "440224103", "addrnm": "扶溪镇" },
+              { "addrno": "440224105", "addrnm": "城口镇" },
+              { "addrno": "440224107", "addrnm": "石塘镇" },
+              { "addrno": "440224109", "addrnm": "黄坑镇" },
+              { "addrno": "440224111", "addrnm": "大桥镇" },
+              { "addrno": "440224110", "addrnm": "周田镇" }
+            ]
+          },
+          {
+            "addrno": "440232",
+            "addrnm": "乳源瑶族自治县",
+            "children": [
+              { "addrno": "440232100", "addrnm": "乳城镇" },
+              { "addrno": "440232106", "addrnm": "洛阳镇" },
+              { "addrno": "440232109", "addrnm": "大桥镇" },
+              { "addrno": "440232108", "addrnm": "大布镇" },
+              { "addrno": "440232111", "addrnm": "东坪镇" },
+              { "addrno": "440232104", "addrnm": "桂头镇" },
+              { "addrno": "440232103", "addrnm": "一六镇" },
+              { "addrno": "440232113", "addrnm": "必背镇" },
+              { "addrno": "440232112", "addrnm": "游溪镇" }
+            ]
+          },
+          {
+            "addrno": "440229",
+            "addrnm": "翁源县",
+            "children": [
+              { "addrno": "440229109", "addrnm": "官渡镇" },
+              { "addrno": "440229111", "addrnm": "周陂镇" },
+              { "addrno": "440229114", "addrnm": "新江镇" },
+              { "addrno": "440229113", "addrnm": "翁城镇" },
+              { "addrno": "440229100", "addrnm": "龙仙镇" },
+              { "addrno": "440229106", "addrnm": "江尾镇" },
+              { "addrno": "440229104", "addrnm": "坝仔镇" }
+            ]
+          }
+        ]
+      },
+      {
+        "addrno": "440500",
+        "addrnm": "汕头市",
+        "children": [
+          {
+            "addrno": "440523",
+            "addrnm": "南澳县",
+            "children": [
+              { "addrno": "440523103", "addrnm": "深澳镇" },
+              { "addrno": "440523102", "addrnm": "云澳镇" },
+              { "addrno": "440523101", "addrnm": "后宅镇" }
+            ]
+          },
+          {
+            "addrno": "440512",
+            "addrnm": "濠江区",
+            "children": [
+              { "addrno": "440512003", "addrnm": "马滘街道" },
+              { "addrno": "440512001", "addrnm": "礐石街道" },
+              { "addrno": "440512007", "addrnm": "滨海街道" },
+              { "addrno": "440512006", "addrnm": "玉新街道" },
+              { "addrno": "440512002", "addrnm": "达濠街道" },
+              { "addrno": "440512005", "addrnm": "河浦街道" },
+              { "addrno": "440512004", "addrnm": "广澳街道" }
+            ]
+          },
+          {
+            "addrno": "440513",
+            "addrnm": "潮阳区",
+            "children": [
+              { "addrno": "440513004", "addrnm": "金浦街道" },
+              { "addrno": "440513110", "addrnm": "金灶镇" },
+              { "addrno": "440513108", "addrnm": "关埠镇" },
+              { "addrno": "440513106", "addrnm": "河溪镇" },
+              { "addrno": "440513107", "addrnm": "西胪镇" },
+              { "addrno": "440513105", "addrnm": "谷饶镇" },
+              { "addrno": "440513102", "addrnm": "和平镇" },
+              { "addrno": "440513101", "addrnm": "海门镇" },
+              { "addrno": "440513103", "addrnm": "贵屿镇" },
+              { "addrno": "440513104", "addrnm": "铜盂镇" },
+              { "addrno": "440513001", "addrnm": "文光街道" },
+              { "addrno": "440513002", "addrnm": "城南街道" },
+              { "addrno": "440513003", "addrnm": "棉北街道" }
+            ]
+          },
+          {
+            "addrno": "440511",
+            "addrnm": "金平区",
+            "children": [
+              { "addrno": "440511006", "addrnm": "鮀莲街道" },
+              { "addrno": "440511014", "addrnm": "东墩街道" },
+              { "addrno": "440511007", "addrnm": "鮀江街道" },
+              { "addrno": "440511019", "addrnm": "金东街道" },
+              { "addrno": "440511018", "addrnm": "小公园街道" },
+              { "addrno": "440511010", "addrnm": "石炮台街道" },
+              { "addrno": "440511009", "addrnm": "大华街道" },
+              { "addrno": "440511011", "addrnm": "东方街道" },
+              { "addrno": "440511003", "addrnm": "海安街道" },
+              { "addrno": "440511002", "addrnm": "同益街道" },
+              { "addrno": "440511005", "addrnm": "永祥街道" },
+              { "addrno": "440511004", "addrnm": "新福街道" },
+              { "addrno": "440511017", "addrnm": "月浦街道" },
+              { "addrno": "440511013", "addrnm": "金砂街道" },
+              { "addrno": "440511012", "addrnm": "金厦街道" },
+              { "addrno": "440511016", "addrnm": "岐山街道" },
+              { "addrno": "440511015", "addrnm": "广厦街道" },
+              { "addrno": "440511008", "addrnm": "乌桥街道" },
+              { "addrno": "440511001", "addrnm": "光华街道" }
+            ]
+          },
+          {
+            "addrno": "440507",
+            "addrnm": "龙湖区",
+            "children": [
+              { "addrno": "440507006", "addrnm": "龙华街道" },
+              { "addrno": "440507008", "addrnm": "珠池街道" },
+              { "addrno": "440507007", "addrnm": "外砂街道" },
+              { "addrno": "440507009", "addrnm": "新溪街道" },
+              { "addrno": "440507011", "addrnm": "龙腾街道" },
+              { "addrno": "440507010", "addrnm": "新海街道" },
+              { "addrno": "440507101", "addrnm": "新溪镇" },
+              { "addrno": "440507100", "addrnm": "外砂镇" },
+              { "addrno": "440507002", "addrnm": "龙祥街道" },
+              { "addrno": "440507005", "addrnm": "珠池街道" },
+              { "addrno": "440507004", "addrnm": "新津街道" },
+              { "addrno": "440507003", "addrnm": "鸥汀街道" },
+              { "addrno": "440507001", "addrnm": "金霞街道" }
+            ]
+          },
+          {
+            "addrno": "440514",
+            "addrnm": "潮南区",
+            "children": [
+              { "addrno": "440514101", "addrnm": "井都镇" },
+              { "addrno": "440514001", "addrnm": "峡山街道" },
+              { "addrno": "440514105", "addrnm": "胪岗镇" },
+              { "addrno": "440514113", "addrnm": "雷岭镇" },
+              { "addrno": "440514102", "addrnm": "陇田镇" },
+              { "addrno": "440514104", "addrnm": "成田镇" },
+              { "addrno": "440514112", "addrnm": "红场镇" },
+              { "addrno": "440514109", "addrnm": "陈店镇" },
+              { "addrno": "440514108", "addrnm": "司马浦镇" },
+              { "addrno": "440514111", "addrnm": "仙城镇" },
+              { "addrno": "440514107", "addrnm": "两英镇" }
+            ]
+          },
+          {
+            "addrno": "440515",
+            "addrnm": "澄海区",
+            "children": [
+              { "addrno": "440515106", "addrnm": "莲上镇" },
+              { "addrno": "440515107", "addrnm": "莲下镇" },
+              { "addrno": "440515105", "addrnm": "隆都镇" },
+              { "addrno": "440515104", "addrnm": "溪南镇" },
+              { "addrno": "440515108", "addrnm": "上华镇" },
+              { "addrno": "440515001", "addrnm": "凤翔街道" },
+              { "addrno": "440515003", "addrnm": "广益街道" },
+              { "addrno": "440515002", "addrnm": "澄华街道" },
+              { "addrno": "440515101", "addrnm": "东里镇" },
+              { "addrno": "440515102", "addrnm": "盐鸿镇" },
+              { "addrno": "440515103", "addrnm": "莲华镇" }
+            ]
+          }
+        ]
+      },
+      {
+        "addrno": "440600",
+        "addrnm": "佛山市",
+        "children": [
+          {
+            "addrno": "440606",
+            "addrnm": "顺德区",
+            "children": [
+              { "addrno": "440606001", "addrnm": "容桂街道" },
+              { "addrno": "440606004", "addrnm": "大良街道" },
+              { "addrno": "440606002", "addrnm": "伦教街道" },
+              { "addrno": "440606105", "addrnm": "均安镇" },
+              { "addrno": "440606104", "addrnm": "杏坛镇" },
+              { "addrno": "440606103", "addrnm": "龙江镇" },
+              { "addrno": "440606101", "addrnm": "北滘镇" },
+              { "addrno": "440606100", "addrnm": "陈村镇" },
+              { "addrno": "440606003", "addrnm": "勒流街道" },
+              { "addrno": "440606102", "addrnm": "乐从镇" }
+            ]
+          },
+          {
+            "addrno": "440608",
+            "addrnm": "高明区",
+            "children": [
+              { "addrno": "440608108", "addrnm": "更合镇" },
+              { "addrno": "440608107", "addrnm": "杨和镇" },
+              { "addrno": "440608103", "addrnm": "明城镇" },
+              { "addrno": "440608001", "addrnm": "荷城街道" }
+            ]
+          },
+          {
+            "addrno": "440607",
+            "addrnm": "三水区",
+            "children": [
+              { "addrno": "440607105", "addrnm": "芦苞镇" },
+              { "addrno": "440607101", "addrnm": "大塘镇" },
+              { "addrno": "440607103", "addrnm": "乐平镇" },
+              { "addrno": "440607001", "addrnm": "西南街道" },
+              { "addrno": "440607104", "addrnm": "白坭镇" },
+              { "addrno": "440607004", "addrnm": "云东海街道" },
+              { "addrno": "440607106", "addrnm": "南山镇" }
+            ]
+          },
+          {
+            "addrno": "440604",
+            "addrnm": "禅城区",
+            "children": [
+              { "addrno": "440604002", "addrnm": "石湾镇街道" },
+              { "addrno": "440604001", "addrnm": "祖庙街道" },
+              { "addrno": "440604100", "addrnm": "南庄镇" },
+              { "addrno": "440604003", "addrnm": "张槎街道" }
+            ]
+          },
+          {
+            "addrno": "440605",
+            "addrnm": "南海区",
+            "children": [
+              { "addrno": "440605106", "addrnm": "狮山镇" },
+              { "addrno": "440605102", "addrnm": "丹灶镇" },
+              { "addrno": "440605101", "addrnm": "九江镇" },
+              { "addrno": "440605105", "addrnm": "大沥镇" },
+              { "addrno": "440605001", "addrnm": "桂城街道" },
+              { "addrno": "440605104", "addrnm": "西樵镇" },
+              { "addrno": "440605100", "addrnm": "里水镇" }
+            ]
+          }
+        ]
+      },
+      {
+        "addrno": "440300",
+        "addrnm": "深圳市",
+        "children": [
+          {
+            "addrno": "440309",
+            "addrnm": "龙华区",
+            "children": [
+              { "addrno": "440309001", "addrnm": "龙华街道" },
+              { "addrno": "440309006", "addrnm": "福城街道" },
+              { "addrno": "440309003", "addrnm": "民治街道" },
+              { "addrno": "440309002", "addrnm": "大浪街道" },
+              { "addrno": "440309005", "addrnm": "观湖街道" },
+              { "addrno": "440309004", "addrnm": "观澜街道" }
+            ]
+          },
+          {
+            "addrno": "440310",
+            "addrnm": "坪山区",
+            "children": [
+              { "addrno": "440310002", "addrnm": "坑梓街道" },
+              { "addrno": "440310001", "addrnm": "坪山街道" },
+              { "addrno": "440310004", "addrnm": "碧岭街道" },
+              { "addrno": "440310003", "addrnm": "马峦街道" },
+              { "addrno": "440310006", "addrnm": "龙田街道" },
+              { "addrno": "440310005", "addrnm": "石井街道" }
+            ]
+          },
+          {
+            "addrno": "440311",
+            "addrnm": "光明新区",
+            "children": [
+              { "addrno": "440311005", "addrnm": "玉塘街道" },
+              { "addrno": "440311004", "addrnm": "凤凰街道" },
+              { "addrno": "440311006", "addrnm": "马田街道" },
+              { "addrno": "440311003", "addrnm": "新湖街道" },
+              { "addrno": "440311002", "addrnm": "光明街道" },
+              { "addrno": "440311001", "addrnm": "公明街道" }
+            ]
+          },
+          {
+            "addrno": "440307",
+            "addrnm": "龙岗区",
+            "children": [
+              { "addrno": "440307011", "addrnm": "龙岗街道" },
+              { "addrno": "440307009", "addrnm": "坪地街道" },
+              { "addrno": "440307013", "addrnm": "坂田街道" },
+              { "addrno": "440307012", "addrnm": "龙城街道" },
+              { "addrno": "440307008", "addrnm": "平湖街道" },
+              { "addrno": "440307005", "addrnm": "葵涌街道*" },
+              { "addrno": "440307004", "addrnm": "布吉街道" },
+              { "addrno": "440307007", "addrnm": "南澳街道*" },
+              { "addrno": "440307006", "addrnm": "大鹏街道*" },
+              { "addrno": "440307015", "addrnm": "吉华街道" },
+              { "addrno": "440307014", "addrnm": "南湾街道" },
+              { "addrno": "440307017", "addrnm": "宝龙街道" },
+              { "addrno": "440307016", "addrnm": "园山街道" },
+              { "addrno": "440307003", "addrnm": "横岗街道" }
+            ]
+          },
+          {
+            "addrno": "440306",
+            "addrnm": "宝安区",
+            "children": [
+              { "addrno": "440306001", "addrnm": "新安街道" },
+              { "addrno": "440306017", "addrnm": "福海街道" },
+              { "addrno": "440306016", "addrnm": "航城街道" },
+              { "addrno": "440306019", "addrnm": "燕罗街道" },
+              { "addrno": "440306018", "addrnm": "新桥街道" },
+              { "addrno": "440306008", "addrnm": "石岩街道" },
+              { "addrno": "440306004", "addrnm": "福永街道" },
+              { "addrno": "440306003", "addrnm": "西乡街道" },
+              { "addrno": "440306006", "addrnm": "松岗街道" },
+              { "addrno": "440306005", "addrnm": "沙井街道" }
+            ]
+          },
+          {
+            "addrno": "440308",
+            "addrnm": "盐田区",
+            "children": [
+              { "addrno": "440308003", "addrnm": "沙头角街道" },
+              { "addrno": "440308002", "addrnm": "盐田街道" },
+              { "addrno": "440308004", "addrnm": "海山街道" },
+              { "addrno": "440308001", "addrnm": "梅沙街道" }
+            ]
+          },
+          {
+            "addrno": "440303",
+            "addrnm": "罗湖区",
+            "children": [
+              { "addrno": "440303009", "addrnm": "东晓街道" },
+              { "addrno": "440303008", "addrnm": "莲塘街道" },
+              { "addrno": "440303010", "addrnm": "清水河街道" },
+              { "addrno": "440303007", "addrnm": "东湖街道" },
+              { "addrno": "440303004", "addrnm": "翠竹街道" },
+              { "addrno": "440303003", "addrnm": "东门街道" },
+              { "addrno": "440303006", "addrnm": "笋岗街道" },
+              { "addrno": "440303005", "addrnm": "南湖街道" },
+              { "addrno": "440303002", "addrnm": "黄贝街道" },
+              { "addrno": "440303001", "addrnm": "桂园街道" }
+            ]
+          },
+          {
+            "addrno": "440305",
+            "addrnm": "南山区",
+            "children": [
+              { "addrno": "440305008", "addrnm": "桃源街道" },
+              { "addrno": "440305007", "addrnm": "粤海街道" },
+              { "addrno": "440305009", "addrnm": "西丽街道" },
+              { "addrno": "440305006", "addrnm": "招商街道" },
+              { "addrno": "440305002", "addrnm": "南山街道" },
+              { "addrno": "440305001", "addrnm": "南头街道" },
+              { "addrno": "440305005", "addrnm": "蛇口街道" },
+              { "addrno": "440305003", "addrnm": "沙河街道" }
+            ]
+          },
+          {
+            "addrno": "440304",
+            "addrnm": "福田区",
+            "children": [
+              { "addrno": "440304001", "addrnm": "南园街道" },
+              { "addrno": "440304009", "addrnm": "华富街道" },
+              { "addrno": "440304008", "addrnm": "莲花街道" },
+              { "addrno": "440304011", "addrnm": "福保街道" },
+              { "addrno": "440304010", "addrnm": "华强北街道" },
+              { "addrno": "440304007", "addrnm": "梅林街道" },
+              { "addrno": "440304004", "addrnm": "福田街道" },
+              { "addrno": "440304002", "addrnm": "园岭街道" },
+              { "addrno": "440304006", "addrnm": "香蜜湖街道" },
+              { "addrno": "440304005", "addrnm": "沙头街道" }
+            ]
+          }
+        ]
+      },
+      {
+        "addrno": "440400",
+        "addrnm": "珠海市",
+        "children": [
+          {
+            "addrno": "440402",
+            "addrnm": "香洲区",
+            "children": [
+              { "addrno": "440402100", "addrnm": "唐家湾镇" },
+              { "addrno": "440402009", "addrnm": "凤山街道" },
+              { "addrno": "440402104", "addrnm": "横琴镇" },
+              { "addrno": "440402106", "addrnm": "担杆镇" },
+              { "addrno": "440402004", "addrnm": "吉大街道" },
+              { "addrno": "440402005", "addrnm": "拱北街道" },
+              { "addrno": "440402002", "addrnm": "梅华街道" },
+              { "addrno": "440402001", "addrnm": "翠香街道" },
+              { "addrno": "440402105", "addrnm": "桂山镇" },
+              { "addrno": "440402107", "addrnm": "万山镇" },
+              { "addrno": "440402007", "addrnm": "狮山街道" },
+              { "addrno": "440402102", "addrnm": "南屏镇" },
+              { "addrno": "440402003", "addrnm": "前山街道" },
+              { "addrno": "440402006", "addrnm": "香湾街道" },
+              { "addrno": "440402008", "addrnm": "湾仔街道" }
+            ]
+          },
+          {
+            "addrno": "440403",
+            "addrnm": "斗门区",
+            "children": [
+              { "addrno": "440403001", "addrnm": "白藤街道" },
+              { "addrno": "440403105", "addrnm": "乾务镇" },
+              { "addrno": "440403102", "addrnm": "莲洲镇" },
+              { "addrno": "440403106", "addrnm": "白蕉镇" },
+              { "addrno": "440403103", "addrnm": "斗门镇" },
+              { "addrno": "440403107", "addrnm": "井岸镇" }
+            ]
+          },
+          {
+            "addrno": "440404",
+            "addrnm": "金湾区",
+            "children": [
+              { "addrno": "440404104", "addrnm": "平沙镇" },
+              { "addrno": "440404101", "addrnm": "南水镇" },
+              { "addrno": "440404100", "addrnm": "三灶镇" },
+              { "addrno": "440404103", "addrnm": "红旗镇" }
+            ]
+          }
+        ]
+      },
+      {
+        "addrno": "441500",
+        "addrnm": "汕尾市",
+        "children": [
+          {
+            "addrno": "441581",
+            "addrnm": "陆丰市",
+            "children": [
+              { "addrno": "441581001", "addrnm": "东海街道" },
+              { "addrno": "441581003", "addrnm": "河西街道" },
+              { "addrno": "441581002", "addrnm": "城东街道" },
+              { "addrno": "441581106", "addrnm": "内湖镇" },
+              { "addrno": "441581105", "addrnm": "博美镇" },
+              { "addrno": "441581108", "addrnm": "陂洋镇" },
+              { "addrno": "441581107", "addrnm": "南塘镇" },
+              { "addrno": "441581104", "addrnm": "大安镇" },
+              { "addrno": "441581101", "addrnm": "甲子镇" },
+              { "addrno": "441581103", "addrnm": "湖东镇" },
+              { "addrno": "441581102", "addrnm": "碣石镇" },
+              { "addrno": "441581118", "addrnm": "甲西镇" },
+              { "addrno": "441581117", "addrnm": "桥冲镇" },
+              { "addrno": "441581115", "addrnm": "河东镇" },
+              { "addrno": "441581119", "addrnm": "西南镇" },
+              { "addrno": "441581116", "addrnm": "上英镇" },
+              { "addrno": "441581110", "addrnm": "金厢镇" },
+              { "addrno": "441581109", "addrnm": "八万镇" },
+              { "addrno": "441581112", "addrnm": "甲东镇" },
+              { "addrno": "441581111", "addrnm": "潭西镇" }
+            ]
+          },
+          {
+            "addrno": "441521",
+            "addrnm": "海丰县",
+            "children": [
+              { "addrno": "441521105", "addrnm": "鲘门镇" },
+              { "addrno": "441521103", "addrnm": "鹅埠镇" },
+              { "addrno": "441521113", "addrnm": "平东镇" },
+              { "addrno": "441521102", "addrnm": "小漠镇" },
+              { "addrno": "441521104", "addrnm": "赤石镇" },
+              { "addrno": "441521112", "addrnm": "黄羌镇" },
+              { "addrno": "441521110", "addrnm": "可塘镇" },
+              { "addrno": "441521107", "addrnm": "陶河镇" },
+              { "addrno": "441521111", "addrnm": "公平镇" },
+              { "addrno": "441521108", "addrnm": "赤坑镇" },
+              { "addrno": "441521109", "addrnm": "大湖镇" },
+              { "addrno": "441521115", "addrnm": "城东镇" },
+              { "addrno": "441521114", "addrnm": "附城镇" },
+              { "addrno": "441521106", "addrnm": "联安镇" },
+              { "addrno": "441521101", "addrnm": "梅陇镇" },
+              { "addrno": "441521100", "addrnm": "海城镇" }
+            ]
+          },
+          {
+            "addrno": "441523",
+            "addrnm": "陆河县",
+            "children": [
+              { "addrno": "441523101", "addrnm": "水唇镇" },
+              { "addrno": "441523107", "addrnm": "南万镇" },
+              { "addrno": "441523106", "addrnm": "东坑镇" },
+              { "addrno": "441523103", "addrnm": "新田镇" },
+              { "addrno": "441523102", "addrnm": "河口镇" },
+              { "addrno": "441523105", "addrnm": "螺溪镇" },
+              { "addrno": "441523104", "addrnm": "上护镇" },
+              { "addrno": "441523100", "addrnm": "河田镇" }
+            ]
+          },
+          {
+            "addrno": "441502",
+            "addrnm": "城区",
+            "children": [
+              { "addrno": "441502102", "addrnm": "东涌镇" },
+              { "addrno": "441502005", "addrnm": "东洲街道" },
+              { "addrno": "441502004", "addrnm": "田墘街道" },
+              { "addrno": "441502002", "addrnm": "香洲街道" },
+              { "addrno": "441502001", "addrnm": "新港街道" },
+              { "addrno": "441502003", "addrnm": "凤山街道" },
+              { "addrno": "441502007", "addrnm": "马宫街道" },
+              { "addrno": "441502100", "addrnm": "红草镇" },
+              { "addrno": "441502006", "addrnm": "遮浪街道" },
+              { "addrno": "441502103", "addrnm": "捷胜镇" }
+            ]
+          }
+        ]
+      },
+      {
+        "addrno": "441700",
+        "addrnm": "阳江市",
+        "children": [
+          {
+            "addrno": "441781",
+            "addrnm": "阳春市",
+            "children": [
+              { "addrno": "441781002", "addrnm": "河西街道" },
+              { "addrno": "441781101", "addrnm": "河塱镇" },
+              { "addrno": "441781116", "addrnm": "双滘镇" },
+              { "addrno": "441781117", "addrnm": "八甲镇" },
+              { "addrno": "441781111", "addrnm": "岗美镇" },
+              { "addrno": "441781112", "addrnm": "河口镇" },
+              { "addrno": "441781114", "addrnm": "三甲镇" },
+              { "addrno": "441781109", "addrnm": "永宁镇" },
+              { "addrno": "441781108", "addrnm": "圭岗镇" },
+              { "addrno": "441781113", "addrnm": "潭水镇" },
+              { "addrno": "441781110", "addrnm": "马水镇" },
+              { "addrno": "441781103", "addrnm": "石望镇" },
+              { "addrno": "441781105", "addrnm": "春湾镇" },
+              { "addrno": "441781107", "addrnm": "陂面镇" },
+              { "addrno": "441781106", "addrnm": "合水镇" },
+              { "addrno": "441781102", "addrnm": "松柏镇" },
+              { "addrno": "441781001", "addrnm": "春城街道" }
+            ]
+          },
+          {
+            "addrno": "441704",
+            "addrnm": "阳东区",
+            "children": [
+              { "addrno": "441704107", "addrnm": "合山镇" },
+              { "addrno": "441704104", "addrnm": "雅韶镇" },
+              { "addrno": "441704109", "addrnm": "大八镇" },
+              { "addrno": "441704102", "addrnm": "那龙镇" },
+              { "addrno": "441704103", "addrnm": "东平镇" },
+              { "addrno": "441704105", "addrnm": "大沟镇" },
+              { "addrno": "441704100", "addrnm": "东城镇" },
+              { "addrno": "441704101", "addrnm": "北惯镇" },
+              { "addrno": "441704106", "addrnm": "新洲镇" },
+              { "addrno": "441704108", "addrnm": "塘坪镇" },
+              { "addrno": "441704110", "addrnm": "红丰镇" }
+            ]
+          },
+          {
+            "addrno": "441702",
+            "addrnm": "江城区",
+            "children": [
+              { "addrno": "441702105", "addrnm": "闸坡镇" },
+              { "addrno": "441702103", "addrnm": "平冈镇" },
+              { "addrno": "441702106", "addrnm": "双捷镇" },
+              { "addrno": "441702008", "addrnm": "白沙街道" },
+              { "addrno": "441702102", "addrnm": "埠场镇" },
+              { "addrno": "441702010", "addrnm": "城西街道" },
+              { "addrno": "441702009", "addrnm": "岗列街道" },
+              { "addrno": "441702002", "addrnm": "城南街道" },
+              { "addrno": "441702001", "addrnm": "南恩街道" },
+              { "addrno": "441702006", "addrnm": "城东街道" },
+              { "addrno": "441702007", "addrnm": "城北街道" },
+              { "addrno": "441702005", "addrnm": "中洲街道" }
+            ]
+          },
+          {
+            "addrno": "441721",
+            "addrnm": "阳西县",
+            "children": [
+              { "addrno": "441721100", "addrnm": "织篢镇" },
+              { "addrno": "441721107", "addrnm": "新圩镇" },
+              { "addrno": "441721108", "addrnm": "沙扒镇" },
+              { "addrno": "441721101", "addrnm": "程村镇" },
+              { "addrno": "441721104", "addrnm": "溪头镇" },
+              { "addrno": "441721106", "addrnm": "儒洞镇" },
+              { "addrno": "441721102", "addrnm": "塘口镇" },
+              { "addrno": "441721103", "addrnm": "上洋镇" }
+            ]
+          }
+        ]
+      },
+      {
+        "addrno": "441400",
+        "addrnm": "梅州市",
+        "children": [
+          {
+            "addrno": "441481",
+            "addrnm": "兴宁市",
+            "children": [
+              { "addrno": "441481001", "addrnm": "福兴街道" },
+              { "addrno": "441481003", "addrnm": "宁新街道" },
+              { "addrno": "441481002", "addrnm": "兴田街道" },
+              { "addrno": "441481112", "addrnm": "水口镇" },
+              { "addrno": "441481111", "addrnm": "新圩镇" },
+              { "addrno": "441481110", "addrnm": "坭陂镇" },
+              { "addrno": "441481102", "addrnm": "宁中镇" },
+              { "addrno": "441481105", "addrnm": "刁坊镇" },
+              { "addrno": "441481107", "addrnm": "永和镇" },
+              { "addrno": "441481108", "addrnm": "径南镇" },
+              { "addrno": "441481115", "addrnm": "罗浮镇" },
+              { "addrno": "441481125", "addrnm": "大坪镇" },
+              { "addrno": "441481124", "addrnm": "石马镇" },
+              { "addrno": "441481104", "addrnm": "新陂镇" },
+              { "addrno": "441481126", "addrnm": "叶塘镇" },
+              { "addrno": "441481123", "addrnm": "龙田镇" },
+              { "addrno": "441481117", "addrnm": "黄槐镇" },
+              { "addrno": "441481116", "addrnm": "罗岗镇" },
+              { "addrno": "441481122", "addrnm": "合水镇" },
+              { "addrno": "441481118", "addrnm": "黄陂镇" }
+            ]
+          },
+          {
+            "addrno": "441403",
+            "addrnm": "梅县区",
+            "children": [
+              { "addrno": "441403133", "addrnm": "扶大镇" },
+              { "addrno": "441403001", "addrnm": "新城办事处街道" },
+              { "addrno": "441403114", "addrnm": "隆文镇" },
+              { "addrno": "441403100", "addrnm": "松口镇" },
+              { "addrno": "441403113", "addrnm": "松源镇" },
+              { "addrno": "441403115", "addrnm": "桃尧镇" },
+              { "addrno": "441403109", "addrnm": "梅南镇" },
+              { "addrno": "441403107", "addrnm": "畲江镇" },
+              { "addrno": "441403108", "addrnm": "水车镇" },
+              { "addrno": "441403116", "addrnm": "程江镇" },
+              { "addrno": "441403110", "addrnm": "丙村镇" },
+              { "addrno": "441403101", "addrnm": "城东镇" },
+              { "addrno": "441403112", "addrnm": "白渡镇" },
+              { "addrno": "441403111", "addrnm": "雁洋镇" },
+              { "addrno": "441403105", "addrnm": "石坑镇" },
+              { "addrno": "441403102", "addrnm": "石扇镇" },
+              { "addrno": "441403106", "addrnm": "南口镇" },
+              { "addrno": "441403103", "addrnm": "梅西镇" },
+              { "addrno": "441403104", "addrnm": "大坪镇" }
+            ]
+          },
+          {
+            "addrno": "441423",
+            "addrnm": "丰顺县",
+            "children": [
+              { "addrno": "441423108", "addrnm": "八乡山镇" },
+              { "addrno": "441423122", "addrnm": "小胜镇" },
+              { "addrno": "441423118", "addrnm": "大龙华镇" },
+              { "addrno": "441423120", "addrnm": "潭江镇" },
+              { "addrno": "441423123", "addrnm": "砂田镇" },
+              { "addrno": "441423111", "addrnm": "龙岗镇" },
+              { "addrno": "441423103", "addrnm": "北斗镇" },
+              { "addrno": "441423106", "addrnm": "埔寨镇" },
+              { "addrno": "441423110", "addrnm": "建桥镇" },
+              { "addrno": "441423109", "addrnm": "丰良镇" },
+              { "addrno": "441423112", "addrnm": "潘田镇" },
+              { "addrno": "441423115", "addrnm": "留隍镇" },
+              { "addrno": "441423114", "addrnm": "黄金镇" },
+              { "addrno": "441423100", "addrnm": "汤坑镇" },
+              { "addrno": "441423105", "addrnm": "汤南镇" },
+              { "addrno": "441423104", "addrnm": "汤西镇" }
+            ]
+          },
+          {
+            "addrno": "441402",
+            "addrnm": "梅江区",
+            "children": [
+              { "addrno": "441402004", "addrnm": "江南街道" },
+              { "addrno": "441402007", "addrnm": "西郊街道" },
+              { "addrno": "441402006", "addrnm": "金山街道" },
+              { "addrno": "441402106", "addrnm": "西阳镇" },
+              { "addrno": "441402105", "addrnm": "城北镇" },
+              { "addrno": "441402103", "addrnm": "长沙镇" },
+              { "addrno": "441402102", "addrnm": "三角镇" }
+            ]
+          },
+          {
+            "addrno": "441422",
+            "addrnm": "大埔县",
+            "children": [
+              { "addrno": "441422114", "addrnm": "枫朗镇" },
+              { "addrno": "441422116", "addrnm": "百侯镇" },
+              { "addrno": "441422102", "addrnm": "高陂镇" },
+              { "addrno": "441422117", "addrnm": "大东镇" },
+              { "addrno": "441422100", "addrnm": "湖寮镇" },
+              { "addrno": "441422112", "addrnm": "光德镇" },
+              { "addrno": "441422103", "addrnm": "青溪镇" },
+              { "addrno": "441422101", "addrnm": "茶阳镇" },
+              { "addrno": "441422118", "addrnm": "西河镇" },
+              { "addrno": "441422105", "addrnm": "三河镇" },
+              { "addrno": "441422109", "addrnm": "洲瑞镇" },
+              { "addrno": "441422113", "addrnm": "桃源镇" },
+              { "addrno": "441422107", "addrnm": "大麻镇" },
+              { "addrno": "441422108", "addrnm": "银江镇" }
+            ]
+          },
+          {
+            "addrno": "441427",
+            "addrnm": "蕉岭县",
+            "children": [
+              { "addrno": "441427107", "addrnm": "广福镇" },
+              { "addrno": "441427106", "addrnm": "文福镇" },
+              { "addrno": "441427110", "addrnm": "南礤镇" },
+              { "addrno": "441427108", "addrnm": "蓝坊镇" },
+              { "addrno": "441427102", "addrnm": "长潭镇" },
+              { "addrno": "441427104", "addrnm": "新铺镇" },
+              { "addrno": "441427100", "addrnm": "蕉城镇" },
+              { "addrno": "441427103", "addrnm": "三圳镇" }
+            ]
+          },
+          {
+            "addrno": "441424",
+            "addrnm": "五华县",
+            "children": [
+              { "addrno": "441424106", "addrnm": "岐岭镇" },
+              { "addrno": "441424125", "addrnm": "梅林镇" },
+              { "addrno": "441424123", "addrnm": "棉洋镇" },
+              { "addrno": "441424127", "addrnm": "龙村镇" },
+              { "addrno": "441424126", "addrnm": "华阳镇" },
+              { "addrno": "441424120", "addrnm": "安流镇" },
+              { "addrno": "441424113", "addrnm": "横陂镇" },
+              { "addrno": "441424111", "addrnm": "周江镇" },
+              { "addrno": "441424118", "addrnm": "双华镇" },
+              { "addrno": "441424117", "addrnm": "郭田镇" },
+              { "addrno": "441424104", "addrnm": "华城镇" },
+              { "addrno": "441424103", "addrnm": "转水镇" },
+              { "addrno": "441424109", "addrnm": "长布镇" },
+              { "addrno": "441424108", "addrnm": "潭下镇" },
+              { "addrno": "441424100", "addrnm": "水寨镇" },
+              { "addrno": "441424101", "addrnm": "河东镇" }
+            ]
+          },
+          {
+            "addrno": "441426",
+            "addrnm": "平远县",
+            "children": [
+              { "addrno": "441426105", "addrnm": "差干镇" },
+              { "addrno": "441426102", "addrnm": "东石镇" },
+              { "addrno": "441426110", "addrnm": "泗水镇" },
+              { "addrno": "441426101", "addrnm": "石正镇" },
+              { "addrno": "441426100", "addrnm": "大柘镇" },
+              { "addrno": "441426109", "addrnm": "上举镇" },
+              { "addrno": "441426104", "addrnm": "八尺镇" },
+              { "addrno": "441426103", "addrnm": "仁居镇" },
+              { "addrno": "441426107", "addrnm": "河头镇" },
+              { "addrno": "441426108", "addrnm": "中行镇" },
+              { "addrno": "441426114", "addrnm": "长田镇" },
+              { "addrno": "441426115", "addrnm": "热柘镇" }
+            ]
+          }
+        ]
+      },
+      {
+        "addrno": "445300",
+        "addrnm": "云浮市",
+        "children": [
+          {
+            "addrno": "445322",
+            "addrnm": "郁南县",
+            "children": [
+              { "addrno": "445322102", "addrnm": "桂圩镇" },
+              { "addrno": "445322101", "addrnm": "平台镇" },
+              { "addrno": "445322105", "addrnm": "建城镇" },
+              { "addrno": "445322104", "addrnm": "通门镇" },
+              { "addrno": "445322100", "addrnm": "都城镇" },
+              { "addrno": "445322106", "addrnm": "宝珠镇" },
+              { "addrno": "445322116", "addrnm": "历洞镇" },
+              { "addrno": "445322114", "addrnm": "东坝镇" },
+              { "addrno": "445322117", "addrnm": "南江口镇" },
+              { "addrno": "445322115", "addrnm": "连滩镇" },
+              { "addrno": "445322113", "addrnm": "宋桂镇" },
+              { "addrno": "445322110", "addrnm": "千官镇" },
+              { "addrno": "445322108", "addrnm": "大方镇" },
+              { "addrno": "445322112", "addrnm": "河口镇" },
+              { "addrno": "445322111", "addrnm": "大湾镇" }
+            ]
+          },
+          {
+            "addrno": "445321",
+            "addrnm": "新兴县",
+            "children": [
+              { "addrno": "445321114", "addrnm": "簕竹镇" },
+              { "addrno": "445321104", "addrnm": "稔村镇" },
+              { "addrno": "445321103", "addrnm": "水台镇" },
+              { "addrno": "445321107", "addrnm": "太平镇" },
+              { "addrno": "445321105", "addrnm": "东成镇" },
+              { "addrno": "445321101", "addrnm": "车岗镇" },
+              { "addrno": "445321100", "addrnm": "新城镇" },
+              { "addrno": "445321108", "addrnm": "里洞镇" },
+              { "addrno": "445321110", "addrnm": "大江镇" },
+              { "addrno": "445321115", "addrnm": "六祖镇" },
+              { "addrno": "445321113", "addrnm": "河头镇" },
+              { "addrno": "445321112", "addrnm": "天堂镇" }
+            ]
+          },
+          {
+            "addrno": "445302",
+            "addrnm": "云城区",
+            "children": [
+              { "addrno": "445302003", "addrnm": "河口街道" },
+              { "addrno": "445302002", "addrnm": "高峰街道" },
+              { "addrno": "445302004", "addrnm": "安塘街道" },
+              { "addrno": "445302001", "addrnm": "云城街道" },
+              { "addrno": "445302103", "addrnm": "思劳镇" },
+              { "addrno": "445302106", "addrnm": "南盛镇" },
+              { "addrno": "445302102", "addrnm": "腰古镇" },
+              { "addrno": "445302105", "addrnm": "前锋镇" }
+            ]
+          },
+          {
+            "addrno": "445381",
+            "addrnm": "罗定市",
+            "children": [
+              { "addrno": "445381106", "addrnm": "满塘镇" },
+              { "addrno": "445381114", "addrnm": "生江镇" },
+              { "addrno": "445381001", "addrnm": "罗城街道" },
+              { "addrno": "445381111", "addrnm": "榃滨镇" },
+              { "addrno": "445381118", "addrnm": "加益镇" },
+              { "addrno": "445381115", "addrnm": "连州镇" },
+              { "addrno": "445381113", "addrnm": "黎少镇" },
+              { "addrno": "445381119", "addrnm": "龙湾镇" },
+              { "addrno": "445381116", "addrnm": "泗纶镇" },
+              { "addrno": "445381100", "addrnm": "罗镜镇" },
+              { "addrno": "445381102", "addrnm": "分界镇" },
+              { "addrno": "445381101", "addrnm": "太平镇" },
+              { "addrno": "445381002", "addrnm": "素龙街道" },
+              { "addrno": "445381109", "addrnm": "围底镇" },
+              { "addrno": "445381003", "addrnm": "附城街道" },
+              { "addrno": "445381004", "addrnm": "双东街道" },
+              { "addrno": "445381110", "addrnm": "华石镇" },
+              { "addrno": "445381105", "addrnm": "船步镇" },
+              { "addrno": "445381104", "addrnm": "罗平镇" },
+              { "addrno": "445381107", "addrnm": "苹塘镇" },
+              { "addrno": "445381108", "addrnm": "金鸡镇" }
+            ]
+          },
+          {
+            "addrno": "445303",
+            "addrnm": "云安区",
+            "children": [
+              { "addrno": "445303108", "addrnm": "都杨镇" },
+              { "addrno": "445303107", "addrnm": "石城镇" },
+              { "addrno": "445303104", "addrnm": "富林镇" },
+              { "addrno": "445303101", "addrnm": "高村镇" },
+              { "addrno": "445303100", "addrnm": "六都镇" },
+              { "addrno": "445303103", "addrnm": "镇安镇" },
+              { "addrno": "445303102", "addrnm": "白石镇" }
+            ]
+          }
+        ]
+      },
+      {
+        "addrno": "441600",
+        "addrnm": "河源市",
+        "children": [
+          {
+            "addrno": "441624",
+            "addrnm": "和平县",
+            "children": [
+              { "addrno": "441624110", "addrnm": "彭寨镇" },
+              { "addrno": "441624108", "addrnm": "古寨镇" },
+              { "addrno": "441624112", "addrnm": "合水镇" },
+              { "addrno": "441624102", "addrnm": "大坝镇" },
+              { "addrno": "441624118", "addrnm": "礼士镇" },
+              { "addrno": "441624117", "addrnm": "东水镇" },
+              { "addrno": "441624100", "addrnm": "阳明镇" },
+              { "addrno": "441624103", "addrnm": "长塘镇" },
+              { "addrno": "441624119", "addrnm": "林寨镇" },
+              { "addrno": "441624107", "addrnm": "贝墩镇" },
+              { "addrno": "441624106", "addrnm": "优胜镇" },
+              { "addrno": "441624115", "addrnm": "浰源镇" },
+              { "addrno": "441624104", "addrnm": "下车镇" },
+              { "addrno": "441624114", "addrnm": "青州镇" },
+              { "addrno": "441624105", "addrnm": "上陵镇" },
+              { "addrno": "441624113", "addrnm": "公白镇" },
+              { "addrno": "441624116", "addrnm": "热水镇" }
+            ]
+          },
+          {
+            "addrno": "441625",
+            "addrnm": "东源县",
+            "children": [
+              { "addrno": "441625103", "addrnm": "船塘镇" },
+              { "addrno": "441625106", "addrnm": "曾田镇" },
+              { "addrno": "441625105", "addrnm": "上莞镇" },
+              { "addrno": "441625200", "addrnm": "漳溪畲族乡" },
+              { "addrno": "441625107", "addrnm": "柳城镇" },
+              { "addrno": "441625109", "addrnm": "蓝口镇" },
+              { "addrno": "441625111", "addrnm": "叶潭镇" },
+              { "addrno": "441625112", "addrnm": "黄村镇" },
+              { "addrno": "441625101", "addrnm": "灯塔镇" },
+              { "addrno": "441625110", "addrnm": "黄田镇" },
+              { "addrno": "441625113", "addrnm": "康禾镇" },
+              { "addrno": "441625115", "addrnm": "新港镇" },
+              { "addrno": "441625100", "addrnm": "仙塘镇" },
+              { "addrno": "441625108", "addrnm": "义合镇" },
+              { "addrno": "441625117", "addrnm": "涧头镇" },
+              { "addrno": "441625116", "addrnm": "双江镇" },
+              { "addrno": "441625102", "addrnm": "骆湖镇" },
+              { "addrno": "441625104", "addrnm": "顺天镇" },
+              { "addrno": "441625114", "addrnm": "锡场镇" },
+              { "addrno": "441625122", "addrnm": "半江镇" },
+              { "addrno": "441625121", "addrnm": "新回龙镇" }
+            ]
+          },
+          {
+            "addrno": "441602",
+            "addrnm": "源城区",
+            "children": [
+              { "addrno": "441602003", "addrnm": "东埔街道" },
+              { "addrno": "441602002", "addrnm": "新江街道" },
+              { "addrno": "441602005", "addrnm": "高埔岗街道" },
+              { "addrno": "441602004", "addrnm": "源西街道" },
+              { "addrno": "441602001", "addrnm": "上城街道" },
+              { "addrno": "441602100", "addrnm": "源南镇" },
+              { "addrno": "441602101", "addrnm": "埔前镇" }
+            ]
+          },
+          {
+            "addrno": "441622",
+            "addrnm": "龙川县",
+            "children": [
+              { "addrno": "441622124", "addrnm": "麻布岗镇" },
+              { "addrno": "441622123", "addrnm": "岩镇镇" },
+              { "addrno": "441622119", "addrnm": "逥龙镇" },
+              { "addrno": "441622126", "addrnm": "细坳镇" },
+              { "addrno": "441622125", "addrnm": "贝岭镇" },
+              { "addrno": "441622116", "addrnm": "黎咀镇" },
+              { "addrno": "441622121", "addrnm": "车田镇" },
+              { "addrno": "441622127", "addrnm": "上坪镇" },
+              { "addrno": "441622115", "addrnm": "田心镇" },
+              { "addrno": "441622112", "addrnm": "铁场镇" },
+              { "addrno": "441622120", "addrnm": "新田镇" },
+              { "addrno": "441622118", "addrnm": "赤光镇" },
+              { "addrno": "441622103", "addrnm": "佗城镇" },
+              { "addrno": "441622100", "addrnm": "老隆镇" },
+              { "addrno": "441622102", "addrnm": "义都镇" },
+              { "addrno": "441622109", "addrnm": "登云镇" },
+              { "addrno": "441622107", "addrnm": "通衢镇" },
+              { "addrno": "441622114", "addrnm": "龙母镇" },
+              { "addrno": "441622110", "addrnm": "丰稔镇" },
+              { "addrno": "441622105", "addrnm": "黄布镇" },
+              { "addrno": "441622117", "addrnm": "黄石镇" },
+              { "addrno": "441622111", "addrnm": "四都镇" },
+              { "addrno": "441622106", "addrnm": "紫市镇" },
+              { "addrno": "441622104", "addrnm": "鹤市镇" }
+            ]
+          },
+          {
+            "addrno": "441623",
+            "addrnm": "连平县",
+            "children": [
+              { "addrno": "441623100", "addrnm": "元善镇" },
+              { "addrno": "441623110", "addrnm": "忠信镇" },
+              { "addrno": "441623105", "addrnm": "溪山镇" },
+              { "addrno": "441623114", "addrnm": "三角镇" },
+              { "addrno": "441623113", "addrnm": "大湖镇" },
+              { "addrno": "441623108", "addrnm": "田源镇" },
+              { "addrno": "441623102", "addrnm": "内莞镇" },
+              { "addrno": "441623101", "addrnm": "上坪镇" },
+              { "addrno": "441623107", "addrnm": "隆街镇" },
+              { "addrno": "441623104", "addrnm": "陂头镇" },
+              { "addrno": "441623111", "addrnm": "高莞镇" },
+              { "addrno": "441623115", "addrnm": "绣缎镇" },
+              { "addrno": "441623109", "addrnm": "油溪镇" }
+            ]
+          },
+          {
+            "addrno": "441621",
+            "addrnm": "紫金县",
+            "children": [
+              { "addrno": "441621109", "addrnm": "临江镇" },
+              { "addrno": "441621108", "addrnm": "古竹镇" },
+              { "addrno": "441621110", "addrnm": "柏埔镇" },
+              { "addrno": "441621107", "addrnm": "义容镇" },
+              { "addrno": "441621106", "addrnm": "凤安镇" },
+              { "addrno": "441621119", "addrnm": "瓦溪镇" },
+              { "addrno": "441621105", "addrnm": "蓝塘镇" },
+              { "addrno": "441621103", "addrnm": "九和镇" },
+              { "addrno": "441621111", "addrnm": "黄塘镇" },
+              { "addrno": "441621100", "addrnm": "紫城镇" },
+              { "addrno": "441621114", "addrnm": "水墩镇" },
+              { "addrno": "441621112", "addrnm": "敬梓镇" },
+              { "addrno": "441621117", "addrnm": "苏区镇" },
+              { "addrno": "441621102", "addrnm": "龙窝镇" },
+              { "addrno": "441621122", "addrnm": "中坝镇" },
+              { "addrno": "441621116", "addrnm": "南岭镇" },
+              { "addrno": "441621120", "addrnm": "好义镇" },
+              { "addrno": "441621104", "addrnm": "上义镇" }
+            ]
+          }
+        ]
+      },
+      {
+        "addrno": "441300",
+        "addrnm": "惠州市",
+        "children": [
+          {
+            "addrno": "441303",
+            "addrnm": "惠阳区",
+            "children": [
+              { "addrno": "441303001", "addrnm": "淡水街道" },
+              { "addrno": "441303003", "addrnm": "三和街道" },
+              { "addrno": "441303002", "addrnm": "秋长街道" },
+              { "addrno": "441303007", "addrnm": "霞涌街道" },
+              { "addrno": "441303008", "addrnm": "西区街道" },
+              { "addrno": "441303006", "addrnm": "澳头街道" },
+              { "addrno": "441303110", "addrnm": "平潭镇" },
+              { "addrno": "441303109", "addrnm": "良井镇" },
+              { "addrno": "441303103", "addrnm": "新圩镇" },
+              { "addrno": "441303101", "addrnm": "沙田镇" },
+              { "addrno": "441303108", "addrnm": "永湖镇" },
+              { "addrno": "441303104", "addrnm": "镇隆镇" }
+            ]
+          },
+          {
+            "addrno": "441302",
+            "addrnm": "惠城区",
+            "children": [
+              { "addrno": "302010", "addrnm": "小金口街道" },
+              { "addrno": "441302008", "addrnm": "陈江街道" },
+              { "addrno": "441302004", "addrnm": "江北街道" },
+              { "addrno": "441302003", "addrnm": "江南街道" },
+              { "addrno": "441302006", "addrnm": "河南岸街道" },
+              { "addrno": "441302005", "addrnm": "龙丰街道" },
+              { "addrno": "441302002", "addrnm": "桥西街道" },
+              { "addrno": "441302001", "addrnm": "桥东街道" },
+              { "addrno": "441302107", "addrnm": "沥林镇" },
+              { "addrno": "441302007", "addrnm": "惠环街道" },
+              { "addrno": "441302106", "addrnm": "潼湖镇" },
+              { "addrno": "441302009", "addrnm": "水口街道" },
+              { "addrno": "441302114", "addrnm": "潼侨镇" },
+              { "addrno": "441302109", "addrnm": "马安镇" },
+              { "addrno": "441302402", "addrnm": "惠南高新科技产业园" },
+              { "addrno": "441302108", "addrnm": "马安镇" },
+              { "addrno": "441302103", "addrnm": "三栋镇" },
+              { "addrno": "441302113", "addrnm": "芦洲镇" },
+              { "addrno": "441302110", "addrnm": "横沥镇" },
+              { "addrno": "441302100", "addrnm": "汝湖镇" }
+            ]
+          },
+          {
+            "addrno": "441322",
+            "addrnm": "博罗县",
+            "children": [
+              { "addrno": "441322002", "addrnm": "龙溪街道" },
+              { "addrno": "441322001", "addrnm": "罗阳街道" },
+              { "addrno": "441322121", "addrnm": "石湾镇" },
+              { "addrno": "441322119", "addrnm": "园洲镇" },
+              { "addrno": "441322100", "addrnm": "石坝镇" },
+              { "addrno": "441322103", "addrnm": "观音阁镇" },
+              { "addrno": "441322102", "addrnm": "麻陂镇" },
+              { "addrno": "441322104", "addrnm": "公庄镇" },
+              { "addrno": "441322115", "addrnm": "长宁镇" },
+              { "addrno": "441322113", "addrnm": "湖镇镇" },
+              { "addrno": "441322117", "addrnm": "龙华镇" },
+              { "addrno": "441322116", "addrnm": "福田镇" },
+              { "addrno": "441322123", "addrnm": "横河镇" },
+              { "addrno": "441322105", "addrnm": "杨村镇" },
+              { "addrno": "441322122", "addrnm": "杨侨镇" },
+              { "addrno": "441322108", "addrnm": "泰美镇" },
+              { "addrno": "441322106", "addrnm": "柏塘镇" }
+            ]
+          },
+          {
+            "addrno": "441324",
+            "addrnm": "龙门县",
+            "children": [
+              { "addrno": "441324002", "addrnm": "平陵街道" },
+              { "addrno": "441324001", "addrnm": "龙城街道" },
+              { "addrno": "441324103", "addrnm": "龙华镇" },
+              { "addrno": "441324101", "addrnm": "永汉镇" },
+              { "addrno": "441324110", "addrnm": "地派镇" },
+              { "addrno": "441324105", "addrnm": "龙江镇" },
+              { "addrno": "441324100", "addrnm": "麻榨镇" },
+              { "addrno": "441324200", "addrnm": "蓝田瑶族乡" },
+              { "addrno": "441324109", "addrnm": "龙潭镇" },
+              { "addrno": "441324107", "addrnm": "龙田镇" }
+            ]
+          },
+          {
+            "addrno": "441323",
+            "addrnm": "惠东县",
+            "children": [
+              { "addrno": "441323002", "addrnm": "大岭街道" },
+              { "addrno": "441323001", "addrnm": "平山街道" },
+              { "addrno": "441323106", "addrnm": "平海镇" },
+              { "addrno": "441323105", "addrnm": "铁涌镇" },
+              { "addrno": "441323109", "addrnm": "吉隆镇" },
+              { "addrno": "441323124", "addrnm": "黄埠镇" },
+              { "addrno": "441323104", "addrnm": "稔山镇" },
+              { "addrno": "441323103", "addrnm": "梁化镇" },
+              { "addrno": "441323102", "addrnm": "白花镇" },
+              { "addrno": "441323118", "addrnm": "高潭镇" },
+              { "addrno": "441323113", "addrnm": "多祝镇" },
+              { "addrno": "441323120", "addrnm": "宝口镇" },
+              { "addrno": "441323115", "addrnm": "安墩镇" },
+              { "addrno": "441323121", "addrnm": "白盆珠镇" }
+            ]
+          }
+        ]
+      },
+      {
+        "addrno": "440800",
+        "addrnm": "湛江市",
+        "children": [
+          {
+            "addrno": "440881",
+            "addrnm": "廉江市",
+            "children": [
+              { "addrno": "440881001", "addrnm": "罗州街道" },
+              { "addrno": "440881003", "addrnm": "城南街道" },
+              { "addrno": "440881002", "addrnm": "城北街道" },
+              { "addrno": "440881102", "addrnm": "新民镇" },
+              { "addrno": "440881101", "addrnm": "石城镇" },
+              { "addrno": "440881106", "addrnm": "良垌镇" },
+              { "addrno": "440881119", "addrnm": "长山镇" },
+              { "addrno": "440881118", "addrnm": "石颈镇" },
+              { "addrno": "440881121", "addrnm": "和寮镇" },
+              { "addrno": "440881120", "addrnm": "塘蓬镇" },
+              { "addrno": "440881117", "addrnm": "雅塘镇" },
+              { "addrno": "440881104", "addrnm": "河唇镇" },
+              { "addrno": "440881105", "addrnm": "石角镇" },
+              { "addrno": "440881115", "addrnm": "石岭镇" },
+              { "addrno": "440881103", "addrnm": "吉水镇" },
+              { "addrno": "440881114", "addrnm": "高桥镇" },
+              { "addrno": "440881109", "addrnm": "横山镇" },
+              { "addrno": "440881112", "addrnm": "青平镇" },
+              { "addrno": "440881113", "addrnm": "车板镇" },
+              { "addrno": "440881110", "addrnm": "安铺镇" },
+              { "addrno": "440881111", "addrnm": "营仔镇" }
+            ]
+          },
+          {
+            "addrno": "440882",
+            "addrnm": "雷州市",
+            "children": [
+              { "addrno": "440882003", "addrnm": "西湖街道" },
+              { "addrno": "440882002", "addrnm": "新城街道" },
+              { "addrno": "440882001", "addrnm": "雷城街道" },
+              { "addrno": "440882114", "addrnm": "龙门镇" },
+              { "addrno": "440882109", "addrnm": "南兴镇" },
+              { "addrno": "440882118", "addrnm": "覃斗镇" },
+              { "addrno": "440882116", "addrnm": "北和镇" },
+              { "addrno": "440882110", "addrnm": "松竹镇" },
+              { "addrno": "440882106", "addrnm": "唐家镇" },
+              { "addrno": "440882105", "addrnm": "杨家镇" },
+              { "addrno": "440882108", "addrnm": "企水镇" },
+              { "addrno": "440882107", "addrnm": "纪家镇" },
+              { "addrno": "440882119", "addrnm": "乌石镇" },
+              { "addrno": "440882111", "addrnm": "调风镇" },
+              { "addrno": "440882115", "addrnm": "英利镇" },
+              { "addrno": "440882113", "addrnm": "东里镇" },
+              { "addrno": "440882112", "addrnm": "雷高镇" },
+              { "addrno": "440882102", "addrnm": "白沙镇" },
+              { "addrno": "440882101", "addrnm": "附城镇" },
+              { "addrno": "440882104", "addrnm": "客路镇" },
+              { "addrno": "440882103", "addrnm": "沈塘镇" }
+            ]
+          },
+          {
+            "addrno": "440883",
+            "addrnm": "吴川市",
+            "children": [
+              { "addrno": "440883107", "addrnm": "塘镇" },
+              { "addrno": "440883001", "addrnm": "梅菉街道" },
+              { "addrno": "440883109", "addrnm": "黄坡镇" },
+              { "addrno": "440883104", "addrnm": "振文镇" },
+              { "addrno": "440883106", "addrnm": "吴阳镇" },
+              { "addrno": "440883002", "addrnm": "塘尾街道" },
+              { "addrno": "440883105", "addrnm": "樟铺镇" },
+              { "addrno": "440883003", "addrnm": "大山江街道" },
+              { "addrno": "440883005", "addrnm": "海滨街道" },
+              { "addrno": "440883103", "addrnm": "王村港镇" },
+              { "addrno": "440883102", "addrnm": "覃巴镇" },
+              { "addrno": "440883100", "addrnm": "浅水镇" },
+              { "addrno": "440883101", "addrnm": "长岐镇" },
+              { "addrno": "440883111", "addrnm": "兰石镇" },
+              { "addrno": "440883004", "addrnm": "博铺街道" }
+            ]
+          },
+          {
+            "addrno": "440803",
+            "addrnm": "霞山区",
+            "children": [
+              { "addrno": "440803005", "addrnm": "新兴街道" },
+              { "addrno": "440803004", "addrnm": "友谊街道" },
+              { "addrno": "440803009", "addrnm": "建设街道" },
+              { "addrno": "440803006", "addrnm": "海滨街道" },
+              { "addrno": "440803003", "addrnm": "工农街道" },
+              { "addrno": "440803002", "addrnm": "爱国街道" },
+              { "addrno": "440803001", "addrnm": "解放街道" },
+              { "addrno": "440803011", "addrnm": "新园街道" },
+              { "addrno": "440803010", "addrnm": "东新街道" },
+              { "addrno": "440803012", "addrnm": "海头街道" }
+            ]
+          },
+          {
+            "addrno": "440804",
+            "addrnm": "坡头区",
+            "children": [
+              { "addrno": "440804002", "addrnm": "麻斜街道" },
+              { "addrno": "440804001", "addrnm": "南调街道" },
+              { "addrno": "440804104", "addrnm": "官渡镇" },
+              { "addrno": "440804101", "addrnm": "坡头镇" },
+              { "addrno": "440804103", "addrnm": "龙头镇" },
+              { "addrno": "440804100", "addrnm": "南三镇" },
+              { "addrno": "440804102", "addrnm": "乾塘镇" }
+            ]
+          },
+          {
+            "addrno": "440825",
+            "addrnm": "徐闻县",
+            "children": [
+              { "addrno": "440825001", "addrnm": "徐城街道" },
+              { "addrno": "440825107", "addrnm": "下桥镇" },
+              { "addrno": "440825204", "addrnm": "角尾乡" },
+              { "addrno": "440825104", "addrnm": "曲界镇" },
+              { "addrno": "440825110", "addrnm": "锦和镇" },
+              { "addrno": "440825102", "addrnm": "迈陈镇" },
+              { "addrno": "440825201", "addrnm": "城北乡" },
+              { "addrno": "440825105", "addrnm": "前山镇" },
+              { "addrno": "440825113", "addrnm": "南山镇" },
+              { "addrno": "440825109", "addrnm": "下洋镇" },
+              { "addrno": "440825106", "addrnm": "西连镇" },
+              { "addrno": "440825112", "addrnm": "新寮镇" },
+              { "addrno": "440825108", "addrnm": "龙塘镇" },
+              { "addrno": "440825103", "addrnm": "海安镇" },
+              { "addrno": "440825111", "addrnm": "和安镇" }
+            ]
+          },
+          {
+            "addrno": "440811",
+            "addrnm": "麻章区",
+            "children": [
+              { "addrno": "440811101", "addrnm": "太平镇" },
+              { "addrno": "440811102", "addrnm": "湖光镇" },
+              { "addrno": "440811100", "addrnm": "麻章镇" }
+            ]
+          },
+          {
+            "addrno": "440823",
+            "addrnm": "遂溪县",
+            "children": [
+              { "addrno": "440823104", "addrnm": "界炮镇" },
+              { "addrno": "440823106", "addrnm": "杨柑镇" },
+              { "addrno": "440823107", "addrnm": "城月镇" },
+              { "addrno": "440823101", "addrnm": "黄略镇" },
+              { "addrno": "440823100", "addrnm": "遂城镇" },
+              { "addrno": "440823110", "addrnm": "岭北镇" },
+              { "addrno": "440823111", "addrnm": "北坡镇" },
+              { "addrno": "440823116", "addrnm": "乐民镇" },
+              { "addrno": "440823113", "addrnm": "草潭镇" },
+              { "addrno": "440823112", "addrnm": "港门镇" },
+              { "addrno": "440823117", "addrnm": "江洪镇" },
+              { "addrno": "440823102", "addrnm": "洋青镇" },
+              { "addrno": "440823109", "addrnm": "建新镇" },
+              { "addrno": "440823115", "addrnm": "河头镇" },
+              { "addrno": "440823108", "addrnm": "乌塘镇" }
+            ]
+          },
+          {
+            "addrno": "440802",
+            "addrnm": "赤坎区",
+            "children": [
+              { "addrno": "440802008", "addrnm": "北桥街道" },
+              { "addrno": "440802007", "addrnm": "南桥街道" },
+              { "addrno": "440802004", "addrnm": "中山街道" },
+              { "addrno": "440802003", "addrnm": "民主街道" },
+              { "addrno": "440802006", "addrnm": "沙湾街道" },
+              { "addrno": "440802005", "addrnm": "调顺街道" },
+              { "addrno": "440802002", "addrnm": "寸金街道" },
+              { "addrno": "440802001", "addrnm": "中华街道" }
+            ]
+          }
+        ]
+      },
+      {
+        "addrno": "440700",
+        "addrnm": "江门市",
+        "children": [
+          {
+            "addrno": "440785",
+            "addrnm": "恩平市",
+            "children": [
+              { "addrno": "440785108", "addrnm": "大槐镇" },
+              { "addrno": "440785107", "addrnm": "那吉镇" },
+              { "addrno": "440785103", "addrnm": "沙湖镇" },
+              { "addrno": "440785104", "addrnm": "牛江镇" },
+              { "addrno": "440785001", "addrnm": "恩城街道" },
+              { "addrno": "440785105", "addrnm": "君堂镇" },
+              { "addrno": "440785106", "addrnm": "大田镇" },
+              { "addrno": "440785109", "addrnm": "东成镇" },
+              { "addrno": "440785100", "addrnm": "横陂镇" },
+              { "addrno": "440785101", "addrnm": "圣堂镇" },
+              { "addrno": "440785102", "addrnm": "良西镇" }
+            ]
+          },
+          {
+            "addrno": "440784",
+            "addrnm": "鹤山市",
+            "children": [
+              { "addrno": "440784108", "addrnm": "宅梧镇" },
+              { "addrno": "440784107", "addrnm": "址山镇" },
+              { "addrno": "440784110", "addrnm": "双合镇" },
+              { "addrno": "440784105", "addrnm": "鹤城镇" },
+              { "addrno": "440784101", "addrnm": "龙口镇" },
+              { "addrno": "440784103", "addrnm": "古劳镇" },
+              { "addrno": "440784106", "addrnm": "共和镇" },
+              { "addrno": "440784104", "addrnm": "桃源镇" },
+              { "addrno": "440784102", "addrnm": "雅瑶镇" },
+              { "addrno": "440784001", "addrnm": "沙坪街道" }
+            ]
+          },
+          {
+            "addrno": "440781",
+            "addrnm": "台山市",
+            "children": [
+              { "addrno": "440781001", "addrnm": "台城街道" },
+              { "addrno": "440781108", "addrnm": "斗山镇" },
+              { "addrno": "440781107", "addrnm": "冲蒌镇" },
+              { "addrno": "440781120", "addrnm": "川岛镇" },
+              { "addrno": "440781109", "addrnm": "都斛镇" },
+              { "addrno": "440781105", "addrnm": "白沙镇" },
+              { "addrno": "440781110", "addrnm": "赤溪镇" },
+              { "addrno": "440781115", "addrnm": "深井镇" },
+              { "addrno": "440781102", "addrnm": "水步镇" },
+              { "addrno": "440781101", "addrnm": "大江镇" },
+              { "addrno": "440781103", "addrnm": "四九镇" },
+              { "addrno": "440781106", "addrnm": "三合镇" },
+              { "addrno": "440781111", "addrnm": "端芬镇" },
+              { "addrno": "440781114", "addrnm": "汶村镇" },
+              { "addrno": "440781117", "addrnm": "北陡镇" },
+              { "addrno": "440781112", "addrnm": "广海镇" },
+              { "addrno": "440781113", "addrnm": "海宴镇" }
+            ]
+          },
+          {
+            "addrno": "440783",
+            "addrnm": "开平市",
+            "children": [
+              { "addrno": "440783001", "addrnm": "三埠街道" },
+              { "addrno": "440783002", "addrnm": "长沙街道" },
+              { "addrno": "440783104", "addrnm": "苍城镇" },
+              { "addrno": "440783111", "addrnm": "蚬冈镇" },
+              { "addrno": "440783107", "addrnm": "马冈镇" },
+              { "addrno": "440783112", "addrnm": "金鸡镇" },
+              { "addrno": "440783113", "addrnm": "赤水镇" },
+              { "addrno": "440783101", "addrnm": "月山镇" },
+              { "addrno": "440783108", "addrnm": "塘口镇" },
+              { "addrno": "440783110", "addrnm": "百合镇" },
+              { "addrno": "440783106", "addrnm": "大沙镇" },
+              { "addrno": "440783103", "addrnm": "沙塘镇" },
+              { "addrno": "440783109", "addrnm": "赤坎镇" },
+              { "addrno": "440783105", "addrnm": "龙胜镇" },
+              { "addrno": "440783102", "addrnm": "水口镇" }
+            ]
+          },
+          {
+            "addrno": "440703",
+            "addrnm": "蓬江区",
+            "children": [
+              { "addrno": "440703002", "addrnm": "白沙街道" },
+              { "addrno": "440703006", "addrnm": "环市街道" },
+              { "addrno": "440703005", "addrnm": "潮连街道" },
+              { "addrno": "440703102", "addrnm": "杜阮镇" },
+              { "addrno": "440703101", "addrnm": "荷塘镇" },
+              { "addrno": "440703103", "addrnm": "棠下镇" }
+            ]
+          },
+          {
+            "addrno": "440704",
+            "addrnm": "江海区",
+            "children": [
+              { "addrno": "440704001", "addrnm": "江南街道" },
+              { "addrno": "440704004", "addrnm": "外海街道" },
+              { "addrno": "440704005", "addrnm": "礼乐街道" }
+            ]
+          },
+          {
+            "addrno": "440705",
+            "addrnm": "新会区",
+            "children": [
+              { "addrno": "440705114", "addrnm": "大鳌镇" },
+              { "addrno": "440705113", "addrnm": "睦洲镇" },
+              { "addrno": "440705112", "addrnm": "三江镇" },
+              { "addrno": "440705121", "addrnm": "崖门镇" },
+              { "addrno": "440705120", "addrnm": "双水镇" },
+              { "addrno": "440705111", "addrnm": "古井镇" },
+              { "addrno": "440705110", "addrnm": "沙堆镇" },
+              { "addrno": "440705101", "addrnm": "大泽镇" },
+              { "addrno": "440705001", "addrnm": "会城街道" },
+              { "addrno": "440705119", "addrnm": "罗坑镇" },
+              { "addrno": "440705103", "addrnm": "司前镇" }
+            ]
+          }
+        ]
+      },
+      {
+        "addrno": "441200",
+        "addrnm": "肇庆市",
+        "children": [
+          {
+            "addrno": "441204",
+            "addrnm": "高要区",
+            "children": [
+              { "addrno": "441204114", "addrnm": "金利镇" },
+              { "addrno": "441204111", "addrnm": "回龙镇" },
+              { "addrno": "441204112", "addrnm": "白土镇" },
+              { "addrno": "441204115", "addrnm": "蚬岗镇" },
+              { "addrno": "441204110", "addrnm": "蛟塘镇" },
+              { "addrno": "441204101", "addrnm": "乐城镇" },
+              { "addrno": "441204100", "addrnm": "河台镇" },
+              { "addrno": "441204102", "addrnm": "水南镇" },
+              { "addrno": "441204108", "addrnm": "莲塘镇" },
+              { "addrno": "441204109", "addrnm": "活道镇" },
+              { "addrno": "441204113", "addrnm": "金渡镇" },
+              { "addrno": "441204001", "addrnm": "南岸街道" },
+              { "addrno": "441204106", "addrnm": "新桥镇" },
+              { "addrno": "441204104", "addrnm": "小湘镇" },
+              { "addrno": "441204103", "addrnm": "禄步镇" },
+              { "addrno": "441204107", "addrnm": "白诸镇" },
+              { "addrno": "441204105", "addrnm": "大湾镇" }
+            ]
+          },
+          {
+            "addrno": "441284",
+            "addrnm": "四会市",
+            "children": [
+              { "addrno": "441284003", "addrnm": "贞山街道" },
+              { "addrno": "441284002", "addrnm": "东城街道" },
+              { "addrno": "441284102", "addrnm": "威整镇" },
+              { "addrno": "441284001", "addrnm": "城中街道" },
+              { "addrno": "441284113", "addrnm": "下茆镇" },
+              { "addrno": "441284100", "addrnm": "龙甫镇" },
+              { "addrno": "441284101", "addrnm": "地豆镇" },
+              { "addrno": "441284110", "addrnm": "江谷镇" },
+              { "addrno": "441284103", "addrnm": "罗源镇" },
+              { "addrno": "441284105", "addrnm": "大沙镇" },
+              { "addrno": "441284104", "addrnm": "迳口镇" },
+              { "addrno": "441284107", "addrnm": "石狗镇" },
+              { "addrno": "441284108", "addrnm": "黄田镇" }
+            ]
+          },
+          {
+            "addrno": "441223",
+            "addrnm": "广宁县",
+            "children": [
+              { "addrno": "441223001", "addrnm": "南街街道" },
+              { "addrno": "441223100", "addrnm": "排沙镇" },
+              { "addrno": "441223103", "addrnm": "江屯镇" },
+              { "addrno": "441223102", "addrnm": "潭布镇" },
+              { "addrno": "441223106", "addrnm": "北市镇" },
+              { "addrno": "441223112", "addrnm": "横山镇" },
+              { "addrno": "441223111", "addrnm": "五和镇" },
+              { "addrno": "441223116", "addrnm": "洲仔镇" },
+              { "addrno": "441223115", "addrnm": "古水镇" },
+              { "addrno": "441223110", "addrnm": "宾亨镇" },
+              { "addrno": "441223107", "addrnm": "坑口镇" },
+              { "addrno": "441223108", "addrnm": "赤坑镇" },
+              { "addrno": "441223109", "addrnm": "南街镇" },
+              { "addrno": "441223105", "addrnm": "螺岗镇" },
+              { "addrno": "441223113", "addrnm": "木格镇" },
+              { "addrno": "441223114", "addrnm": "石咀镇" }
+            ]
+          },
+          {
+            "addrno": "441225",
+            "addrnm": "封开县",
+            "children": [
+              { "addrno": "441225001", "addrnm": "江口街道" },
+              { "addrno": "441225108", "addrnm": "罗董镇" },
+              { "addrno": "441225107", "addrnm": "杏花镇" },
+              { "addrno": "441225102", "addrnm": "白垢镇" },
+              { "addrno": "441225109", "addrnm": "长岗镇" },
+              { "addrno": "441225104", "addrnm": "渔涝镇" },
+              { "addrno": "441225115", "addrnm": "长安镇" },
+              { "addrno": "441225114", "addrnm": "金装镇" },
+              { "addrno": "441225105", "addrnm": "河儿口镇" },
+              { "addrno": "441225106", "addrnm": "莲都镇" },
+              { "addrno": "441225110", "addrnm": "平凤镇" },
+              { "addrno": "441225112", "addrnm": "大玉口镇" },
+              { "addrno": "441225100", "addrnm": "江口镇" },
+              { "addrno": "441225101", "addrnm": "江川镇" },
+              { "addrno": "441225113", "addrnm": "都平镇" },
+              { "addrno": "441225103", "addrnm": "大洲镇" },
+              { "addrno": "441225111", "addrnm": "南丰镇" }
+            ]
+          },
+          {
+            "addrno": "441224",
+            "addrnm": "怀集县",
+            "children": [
+              { "addrno": "441224112", "addrnm": "蓝钟镇" },
+              { "addrno": "441224200", "addrnm": "下帅壮族瑶族乡" },
+              { "addrno": "441224002", "addrnm": "幸福街道" },
+              { "addrno": "441224001", "addrnm": "怀城街道" },
+              { "addrno": "441224102", "addrnm": "坳仔镇" },
+              { "addrno": "441224109", "addrnm": "岗坪镇" },
+              { "addrno": "441224107", "addrnm": "梁村镇" },
+              { "addrno": "441224103", "addrnm": "汶朗镇" },
+              { "addrno": "441224104", "addrnm": "甘洒镇" },
+              { "addrno": "441224100", "addrnm": "怀城镇" },
+              { "addrno": "441224105", "addrnm": "凤岗镇" },
+              { "addrno": "441224106", "addrnm": "洽水镇" },
+              { "addrno": "441224108", "addrnm": "大岗镇" },
+              { "addrno": "441224116", "addrnm": "中洲镇" },
+              { "addrno": "441224110", "addrnm": "冷坑镇" },
+              { "addrno": "441224118", "addrnm": "连麦镇" },
+              { "addrno": "441224111", "addrnm": "马宁镇" },
+              { "addrno": "441224114", "addrnm": "诗洞镇" },
+              { "addrno": "441224115", "addrnm": "桥头镇" },
+              { "addrno": "441224101", "addrnm": "闸岗镇" },
+              { "addrno": "441224113", "addrnm": "永固镇" }
+            ]
+          },
+          {
+            "addrno": "441226",
+            "addrnm": "德庆县",
+            "children": [
+              { "addrno": "441226001", "addrnm": "德城街道" },
+              { "addrno": "441226102", "addrnm": "回龙镇" },
+              { "addrno": "441226101", "addrnm": "新圩镇" },
+              { "addrno": "441226105", "addrnm": "马圩镇" },
+              { "addrno": "441226103", "addrnm": "官圩镇" },
+              { "addrno": "441226106", "addrnm": "高良镇" },
+              { "addrno": "441226114", "addrnm": "九市镇" },
+              { "addrno": "441226113", "addrnm": "悦城镇" },
+              { "addrno": "441226112", "addrnm": "凤村镇" },
+              { "addrno": "441226109", "addrnm": "永丰镇" },
+              { "addrno": "441226107", "addrnm": "莫村镇" },
+              { "addrno": "441226111", "addrnm": "播植镇" },
+              { "addrno": "441226110", "addrnm": "武垄镇" }
+            ]
+          },
+          {
+            "addrno": "441203",
+            "addrnm": "鼎湖区",
+            "children": [
+              { "addrno": "441203002", "addrnm": "桂城街道" },
+              { "addrno": "441203001", "addrnm": "坑口街道" },
+              { "addrno": "441203003", "addrnm": "广利街道" },
+              { "addrno": "441203103", "addrnm": "凤凰镇" },
+              { "addrno": "441203102", "addrnm": "沙浦镇" },
+              { "addrno": "441203104", "addrnm": "莲花镇" },
+              { "addrno": "441203101", "addrnm": "永安镇" }
+            ]
+          },
+          {
+            "addrno": "441202",
+            "addrnm": "端州区",
+            "children": [
+              { "addrno": "441202003", "addrnm": "城西街道" },
+              { "addrno": "441202001", "addrnm": "城东街道" },
+              { "addrno": "441202006", "addrnm": "睦岗街道" },
+              { "addrno": "441202005", "addrnm": "黄岗街道" }
+            ]
+          }
+        ]
+      },
+      {
+        "addrno": "440900",
+        "addrnm": "茂名市",
+        "children": [
+          {
+            "addrno": "440981",
+            "addrnm": "高州市",
+            "children": [
+              { "addrno": "440981002", "addrnm": "石仔岭街道" },
+              { "addrno": "440981106", "addrnm": "石鼓镇" },
+              { "addrno": "440981006", "addrnm": "金山街道" },
+              { "addrno": "440981003", "addrnm": "山美街道" },
+              { "addrno": "440981008", "addrnm": "潘州街道" },
+              { "addrno": "440981007", "addrnm": "宝光街道" },
+              { "addrno": "440981116", "addrnm": "潭头镇" },
+              { "addrno": "440981110", "addrnm": "南塘镇" },
+              { "addrno": "440981113", "addrnm": "东岸镇" },
+              { "addrno": "440981115", "addrnm": "大井镇" },
+              { "addrno": "440981112", "addrnm": "石板镇" },
+              { "addrno": "440981109", "addrnm": "沙田镇" },
+              { "addrno": "440981107", "addrnm": "镇江镇" },
+              { "addrno": "440981111", "addrnm": "荷花镇" },
+              { "addrno": "440981126", "addrnm": "荷塘镇" },
+              { "addrno": "440981122", "addrnm": "马贵镇" },
+              { "addrno": "440981124", "addrnm": "曹江镇" },
+              { "addrno": "440981119", "addrnm": "大坡镇" },
+              { "addrno": "440981121", "addrnm": "深镇镇" },
+              { "addrno": "440981123", "addrnm": "古丁镇" },
+              { "addrno": "440981117", "addrnm": "长坡镇" },
+              { "addrno": "440981120", "addrnm": "平山镇" },
+              { "addrno": "440981104", "addrnm": "根子镇" },
+              { "addrno": "440981100", "addrnm": "谢鸡镇" },
+              { "addrno": "440981105", "addrnm": "泗水镇" },
+              { "addrno": "440981103", "addrnm": "分界镇" },
+              { "addrno": "440981101", "addrnm": "新垌镇" },
+              { "addrno": "440981102", "addrnm": "云潭镇" }
+            ]
+          },
+          {
+            "addrno": "440982",
+            "addrnm": "化州市",
+            "children": [
+              { "addrno": "440982006", "addrnm": "鉴江街道" },
+              { "addrno": "440982112", "addrnm": "合江镇" },
+              { "addrno": "440982118", "addrnm": "江湖镇" },
+              { "addrno": "440982114", "addrnm": "播扬镇" },
+              { "addrno": "440982113", "addrnm": "那务镇" },
+              { "addrno": "440982110", "addrnm": "林尘镇" },
+              { "addrno": "440982101", "addrnm": "同庆镇" },
+              { "addrno": "440982100", "addrnm": "长岐镇" },
+              { "addrno": "440982106", "addrnm": "丽岗镇" },
+              { "addrno": "440982004", "addrnm": "南盛街道" },
+              { "addrno": "440982115", "addrnm": "宝圩镇" },
+              { "addrno": "440982111", "addrnm": "中垌镇" },
+              { "addrno": "440982107", "addrnm": "新安镇" },
+              { "addrno": "440982117", "addrnm": "文楼镇" },
+              { "addrno": "440982116", "addrnm": "平定镇" },
+              { "addrno": "440982108", "addrnm": "官桥镇" },
+              { "addrno": "440982103", "addrnm": "良光镇" },
+              { "addrno": "440982102", "addrnm": "杨梅镇" },
+              { "addrno": "440982005", "addrnm": "石湾街道" },
+              { "addrno": "440982104", "addrnm": "笪桥镇" },
+              { "addrno": "440982002", "addrnm": "东山街道" },
+              { "addrno": "440982003", "addrnm": "下郭街道" },
+              { "addrno": "440982001", "addrnm": "河西街道" }
+            ]
+          },
+          {
+            "addrno": "440904",
+            "addrnm": "电白区",
+            "children": [
+              { "addrno": "440904004", "addrnm": "电海街道" },
+              { "addrno": "440904002", "addrnm": "高地街道" },
+              { "addrno": "440904005", "addrnm": "陈村街道" },
+              { "addrno": "440904001", "addrnm": "南海街道" },
+              { "addrno": "440904116", "addrnm": "那霍镇" },
+              { "addrno": "440904115", "addrnm": "罗坑镇" },
+              { "addrno": "440904110", "addrnm": "霞洞镇" },
+              { "addrno": "440904113", "addrnm": "黄岭镇" },
+              { "addrno": "440904112", "addrnm": "沙琅镇" },
+              { "addrno": "440904108", "addrnm": "旦场镇" },
+              { "addrno": "440904107", "addrnm": "麻岗镇" },
+              { "addrno": "440904111", "addrnm": "观珠镇" },
+              { "addrno": "440904109", "addrnm": "林头镇" },
+              { "addrno": "440904117", "addrnm": "水东镇" },
+              { "addrno": "440904102", "addrnm": "小良镇" },
+              { "addrno": "440904101", "addrnm": "坡心镇" },
+              { "addrno": "440904103", "addrnm": "沙院镇" },
+              { "addrno": "440904104", "addrnm": "马踏镇" },
+              { "addrno": "440904114", "addrnm": "望夫镇" },
+              { "addrno": "440904106", "addrnm": "树仔镇" },
+              { "addrno": "440904105", "addrnm": "岭门镇" }
+            ]
+          },
+          {
+            "addrno": "440983",
+            "addrnm": "信宜市",
+            "children": [
+              { "addrno": "440983001", "addrnm": "东镇街道" },
+              { "addrno": "440983101", "addrnm": "镇隆镇" },
+              { "addrno": "440983103", "addrnm": "北界镇" },
+              { "addrno": "440983122", "addrnm": "思贺镇" },
+              { "addrno": "440983113", "addrnm": "怀乡镇" },
+              { "addrno": "440983107", "addrnm": "金垌镇" },
+              { "addrno": "440983121", "addrnm": "平塘镇" },
+              { "addrno": "440983106", "addrnm": "池洞镇" },
+              { "addrno": "440983102", "addrnm": "水口镇" },
+              { "addrno": "440983112", "addrnm": "贵子镇" },
+              { "addrno": "440983109", "addrnm": "朱砂镇" },
+              { "addrno": "440983115", "addrnm": "洪冠镇" },
+              { "addrno": "440983120", "addrnm": "新宝镇" },
+              { "addrno": "440983119", "addrnm": "合水镇" },
+              { "addrno": "440983118", "addrnm": "钱排镇" },
+              { "addrno": "440983105", "addrnm": "丁堡镇" },
+              { "addrno": "440983114", "addrnm": "茶山镇" },
+              { "addrno": "440983117", "addrnm": "大成镇" },
+              { "addrno": "440983116", "addrnm": "白石镇" }
+            ]
+          },
+          {
+            "addrno": "440902",
+            "addrnm": "茂南区",
+            "children": [
+              { "addrno": "440902003", "addrnm": "河东街道" },
+              { "addrno": "440902002", "addrnm": "河西街道" },
+              { "addrno": "440902005", "addrnm": "新华街道" },
+              { "addrno": "440902004", "addrnm": "露天矿街道" },
+              { "addrno": "440902001", "addrnm": "红旗街道" },
+              { "addrno": "440902007", "addrnm": "站前街道" },
+              { "addrno": "440902006", "addrnm": "官渡街道" },
+              { "addrno": "440902108", "addrnm": "羊角镇" },
+              { "addrno": "440902008", "addrnm": "城南街道" },
+              { "addrno": "440902106", "addrnm": "高山镇" },
+              { "addrno": "440902102", "addrnm": "新坡镇" },
+              { "addrno": "440902105", "addrnm": "袂花镇" },
+              { "addrno": "440902107", "addrnm": "山阁镇" },
+              { "addrno": "440902101", "addrnm": "公馆镇" },
+              { "addrno": "440902103", "addrnm": "镇盛镇" },
+              { "addrno": "440902100", "addrnm": "金塘镇" },
+              { "addrno": "440902104", "addrnm": "鳌头镇" }
+            ]
+          }
+        ]
+      },
+      {
+        "addrno": "445100",
+        "addrnm": "潮州市",
+        "children": [
+          {
+            "addrno": "445103",
+            "addrnm": "潮安区",
+            "children": [
+              { "addrno": "445103115", "addrnm": "枫溪镇" },
+              { "addrno": "445103113", "addrnm": "凤凰镇" },
+              { "addrno": "445103111", "addrnm": "归湖镇" },
+              { "addrno": "445103101", "addrnm": "登塘镇" },
+              { "addrno": "445103100", "addrnm": "古巷镇" },
+              { "addrno": "445103104", "addrnm": "龙湖镇" },
+              { "addrno": "445103108", "addrnm": "东凤镇" },
+              { "addrno": "445103102", "addrnm": "凤塘镇" },
+              { "addrno": "445103105", "addrnm": "金石镇" },
+              { "addrno": "445103107", "addrnm": "彩塘镇" },
+              { "addrno": "445103103", "addrnm": "浮洋镇" },
+              { "addrno": "445103106", "addrnm": "沙溪镇" },
+              { "addrno": "445103110", "addrnm": "江东镇" },
+              { "addrno": "445103114", "addrnm": "赤凤镇" },
+              { "addrno": "445103112", "addrnm": "文祠镇" },
+              { "addrno": "445103109", "addrnm": "庵埠镇" }
+            ]
+          },
+          {
+            "addrno": "445102",
+            "addrnm": "湘桥区",
+            "children": [
+              { "addrno": "445102003", "addrnm": "金山街道" },
+              { "addrno": "445102001", "addrnm": "湘桥街道" },
+              { "addrno": "445102005", "addrnm": "南春街道" },
+              { "addrno": "445102004", "addrnm": "太平街道" },
+              { "addrno": "445102006", "addrnm": "西新街道" },
+              { "addrno": "445102102", "addrnm": "官塘镇" },
+              { "addrno": "445102101", "addrnm": "磷溪镇" },
+              { "addrno": "445102103", "addrnm": "铁铺镇" },
+              { "addrno": "445102002", "addrnm": "西湖街道" },
+              { "addrno": "445102009", "addrnm": "凤新街道" },
+              { "addrno": "445102008", "addrnm": "城西街道" },
+              { "addrno": "445102100", "addrnm": "意溪镇" },
+              { "addrno": "445102007", "addrnm": "桥东街道" }
+            ]
+          },
+          {
+            "addrno": "445122",
+            "addrnm": "饶平县",
+            "children": [
+              { "addrno": "445122102", "addrnm": "上饶镇" },
+              { "addrno": "445122107", "addrnm": "三饶镇" },
+              { "addrno": "445122104", "addrnm": "新丰镇" },
+              { "addrno": "445122123", "addrnm": "汫洲镇" },
+              { "addrno": "445122114", "addrnm": "新圩镇" },
+              { "addrno": "445122110", "addrnm": "浮滨镇" },
+              { "addrno": "445122119", "addrnm": "联饶镇" },
+              { "addrno": "445122117", "addrnm": "钱东镇" },
+              { "addrno": "445122112", "addrnm": "浮山镇" },
+              { "addrno": "445122109", "addrnm": "汤溪镇" },
+              { "addrno": "445122116", "addrnm": "樟溪镇" },
+              { "addrno": "445122113", "addrnm": "东山镇" },
+              { "addrno": "445122108", "addrnm": "新塘镇" },
+              { "addrno": "445122106", "addrnm": "建饶镇" },
+              { "addrno": "445122103", "addrnm": "饶洋镇" },
+              { "addrno": "445122118", "addrnm": "高堂镇" },
+              { "addrno": "445122122", "addrnm": "柘林镇" },
+              { "addrno": "445122100", "addrnm": "黄冈镇" },
+              { "addrno": "445122124", "addrnm": "海山镇" },
+              { "addrno": "445122120", "addrnm": "所城镇" },
+              { "addrno": "445122121", "addrnm": "大埕镇" }
+            ]
+          }
+        ]
+      },
+      {
+        "addrno": "442000",
+        "addrnm": "中山市",
+        "children": [
+          { "addrno": "442091005", "addrnm": "南区街道" },
+          { "addrno": "442091004", "addrnm": "西区街道" },
+          { "addrno": "442091006", "addrnm": "五桂山街道" },
+          { "addrno": "442091101", "addrnm": "黄圃镇" },
+          { "addrno": "442091100", "addrnm": "小榄镇" },
+          { "addrno": "442091001", "addrnm": "石岐街道" },
+          { "addrno": "442091003", "addrnm": "中山港街道" },
+          { "addrno": "442091002", "addrnm": "东区街道" },
+          { "addrno": "442091102", "addrnm": "民众镇" },
+          { "addrno": "442091109", "addrnm": "三角镇" },
+          { "addrno": "442091108", "addrnm": "港口镇" },
+          { "addrno": "442091110", "addrnm": "横栏镇" },
+          { "addrno": "442091112", "addrnm": "阜沙镇" },
+          { "addrno": "442091111", "addrnm": "南头镇" },
+          { "addrno": "442091104", "addrnm": "东升镇" },
+          { "addrno": "442091103", "addrnm": "东凤镇" },
+          { "addrno": "442091105", "addrnm": "古镇镇" },
+          { "addrno": "442091107", "addrnm": "坦洲镇" },
+          { "addrno": "442091106", "addrnm": "沙溪镇" },
+          { "addrno": "442091113", "addrnm": "南朗镇" },
+          { "addrno": "442091115", "addrnm": "板芙镇" },
+          { "addrno": "442091114", "addrnm": "三乡镇" },
+          { "addrno": "442091116", "addrnm": "大涌镇" },
+          { "addrno": "442091117", "addrnm": "神湾镇" },
+          { "addrno": "442091000", "addrnm": "中山市市辖区" },
+          { "addrno": "442091007", "addrnm": "民众街道" },
+          { "addrno": "442091008", "addrnm": "南朗街道" }
+        ]
+      },
+      {
+        "addrno": "441900",
+        "addrnm": "东莞市",
+        "children": [
+          { "addrno": "441991129", "addrnm": "高埗镇" },
+          { "addrno": "441991128", "addrnm": "中堂镇" },
+          { "addrno": "441991127", "addrnm": "望牛墩镇" },
+          { "addrno": "441991111", "addrnm": "寮步镇" },
+          { "addrno": "441991110", "addrnm": "常平镇" },
+          { "addrno": "441991112", "addrnm": "樟木头镇" },
+          { "addrno": "441991114", "addrnm": "黄江镇" },
+          { "addrno": "441991113", "addrnm": "大朗镇" },
+          { "addrno": "441991106", "addrnm": "横沥镇" },
+          { "addrno": "441991105", "addrnm": "企石镇" },
+          { "addrno": "441991107", "addrnm": "桥头镇" },
+          { "addrno": "441991109", "addrnm": "东坑镇" },
+          { "addrno": "441991108", "addrnm": "谢岗镇" },
+          { "addrno": "441991115", "addrnm": "清溪镇" },
+          { "addrno": "441991123", "addrnm": "沙田镇" },
+          { "addrno": "441991122", "addrnm": "厚街镇" },
+          { "addrno": "441991124", "addrnm": "道滘镇" },
+          { "addrno": "441991126", "addrnm": "麻涌镇" },
+          { "addrno": "441991125", "addrnm": "洪梅镇" },
+          { "addrno": "441991117", "addrnm": "凤岗镇" },
+          { "addrno": "441991116", "addrnm": "塘厦镇" },
+          { "addrno": "441991118", "addrnm": "大岭山镇" },
+          { "addrno": "441991121", "addrnm": "虎门镇" },
+          { "addrno": "441991119", "addrnm": "长安镇" },
+          { "addrno": "441991101", "addrnm": "石碣镇" },
+          { "addrno": "441991006", "addrnm": "莞城街道" },
+          { "addrno": "441991102", "addrnm": "石龙镇" },
+          { "addrno": "441991104", "addrnm": "石排镇" },
+          { "addrno": "441991103", "addrnm": "茶山镇" },
+          { "addrno": "441991003", "addrnm": "东城街道" },
+          { "addrno": "441991005", "addrnm": "万江街道" },
+          { "addrno": "441991004", "addrnm": "南城街道" },
+          { "addrno": "441991000", "addrnm": "东莞市市辖区" }
+        ]
+      },
+      {
+        "addrno": "445200",
+        "addrnm": "揭阳市",
+        "children": [
+          {
+            "addrno": "445203",
+            "addrnm": "揭东区",
+            "children": [
+              { "addrno": "445203001", "addrnm": "曲溪街道" },
+              { "addrno": "445203112", "addrnm": "玉滘镇" },
+              { "addrno": "445203002", "addrnm": "磐东街道" },
+              { "addrno": "445203105", "addrnm": "龙尾镇" },
+              { "addrno": "445203104", "addrnm": "白塔镇" },
+              { "addrno": "445203110", "addrnm": "埔田镇" },
+              { "addrno": "445203107", "addrnm": "锡场镇" },
+              { "addrno": "445203100", "addrnm": "云路镇" },
+              { "addrno": "445203108", "addrnm": "新亨镇" },
+              { "addrno": "445203106", "addrnm": "桂岭镇" },
+              { "addrno": "445203102", "addrnm": "霖磐镇" },
+              { "addrno": "445203109", "addrnm": "玉湖镇" },
+              { "addrno": "445203103", "addrnm": "月城镇" }
+            ]
+          },
+          {
+            "addrno": "445222",
+            "addrnm": "揭西县",
+            "children": [
+              { "addrno": "445222106", "addrnm": "灰寨镇" },
+              { "addrno": "445222103", "addrnm": "南山镇" },
+              { "addrno": "445222104", "addrnm": "五经富镇" },
+              { "addrno": "445222105", "addrnm": "京溪园镇" },
+              { "addrno": "445222102", "addrnm": "龙潭镇" },
+              { "addrno": "445222201", "addrnm": "良田乡" },
+              { "addrno": "445222115", "addrnm": "五云镇" },
+              { "addrno": "445222114", "addrnm": "坪上镇" },
+              { "addrno": "445222001", "addrnm": "河婆街道" },
+              { "addrno": "445222107", "addrnm": "塔头镇" },
+              { "addrno": "445222112", "addrnm": "大溪镇" },
+              { "addrno": "445222113", "addrnm": "钱坑镇" },
+              { "addrno": "445222110", "addrnm": "棉湖镇" },
+              { "addrno": "445222108", "addrnm": "东园镇" },
+              { "addrno": "445222111", "addrnm": "金和镇" },
+              { "addrno": "445222109", "addrnm": "凤江镇" },
+              { "addrno": "445222116", "addrnm": "上砂镇" }
+            ]
+          },
+          {
+            "addrno": "445224",
+            "addrnm": "惠来县",
+            "children": [
+              { "addrno": "445224114", "addrnm": "侨园镇" },
+              { "addrno": "445224107", "addrnm": "葵潭镇" },
+              { "addrno": "445224104", "addrnm": "周田镇" },
+              { "addrno": "445224109", "addrnm": "溪西镇" },
+              { "addrno": "445224110", "addrnm": "鳌江镇" },
+              { "addrno": "445224103", "addrnm": "仙庵镇" },
+              { "addrno": "445224102", "addrnm": "神泉镇" },
+              { "addrno": "445224106", "addrnm": "前詹镇" },
+              { "addrno": "445224101", "addrnm": "靖海镇" },
+              { "addrno": "445224105", "addrnm": "华湖镇" },
+              { "addrno": "445224113", "addrnm": "岐石镇" },
+              { "addrno": "445224111", "addrnm": "东港镇" },
+              { "addrno": "445224100", "addrnm": "惠城镇" },
+              { "addrno": "445224108", "addrnm": "隆江镇" },
+              { "addrno": "445224112", "addrnm": "东陇镇" }
+            ]
+          },
+          {
+            "addrno": "445202",
+            "addrnm": "榕城区",
+            "children": [
+              { "addrno": "445202101", "addrnm": "渔湖镇" },
+              { "addrno": "445202012", "addrnm": "梅云街道" },
+              { "addrno": "445202009", "addrnm": "东升街道" },
+              { "addrno": "445202008", "addrnm": "东阳街道" },
+              { "addrno": "445202011", "addrnm": "仙桥街道" },
+              { "addrno": "445202010", "addrnm": "东兴街道" },
+              { "addrno": "445202006", "addrnm": "榕东街道" },
+              { "addrno": "445202002", "addrnm": "新兴街道" },
+              { "addrno": "445202001", "addrnm": "榕华街道" },
+              { "addrno": "445202004", "addrnm": "西马街道" },
+              { "addrno": "445202003", "addrnm": "中山街道" },
+              { "addrno": "445202013", "addrnm": "渔湖街道" },
+              { "addrno": "445202103", "addrnm": "砲台镇" },
+              { "addrno": "445202104", "addrnm": "登岗镇" },
+              { "addrno": "445202102", "addrnm": "地都镇" }
+            ]
+          },
+          {
+            "addrno": "445281",
+            "addrnm": "普宁市",
+            "children": [
+              { "addrno": "445281007", "addrnm": "大南山街道" },
+              { "addrno": "445281006", "addrnm": "燎原街道" },
+              { "addrno": "445281201", "addrnm": "鲘溪乡" },
+              { "addrno": "445281005", "addrnm": "流沙南街道" },
+              { "addrno": "445281002", "addrnm": "流沙北街道" },
+              { "addrno": "445281001", "addrnm": "池尾街道" },
+              { "addrno": "445281004", "addrnm": "流沙东街道" },
+              { "addrno": "445281003", "addrnm": "流沙西街道" },
+              { "addrno": "445281122", "addrnm": "普侨镇" },
+              { "addrno": "445281115", "addrnm": "大坪镇" },
+              { "addrno": "445281116", "addrnm": "船埔镇" },
+              { "addrno": "445281114", "addrnm": "云落镇" },
+              { "addrno": "445281113", "addrnm": "高埔镇" },
+              { "addrno": "445281117", "addrnm": "梅林镇" },
+              { "addrno": "445281105", "addrnm": "南溪镇" },
+              { "addrno": "445281106", "addrnm": "广太镇" },
+              { "addrno": "445281119", "addrnm": "里湖镇" },
+              { "addrno": "445281121", "addrnm": "梅塘镇" },
+              { "addrno": "445281103", "addrnm": "大坝镇" },
+              { "addrno": "445281107", "addrnm": "麒麟镇" },
+              { "addrno": "445281102", "addrnm": "赤岗镇" },
+              { "addrno": "445281104", "addrnm": "洪阳镇" },
+              { "addrno": "445281108", "addrnm": "南径镇" },
+              { "addrno": "445281109", "addrnm": "占陇镇" },
+              { "addrno": "445281110", "addrnm": "军埠镇" },
+              { "addrno": "445281111", "addrnm": "下架山镇" }
+            ]
+          }
+        ]
+      },
+      {
+        "addrno": "441800",
+        "addrnm": "清远市",
+        "children": [
+          {
+            "addrno": "441803",
+            "addrnm": "清新区",
+            "children": [
+              { "addrno": "441803104", "addrnm": "太平镇" },
+              { "addrno": "441803105", "addrnm": "山塘镇" },
+              { "addrno": "441803102", "addrnm": "太和镇" },
+              { "addrno": "441803106", "addrnm": "三坑镇" },
+              { "addrno": "441803112", "addrnm": "龙颈镇" },
+              { "addrno": "441803117", "addrnm": "浸潭镇" },
+              { "addrno": "441803113", "addrnm": "禾云镇" },
+              { "addrno": "441803118", "addrnm": "石潭镇" }
+            ]
+          },
+          {
+            "addrno": "441881",
+            "addrnm": "英德市",
+            "children": [
+              { "addrno": "441881112", "addrnm": "浛洸镇" },
+              { "addrno": "441881001", "addrnm": "英城街道" },
+              { "addrno": "441881120", "addrnm": "下石太镇" },
+              { "addrno": "441881114", "addrnm": "大湾镇" },
+              { "addrno": "441881116", "addrnm": "石牯塘镇" },
+              { "addrno": "441881110", "addrnm": "西牛镇" },
+              { "addrno": "441881124", "addrnm": "波罗镇" },
+              { "addrno": "441881115", "addrnm": "石灰铺镇" },
+              { "addrno": "441881109", "addrnm": "大站镇" },
+              { "addrno": "441881102", "addrnm": "望埠镇" },
+              { "addrno": "441881125", "addrnm": "横石塘镇" },
+              { "addrno": "441881101", "addrnm": "沙口镇" },
+              { "addrno": "441881111", "addrnm": "九龙镇" },
+              { "addrno": "441881132", "addrnm": "英红镇" },
+              { "addrno": "441881129", "addrnm": "连江口镇" },
+              { "addrno": "441881126", "addrnm": "大洞镇" },
+              { "addrno": "441881131", "addrnm": "水边镇" },
+              { "addrno": "441881130", "addrnm": "黎溪镇" },
+              { "addrno": "441881106", "addrnm": "青塘镇" },
+              { "addrno": "441881105", "addrnm": "桥头镇" },
+              { "addrno": "441881103", "addrnm": "横石水镇" },
+              { "addrno": "441881108", "addrnm": "白沙镇" },
+              { "addrno": "441881121", "addrnm": "黄花镇" },
+              { "addrno": "441881104", "addrnm": "东华镇" }
+            ]
+          },
+          {
+            "addrno": "441882",
+            "addrnm": "连州市",
+            "children": [
+              { "addrno": "441882200", "addrnm": "瑶安瑶族乡" },
+              { "addrno": "441882201", "addrnm": "三水瑶族乡" },
+              { "addrno": "441882109", "addrnm": "九陂镇" },
+              { "addrno": "441882100", "addrnm": "连州镇" },
+              { "addrno": "441882107", "addrnm": "东陂镇" },
+              { "addrno": "441882105", "addrnm": "保安镇" },
+              { "addrno": "441882106", "addrnm": "丰阳镇" },
+              { "addrno": "441882102", "addrnm": "大路边镇" },
+              { "addrno": "441882103", "addrnm": "龙坪镇" },
+              { "addrno": "441882104", "addrnm": "西岸镇" },
+              { "addrno": "441882101", "addrnm": "星子镇" },
+              { "addrno": "441882118", "addrnm": "西江镇" }
+            ]
+          },
+          {
+            "addrno": "441823",
+            "addrnm": "阳山县",
+            "children": [
+              { "addrno": "441823201", "addrnm": "秤架瑶族乡" },
+              { "addrno": "441823110", "addrnm": "大崀镇" },
+              { "addrno": "441823111", "addrnm": "小江镇" },
+              { "addrno": "441823108", "addrnm": "杨梅镇" },
+              { "addrno": "441823115", "addrnm": "黄坌镇" },
+              { "addrno": "441823113", "addrnm": "岭背镇" },
+              { "addrno": "441823107", "addrnm": "太平镇" },
+              { "addrno": "441823101", "addrnm": "江英镇" },
+              { "addrno": "441823100", "addrnm": "青莲镇" },
+              { "addrno": "441823105", "addrnm": "七拱镇" },
+              { "addrno": "441823104", "addrnm": "杜步镇" },
+              { "addrno": "441823116", "addrnm": "黎埠镇" },
+              { "addrno": "441823119", "addrnm": "阳城镇" }
+            ]
+          },
+          {
+            "addrno": "441821",
+            "addrnm": "佛冈县",
+            "children": [
+              { "addrno": "441821100", "addrnm": "石角镇" },
+              { "addrno": "441821101", "addrnm": "水头镇" },
+              { "addrno": "441821103", "addrnm": "龙山镇" },
+              { "addrno": "441821102", "addrnm": "汤塘镇" },
+              { "addrno": "441821107", "addrnm": "迳头镇" },
+              { "addrno": "441821104", "addrnm": "高岗镇" }
+            ]
+          },
+          {
+            "addrno": "441802",
+            "addrnm": "清城区",
+            "children": [
+              { "addrno": "441802004", "addrnm": "横荷街道" },
+              { "addrno": "441802001", "addrnm": "凤城街道" },
+              { "addrno": "441802003", "addrnm": "洲心街道" },
+              { "addrno": "441802002", "addrnm": "东城街道" },
+              { "addrno": "441802103", "addrnm": "飞来峡镇" },
+              { "addrno": "441802101", "addrnm": "龙塘镇" },
+              { "addrno": "441802100", "addrnm": "源潭镇" },
+              { "addrno": "441802102", "addrnm": "石角镇" }
+            ]
+          },
+          {
+            "addrno": "441825",
+            "addrnm": "连山壮族瑶族自治县",
+            "children": [
+              { "addrno": "441825111", "addrnm": "上帅镇" },
+              { "addrno": "441825109", "addrnm": "小三江镇" },
+              { "addrno": "441825106", "addrnm": "禾洞镇" },
+              { "addrno": "441825108", "addrnm": "福堂镇" },
+              { "addrno": "441825104", "addrnm": "吉田镇" },
+              { "addrno": "441825105", "addrnm": "太保镇" },
+              { "addrno": "441825100", "addrnm": "永和镇" }
+            ]
+          },
+          {
+            "addrno": "441826",
+            "addrnm": "连南瑶族自治县",
+            "children": [
+              { "addrno": "441826102", "addrnm": "寨岗镇" },
+              { "addrno": "441826101", "addrnm": "大麦山镇" },
+              { "addrno": "441826100", "addrnm": "三江镇" },
+              { "addrno": "441826106", "addrnm": "涡水镇" },
+              { "addrno": "441826105", "addrnm": "三排镇" },
+              { "addrno": "441826109", "addrnm": "香坪镇" },
+              { "addrno": "441826108", "addrnm": "大坪镇" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

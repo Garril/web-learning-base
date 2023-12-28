@@ -29,5 +29,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "fast-csv": "^4.3.6",
+    "jsonminify": "^0.4.2"
   }
 }
