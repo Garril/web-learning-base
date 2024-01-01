@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    const domains = [
+      'garril.com',
+      'kuoc.com'
+    ];
+    const maxRetry = 3;
+    const retryInfo = {};
+
+    // 加 true。需要在捕获阶段就拿到事件，因为error不冒泡。
+    window.addEventListener('error', (e) => {
+      // js、图片加载、script加载都会报错，需要筛选
+      // script错误是Event对象，其他的是ErrorEvent对象。
+      const tag = e.target;
+      if (tag.tagName == 'SCRIPT' && !(e instanceof ErrorEvent)) {
+        console.log('script load fail...');
+        const url = new URL(tag.src); // 获取script标签内的src
+        if (!retryInfo[url.pathname]) {
+          retryInfo[url.pathname] = {
+            times: 0,
+            nextIndex: 0
+          }
+        }
+        const info = retryInfo[url.pathname];
+        const script = document.createElement('script');
+        url.host = domains[info.nextIndex];
+        // 可能多个script都触发了重加载，但是，这里是没有阻塞的，可能script加载顺序不行
+        document.write(`<script src="${url.toString()}"> \<\/script>`); // 会阻塞后续代码
+        // script.src = url.toString();
+        document.body.insertBefore(script, tag);
+        info.times++;
+        info.nextIndex = (info.nextIndex + 1) % domains.length;
+      }
+    }, true)
+
+
+  </script>
+</head>
+
+<body>
+  <script src="http://xxxx/file.js"></script>
+  <script src="http://xxxx/file.js"></script>
+</body>
+
+</html>

@@ -26,3 +26,9 @@ async function getResponse(content) {
     console.log("txt: ", txt);
   }
 }
+/* 
+  axios的话
+    axios配置项里面有onDownloadProgress配置项，
+    是个函数，在里面可以拿到需要的数据
+  上述返回的json格式就用不起来了。
+*/
