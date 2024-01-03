@@ -21,4 +21,4 @@ type ArgsType<T extends JSTypeName[]> = {
 declare function addImpl<T extends JSTypeName[]>(
   ...args: [...T, (...args: ArgsType<T>) => any]
 ): void;
-addImpl("string", "boolean", "number", (a, b, c) => {});
+addImpl('string', 'boolean', 'number', (a, b, c) => {});
