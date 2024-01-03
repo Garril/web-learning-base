@@ -1,4 +1,4 @@
-function creatAnimation(scrollStart, scrollEnd, startValue, endValue) {
+function createAnimation(scrollStart, scrollEnd, startValue, endValue) {
   return function (x) {
     if (x < scrollStart) {
       return startValue;
@@ -15,18 +15,18 @@ function creatAnimation(scrollStart, scrollEnd, startValue, endValue) {
 // opacityAnimation(500);
 const animationMap = new Map();
 const items = document.querySelectorAll('.list-item');
-const playGround = document.querySelectorAll('.playground');
-const list = document.querySelectorAll('.list');
+const playGround = document.querySelector('.playground');
+const list = document.querySelector('.list');
 
 function getDomAnimation(dom, scrollStart, scrollEnd) {
-  scrollStart += dom.dataset.order * 600;
-  const opacityAnimation = = createAnimation(scrollStart, scrollEnd, 0, 1);
-  const transformAnimation = = createAnimation(scrollStart, scrollEnd, 0.5, 1);
+  scrollStart += dom.dataset.order * 100;
+  const opacityAnimation = createAnimation(scrollStart, scrollEnd, 0, 1);
+  const transformAnimation = createAnimation(scrollStart, scrollEnd, 0.5, 1);
   const { clientWidth, clientHeight, offsetTop, offsetLeft } = dom;
   const rect = list.getBoundingClientRect();
 
-  const xAnimation = = createAnimation(scrollStart, scrollEnd, rect.width / 2 - clientWidth / 2 - offsetLeft, 0);
-  const yAnimation = = createAnimation(scrollStart, scrollEnd, rect.height / 2 - clientHeight / 2 - offsetTop, 0);
+  const xAnimation = createAnimation(scrollStart, scrollEnd, rect.width / 2 - clientWidth / 2 - offsetLeft, 0);
+  const yAnimation = createAnimation(scrollStart, scrollEnd, rect.height / 2 - clientHeight / 2 - offsetTop, 0);
   const opacity = function (x) {
     return opacityAnimation(x);
   }
