@@ -1,0 +1,119 @@
+<div class="imgEditor-box" style="display: none">
+  <!-- 控件底布 -->
+  <div class="imgEditor-bg imgEditor-modal"></div>
+  <div class="imgEditor-container imgEditor-modal">
+    <!-- 标题 -->
+    <div class="imgEditor-head">
+      <div class="imgEditor-title imgEditor-head-normal">图片编辑</div>
+      <div class="imgEditor-close imgEditor-head-normal">
+        <i class="fa fa-remove"></i>
+      </div>
+    </div>
+    <!-- 上传文件 -->
+    <div class="imgEditor-file">
+      <!-- id="canvas_fileInput" -->
+      <input type="file" class="canvas_fileInputs" accept="image/*" />
+    </div>
+    <!-- canvas画布区 -->
+    <div class="imgEditor-editField">
+      <!--       <canvas id="canvas" style="border: 1px solid #ccc;min-height: 360px;"></canvas>
+      <canvas id="res_canvas" style="border: 1px solid #ccc;min-height: 360px;"></canvas> -->
+    </div>
+    <!-- 提示 -->
+    <div class="imgEditor-tips" style="color: red">提示: 请先上传图片</div>
+    <!-- 工具栏 -->
+    <div class="imgEditor-foot">
+
+      <div class="imgEditor-tools-group reset-clear-all">
+        <div class="imgEditor-tools-item cropper" title="裁剪" data-toggle="tooltip" data-placement="top" name="cropper">
+          <i class="fa fa-crop"></i>
+        </div>
+        <div class="imgEditor-tools-item line" title="直线" data-toggle="tooltip" data-placement="top" name="line">
+          <i class="fa fa-long-arrow-up" style="transform: rotate(45deg);"></i>
+        </div>
+        <div class="imgEditor-tools-item rect" title="矩形" data-toggle="tooltip" data-placement="top" name="rect">
+          <i class="fa fa-square-o"></i>
+        </div>
+        <div class="imgEditor-tools-item circle" title="圆形" data-toggle="tooltip" data-placement="top" name="circle">
+          <i class="fa fa-circle-thin"></i>
+        </div>
+        <div class="imgEditor-tools-item text" title="文本" data-toggle="tooltip" data-placement="top" name="text">
+          <i class="fa fa-text-width" style="transform: scaleY(1.2); overflow-y: hidden; height: 13px;"></i>
+        </div>
+        <div class="imgEditor-tools-item pencilbrush" title="铅笔" data-toggle="tooltip" data-placement="top"
+          name="pencilbrush">
+          <i class="fa fa-pencil"></i>
+        </div>
+        <div class="imgEditor-tools-item markpoint" title="标点" data-toggle="tooltip" data-placement="top"
+          name="markpoint">
+          <i class="fa fa-flag"></i>
+        </div>
+      </div>
+
+      <div class="imgEditor-tools-group">
+        <div class="imgEditor-tools-item rotateleft" title="向左旋转45°" data-toggle="tooltip" data-placement="top"
+          name="rotateleft">
+          <i class="fa fa-rotate-left"></i>
+        </div>
+        <div class="imgEditor-tools-item rotateright" title="向右旋转45°" data-toggle="tooltip" data-placement="top"
+          name="rotateright">
+          <i class="fa fa-rotate-right"></i>
+        </div>
+      </div>
+
+      <div class="imgEditor-tools-group conflict-group">
+        <div class="imgEditor-tools-item segment active" title="线段" data-toggle="tooltip" data-placement="top"
+          name="segment">
+          <i class="fa fa-italic" style="transform: rotate(45deg);"></i>
+        </div>
+        <div class="imgEditor-tools-item arrow" title="箭头" data-toggle="tooltip" data-placement="top" name="arrow">
+          <i class="fa fa-arrow-up" style="transform: rotate(45deg);"></i>
+        </div>
+      </div>
+
+      <div class="imgEditor-tools-group conflict-group">
+
+        <div class="imgEditor-tools-item point active" title="不填充" data-toggle="tooltip" data-placement="top"
+          name="point">
+          <span class="fa-stack">
+            <i class="fa fa-square-o fa-stack-2x"></i>
+            <i class="fa fa-circle-o fa-stack-1x"></i>
+          </span>
+        </div>
+
+        <div class="imgEditor-tools-item fill" title="填充" data-toggle="tooltip" data-placement="top" name="fill">
+          <span class="fa-stack">
+            <i class="fa fa-square fa-stack-2x"></i>
+            <i class="fa fa-circle fa-stack-1x" style="color: #1b78a6;"></i>
+          </span>
+        </div>
+
+      </div>
+
+      <div class="imgEditor-tools-group">
+        <div class="imgEditor-tools-item color" title="调色板" data-toggle="tooltip" data-placement="top" name="color">
+          <input type="color" class="detail_color" />
+        </div>
+      </div>
+
+      <div class="imgEditor-tools-group-new">
+        <div class="imgEditor-tools-item download" title="" data-toggle="tooltip" data-placement="top" name="reset"
+          data-original-title="下载当前截图">
+          下载当前截图
+        </div>
+        <div class="imgEditor-tools-item reset" title="" data-toggle="tooltip" data-placement="top" name="reset"
+          data-original-title="重置">
+          重置
+        </div>
+        <div class="imgEditor-tools-item confirm_cut" title="" data-toggle="tooltip" data-placement="top"
+          data-original-title="确认裁剪" name="confirm_cut">
+          确认裁剪
+        </div>
+        <div class="imgEditor-tools-item sure" title="" data-toggle="tooltip" data-placement="top"
+          data-original-title="确认上传" name="sure">
+          确认上传
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
