@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./repo/jquery-1.11.3.min.js"></script>
+  <script src="./repo/fabric.js"></script>
+</head>
+
+<body>
+  <!-- 图片上传输入框 -->
+  <input type="file" id="imageLoader" />
+
+  <!-- Canvas容器 -->
+  <canvas id="c" width="500px" height="500px" style="border:1px solid #ccc"></canvas>
+
+  <!-- 裁剪按钮 -->
+  <button id="cropButton">Create Crop Box</button>
+
+  <!-- 下载链接 -->
+  <a id="download" style="display:none;"></a>
+  <button id="downloadbtn">下载</button>
+
+  <script>
+    // 初始化Fabric Canvas
+    var canvas = new fabric.Canvas('c', {
+      uniScaleTransform: true,
+    });
+
+    document.getElementById('imageLoader').onchange = function handleImage(e) {
+      var reader = new FileReader();
+      reader.onload = function (event) {
+        fabric.Image.fromURL(event.target.result, function (oImg) {
+          // 调整图片的缩放到Canvas大小
+          var scaleRatio = canvas.width / oImg.width;
+          oImg.scale(scaleRatio).set({
+            selectable: false // 禁用选择，因为我们暂时只做裁剪
+          });
+          // 清除canvas再添加新的图片
+          canvas.clear().add(oImg);
+          canvas.renderAll();
+        }, { crossOrigin: 'anonymous' }); // 设置跨域为anonymous
+      }
+      reader.readAsDataURL(e.target.files[0]);
+    };
+
+    // 当点击创建裁剪框按钮时
+    $('#cropButton').click(function () {
+      var rect = new fabric.Rect({
+        left: 250,
+        top: 250,
+        fill: 'transparent',
+        stroke: 'red',
+        strokeDashArray: [5, 5],
+        width: 250,
+        height: 250,
+        hasControls: true
+      });
+
+      // 添加Rect为裁剪框
+      canvas.add(rect).setActiveObject(rect);
+      canvas.renderAll();
+      rect.on('scaling', function () {
+        this.strokeWidth = 2 / this.scaleX;
+      });
+    });
+    let activeObject = null;
+    // 当裁剪框调整完成，准备下载
+    canvas.on('object:modified', function (e) {
+      activeObject = e.target;
+
+      // 如果是裁剪框则执行裁剪
+      // if (activeObject instanceof fabric.Rect) {
+      //   cropImage(activeObject);
+      // }
+      cropImage(activeObject);
+    });
+
+
+    let dataURL = '';
+    function cropImage(cropRect) {
+      // 假设图片是canvas的第一个对象
+      var img = canvas.item(0);
+      var imgBoundingRect = img.getBoundingRect();
+
+      // 计算裁剪区域相对于图片显示的尺寸，考虑缩放
+      var cropX = (cropRect.left - imgBoundingRect.left) / img.scaleX;
+      var cropY = (cropRect.top - imgBoundingRect.top) / img.scaleY;
+      var cropWidth = cropRect.width / img.scaleX;
+      var cropHeight = cropRect.height / img.scaleY;
+
+      // 获取图片数据
+      dataURL = img.toDataURL({
+        left: cropX,
+        top: cropY,
+        width: cropWidth,
+        height: cropHeight
+      });
+    }
+    function downloadImage(dataURL) {
+      var downloadBtn = document.getElementById('download');
+      downloadBtn.href = dataURL;
+      downloadBtn.setAttribute('download', 'cropped_image.png');
+      downloadBtn.click();
+    }
+    $('#downloadbtn').on('click', function (e) {
+      downloadImage(dataURL);
+    })
+  </script>
+</body>
+
+</html>
