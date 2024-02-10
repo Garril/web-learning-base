@@ -1,3 +1,5 @@
 node_modules/
 /node_modules/
 **/*/node_modules/
+/node/data_import/*.xlsx
+/node/data_import/constanct.js

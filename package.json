@@ -31,8 +31,10 @@
     }
   },
   "dependencies": {
+    "exceljs": "^4.4.0",
     "fast-csv": "^4.3.6",
     "jsonminify": "^0.4.2",
+    "oracledb": "^6.3.0",
     "prettier": "^3.1.1"
   }
 }
