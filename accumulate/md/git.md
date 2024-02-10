@@ -2,13 +2,35 @@
 
 <hr/>
 
+## gitignore匹配规则
+
+`dist` ---> 匹配项目下所有`dist`文件/文件夹
+
+`a/dist` 或者 `/a/dist` ---> 从`gitignore`当前目录出发，找到`a`文件夹下的`dist`文件/文件夹
+
+`/dist` ---> 匹配`gitignore`同层级目录下的`dist`文件夹/文件。同层级`a/dist`不匹配。同层级下的`dist`文件夹和文件都匹配
+
+`/dist/` ---> 匹配`gitignore`同层级下的文件夹，名为`dist`的文件不匹配
+
+`*` 匹配字符串，但是不能匹配斜杆
+
+`*.jpg` ---> 匹配所有jpg图片
+
+`/a/*.jpg` ---> 匹配`a`文件夹下的所有`jpg`图片，但是`/a/sub/test.jpg`不能匹配
+
+`/a/**/*.jpg` ---> 匹配任意层级目录下的`jpg`图片
+
+`/upload/**/*.*` 匹配upload文件夹下的所有文件
+但是github可能觉得upload排除所有，没有文件就不上传了，那么文件夹就没了，我们需要排除所有，但是目录保留。比如upload文件夹下有一个sub文件夹，建立一个空文件`.gitkeep`，希望文件不要被排除。
+修改匹配规则
+`/upload/**/*.*`
+`!/upload/.gitkeep`
+
 ## 学习网站
 
 ```css
-https://learngitbranching.js.org/?locale=zh_CN
+https: //learngitbranching.js.org/?locale=zh_CN;;
 ```
-
-
 
 ## 连接git仓库
 
@@ -39,10 +61,6 @@ git remote add origin git@github.com:Garril/test.git
 git branch -M main
 git push -u origin main
 ```
-
-
-
-
 
 <hr/>
 
@@ -99,8 +117,6 @@ origin  git@github.com:Garril/daily_notes.git (push)
 git merge origin/main
 ```
 
-
-
 然而，如果你想丢弃本地更改并强制更新本地分支：
 
 ```css
@@ -108,8 +124,6 @@ git reset --hard origin/yourBranchName
 ```
 
 变量如上。
-
-
 
 ## 修改/添加其他远程存储库
 
@@ -136,8 +150,6 @@ git remote remove <name>
 ```
 
 在这里， `<name>` 是要删除的远程存储库的名称。
-
-
 
 <hr/>
 
@@ -187,8 +199,6 @@ git checkout main^
 git checkout HEAD~4
 ```
 
-
-
 相对引用最多的就是移动分支，直接使用 `-f` 选项让分支指向另一个提交
 
 将 main 分支强制指向 HEAD 的第 3 级父提交
@@ -201,8 +211,6 @@ git branch -f main HEAD~3
 
 要改变分支，比如`main`和`bugFix`，都要用`git branch -f 分支名 分支名~num/版本名-c0c1c2c3`
 
-
-
 ```css
 C0 -> C1 -> C3(main*)
 	 -> C2
@@ -213,8 +221,6 @@ git checkout main^2  HEAD指向C2
 这里决定1行2行，看的是最新的一次提交，比如
 第一行最新提交是C4，那么第二行最新一次提交必须是C5以及C5以上
 ```
-
-
 
 ### 删除分支
 
@@ -271,8 +277,6 @@ git merge bugFix
 
 ![image-20230511141505667](https://forupload.oss-cn-guangzhou.aliyuncs.com/newImg/image-20230511141505667.png)
 
-
-
 第二种合并分支的方法是 `git rebase`。
 
 Rebase 实际上就是取出一系列的提交记录，“复制”它们，然后在另外一个地方逐个的放下去。
@@ -300,8 +304,6 @@ git rebase bugFix
 由于 `bugFix` 继承自 `main`，所以 Git 只是简单的把 `main` 分支的引用向后移动了一下而已。
 
 也就是：现在main指向的也是c3'，和bugFix一样
-
-
 
 <hr/>
 
@@ -333,8 +335,6 @@ git checkout C1; git checkout main; git commit; git checkout C2;
 左图为 HEAD -> main -> C1
 右图 不是 HEAD -> main -> C2，而是 HEAD -> C2、main -> C2
 ```
-
-
 
 ## 版本回退
 
@@ -370,8 +370,6 @@ git reset HEAD~1
 git revert HEAD
 ```
 
-
-
 ## Cherry-pick
 
 ```css
@@ -396,11 +394,9 @@ git cherry-pick C2 C4
 
 可以利用交互式的 rebase —— 如果你想从一系列的提交记录中找到想要的记录, 这就是最好的方法了
 
-
-
 ### 技巧
 
- cherry-pick 可以将提交树上任何地方的提交记录取过来追加到 HEAD 上（只要不是 HEAD 上游的提交就没问题）。
+cherry-pick 可以将提交树上任何地方的提交记录取过来追加到 HEAD 上（只要不是 HEAD 上游的提交就没问题）。
 
 ```css
 C0 -> C1 -> C2（bugFix）
@@ -415,10 +411,6 @@ C0 -> C1 -> C2（bugFix）
 
 				-> C3 -> C2'（main*）
 ```
-
-
-
-
 
 ## rebase
 
@@ -446,7 +438,7 @@ ui界面选择删除某个节点，调整节点顺序。
 
 - 先用 `git rebase -i` 将提交重新排序，然后把我们想要修改的提交记录挪到最前（C3和C2换）
 
-此时C2（newImage），C3灰色，另开分支 （ C3' -> C2' ---caption* ）
+此时C2（newImage），C3灰色，另开分支 （ C3' -> C2' ---caption\* ）
 
 - 然后用 `git commit --amend` 来进行一些小修改（C2'）
 
@@ -457,8 +449,6 @@ C3' 下 原本 -> C2'，现在多出一条 -> C2''
 生成C2''' -> C3''的路线
 
 - 最后我们把 main 移到修改的最前端
-
-
 
 ## tag
 
@@ -498,8 +488,6 @@ git clone 地址
 
 Git 变成了分离 HEAD 状态，当添加新的提交时 `o/main` 也不会更新。这是因为 `o/main` 只有在远程仓库中相应的分支更新了以后才会更新。
 
-
-
 ### fetch
 
 将本地仓库中的远程分支更新成远程仓库相应分支最新的状态
@@ -510,12 +498,10 @@ git fetch
 
 - 从远程仓库下载本地仓库中缺失的提交记录
 - 更新远程分支指针(如 `o/main`)
--  并不会改变你本地仓库的状态。它不会更新你的 `main` 分支，也不会修改你磁盘上的文件。
+- 并不会改变你本地仓库的状态。它不会更新你的 `main` 分支，也不会修改你磁盘上的文件。
 - 理解为单纯的下载操作。
 
 当时o/main以及o/fetch等远程分支有了，本地对应分支需要自己切换。
-
-
 
 ### merge
 
@@ -533,11 +519,7 @@ git fetch; git merge o/main;
 
 ![image-20230511175408157](https://forupload.oss-cn-guangzhou.aliyuncs.com/newImg/image-20230511175408157.png)
 
- `git pull` 就是 `git fetch` 和 `git merge` 的缩写
-
-
-
-
+`git pull` 就是 `git fetch` 和 `git merge` 的缩写
 
 ### 团队
 
@@ -550,8 +532,6 @@ git fakeTeamwork
 变为：
 	C0 -> C1 -> C2(main)
 ```
-
-
 
 模拟队友推送了 3 个提交记录到远程仓库的 foo 分支。
 
@@ -566,15 +546,13 @@ git frameTeamwork foo 3
 
 步骤：
 
-​	克隆一个远程仓库（用 `git clone`），
+​ 克隆一个远程仓库（用 `git clone`），
 
-​	再在刚创建的远程仓库中模拟一些修改，git frameTeamWork xxx num
+​ 再在刚创建的远程仓库中模拟一些修改，git frameTeamWork xxx num
 
-​	然后在你自己的本地分支上做一些提交，git commit
+​ 然后在你自己的本地分支上做一些提交，git commit
 
-​	再拉取远程仓库的变更。 git fetch，git merge
-
-
+​ 再拉取远程仓库的变更。 git fetch，git merge
 
 ### push
 
@@ -612,8 +590,6 @@ git fetch; git rebase o/main; git push;
 
 执行后，看图三。
 
-
-
 其它的方法：`git merge`
 
 `git merge` 不会移动你的工作（它会创建新的合并提交），
@@ -626,8 +602,6 @@ git fetch; git rebase o/main; git push;
 git fetch; git merge o/main; git push
 ```
 
-
-
 更简单一点的: `git pull`
 
 `git pull` 就是 fetch 和 merge 的简写，类似的 `git pull --rebase` 就是 fetch 和 rebase 的简写
@@ -636,21 +610,17 @@ git fetch; git merge o/main; git push
 git pull
 ```
 
-
-
 ### 策略配置
 
 远程服务器拒绝直接推送`(push)`提交到`main`, 因为策略配置要求` pull requests` 来提交更新.
 
 解决方法：
 
-​	新建一个分支feature, 推送到远程服务器. 
+​ 新建一个分支feature, 推送到远程服务器.
 
-​	然后reset你的main分支和远程服务器保持一致, （用git branch -f 调整)，之后不需要git push
+​ 然后reset你的main分支和远程服务器保持一致, （用git branch -f 调整)，之后不需要git push
 
-​	否则下次你pull并且他人的提交和你冲突的时候就会有问题.
-
-
+​ 否则下次你pull并且他人的提交和你冲突的时候就会有问题.
 
 ## 实际
 
@@ -676,8 +646,6 @@ git pull（更新下master分支）
 git merge test-branch（test-branch合并到master分支，可能有冲突 -- 本地合并）
 git push
 ```
-
-
 
 ### 主仓库不直接开发，成员fork，然后开发合并
 
@@ -719,14 +687,3 @@ console.log(2);
 
 git pull。git add、commit、push
 ```
-
-
-
-
-
-
-
-
-
-
-

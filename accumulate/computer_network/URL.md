@@ -34,8 +34,8 @@ application/json
 
 ```json
 {
-    "loginId":'garril',
-    "loginPwd":'123456'
+  "loginId": "garril",
+  "loginPwd": "123456"
 }
 ```
 
@@ -70,23 +70,19 @@ Content-Disposition: form-data; name="mypic"
 比如你要传一个文件，用的字符串，body部分要为图片，图片应该为2进制数，你想用1010...去表示，如下：
 
 ```css
-Content-Type: application/x-www-form-urlencoded
-
-avatar=1000111.....
+content-type: application/x-www-form-urlencoded avatar=1000111.....;
 ```
 
 可这是字符的1010，不是数字的1010
 
 ```js
-'1'.codePointAt(0)  // 49
-'1'.codePointAt(0).toString(2)  // 110001
+'1'.codePointAt(0); // 49
+'1'.codePointAt(0).toString(2); // 110001
 ```
 
 那么就写不了，除非转化为 `base64`
 
 而`multipart/form-data`类型为什么可以，因为他的name，也就是字段对应的值，可以是文件的二进制。
-
-
 
 ### `base64`
 
@@ -95,8 +91,6 @@ avatar=1000111.....
 如果类型为`application/json`，对象里面的数据也要`base64`
 
 转出来的`base64`会大于原先的二进制数，所以一般也是不得以而为之。
-
-
 
 ## 什么时候会发`http`请求
 
@@ -124,34 +118,32 @@ https://www.baidu.com/news/detail
 <script src="./js/app.js" /> 不行。
 ```
 
-3、按了提交的按钮 
+3、按了提交的按钮
 
 ### `form`
 
 ```html
 <button type="submit">...</button>
-会获取到button所在 form标签，拿到他action属性地址，同时拿到method属性值，然后把表单数据组织到请求体中，发送请求，同时抛弃当前页面。
-
-
+会获取到button所在
+form标签，拿到他action属性地址，同时拿到method属性值，然后把表单数据组织到请求体中，发送请求，同时抛弃当前页面。
 表单默认Content-Type: application/x-www-form-urlencoded
 <form action="https://....." methods="POST">
-	<!-- 内部元素为payload负荷，即：请求体-->	
-    <label for="userId">姓名</label>
-    <input type="text" name="loginId" id="userId" />
-    
-    <label for="userPwd">密码</label>
-    <input type="password" name="loginPwd" id="userPwd" />
-    <button type="submit">提交</button>
-</form>
+  <!-- 内部元素为payload负荷，即：请求体-->
+  <label for="userId">姓名</label>
+  <input type="text" name="loginId" id="userId" />
 
+  <label for="userPwd">密码</label>
+  <input type="password" name="loginPwd" id="userPwd" />
+  <button type="submit">提交</button>
+</form>
 
 表单内置的一些东西比如回车的监听，挺好用。可以通过阻止默认事件，去阻止他发送请求，但是仍然利用他的事件监听。
 <script>
-	const form = document.getElementBy....;
-    form.onsubmit = (e) => {
-        e.preventDefault();
-        console.log(e);
-	}
+  const form = document.getElementBy....;
+     form.onsubmit = (e) => {
+         e.preventDefault();
+         console.log(e);
+  }
 </script>
 ```
 
@@ -159,16 +151,12 @@ https://www.baidu.com/news/detail
 
 ```js
 textArea.onkeydown = (e) => {
-    if(e.key === 'Enter' && !e.shiftKey && !e.ctrlKey && !e.altKey) {
-		e.preventDefault();
-        form.dispatchEvent(new Event('submit'));
-    }
-}
+  if (e.key === 'Enter' && !e.shiftKey && !e.ctrlKey && !e.altKey) {
+    e.preventDefault();
+    form.dispatchEvent(new Event('submit'));
+  }
+};
 ```
-
-
-
-
 
 ### `post` 和 `get`
 
@@ -183,8 +171,6 @@ textArea.onkeydown = (e) => {
 6、刷新页面时，若当前的页面是通过POST请求得到的，会提示用户是否重新提交，若GET，无。
 ```
 
-
-
 # `Ajax`
 
 `xml`例子
@@ -198,9 +184,11 @@ textArea.onkeydown = (e) => {
 
 `XMLHttpRequest` 和 `Fetch (h5)`
 
-![image-20231030013600313](https://forupload.oss-cn-guangzhou.aliyuncs.com/imgs/image-20231030013600313.png)
+![image-20240210171129353](https://forupload.oss-cn-guangzhou.aliyuncs.com/newImg/image-20240210171129353.png)
 
 除非要监听文件上传进度，否则基本都是 `Fetch`
+当然用`Fetch`也是可以实现，具体看 `accmulate/js/fragment_read_fetch.js`
+`XHR`具体看 `accmulate/js/xhr_progress.js`
 
 ## `axios` 和 `fetch`
 
@@ -215,23 +203,23 @@ umi-request库用的是fetch
 
 ```js
 async function loadData() {
-	const res = await fetch("https://......",{
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        // body不支持直接写js对象
-        body: `{
+  const res = await fetch('https://......', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    // body不支持直接写js对象
+    body: `{
         	"clear": true
-        }` // or JSON.stringify({ clear: true })
-    });
-    // fetch拿到的是一个promise，但是他不是等请求结果都有了，才返回，有了请求头，没有请求体的时候，就已经执行了。
-    console.log(res.body); // 没要的数据
-    const body = await res.text();
-    // const body = await res.json();
-    // const body = await res.blob();
-    // const body = await res.arrayBuffer();
-    // 等待响应体到来，且转为文本
+        }`, // or JSON.stringify({ clear: true })
+  });
+  // fetch拿到的是一个promise，但是他不是等请求结果都有了，才返回，有了请求头，没有请求体的时候，就已经执行了。
+  console.log(res.body); // 没要的数据
+  const body = await res.text();
+  // const body = await res.json();
+  // const body = await res.blob();
+  // const body = await res.arrayBuffer();
+  // 等待响应体到来，且转为文本
 }
 loadData();
 ```
@@ -242,39 +230,41 @@ loadData();
 
 ```js
 // xxx为input元素
-xxx.selectFile.onchange = e => {
-    const file = e.target.files[0];
-    setProgress(0); // ui操作进度方法
-    // js 中所有io都选异步
-    const reader = new FileReader();
-    render.onload = event => {
-        const dataURL = event.target.result;
-        // 字符串本身描述了图片的所有信息，不需要发送网络请求获取图片
-        // 在background: url() 还有 script标签的src="data url"都可以写data:url
-       xxx.img.src = dataURL; 
-    }
-    reader.readAsDataURL(file);
-    upload(file);
-}
+xxx.selectFile.onchange = (e) => {
+  const file = e.target.files[0];
+  setProgress(0); // ui操作进度方法
+  // js 中所有io都选异步
+  const reader = new FileReader();
+  render.onload = (event) => {
+    const dataURL = event.target.result;
+    // 字符串本身描述了图片的所有信息，不需要发送网络请求获取图片
+    // 在background: url() 还有 script标签的src="data url"都可以写data:url
+    xxx.img.src = dataURL;
+  };
+  reader.readAsDataURL(file);
+  upload(file);
+};
 
 function upload(file) {
-    const xhr = new XMLHttpRequest();
-    const url = 'https://....:8000/upload/img';
-    xhr.open('POST',url);
-    xhr.setRequestHeader('Content-Type','multipart/form-data; boundary=aaa');
-    const bfBuilder = new BufferBuilder();
-    // 创建的类，append就拼接
-    bfBuilder.appendString('--aaa\r\nContent-Disposition: form-data; name="avatar";filename="test.png"\r\nContent-Type:image/png\r\n\r\n');
-    // 请求体前记得留两行
-    const reader = new FileReader();
-    reader.onload = (e) => {
-        bfBuilder.appendBuffer(e.target.result);
-        bfBuilder.appendString('\r\n--aaa--');
-        // 得到完整的二进制数据
-        const bf = bfBuilder.toBuffer();
-        xhr.send(bf);
-    }
-    reader.readAsArrayBuffer(file);
+  const xhr = new XMLHttpRequest();
+  const url = 'https://....:8000/upload/img';
+  xhr.open('POST', url);
+  xhr.setRequestHeader('Content-Type', 'multipart/form-data; boundary=aaa');
+  const bfBuilder = new BufferBuilder();
+  // 创建的类，append就拼接
+  bfBuilder.appendString(
+    '--aaa\r\nContent-Disposition: form-data; name="avatar";filename="test.png"\r\nContent-Type:image/png\r\n\r\n',
+  );
+  // 请求体前记得留两行
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    bfBuilder.appendBuffer(e.target.result);
+    bfBuilder.appendString('\r\n--aaa--');
+    // 得到完整的二进制数据
+    const bf = bfBuilder.toBuffer();
+    xhr.send(bf);
+  };
+  reader.readAsArrayBuffer(file);
 }
 ```
 
@@ -282,40 +272,41 @@ function upload(file) {
 
 ```js
 function upload(file) {
-    const xhr = new XMLHttpRequest();
-    const url = 'https://....:8000/upload/img';
-    xhr.open('POST',url);
-    xhr.onload = () => {
-		showPic();
-    }
-    xhr.upload.onprogress = (e) => {
-        const per = Math.floor((e.loaded/e.total)*100);
-        setProgress(per);
-    }
-    // 终止请求 xhr.abort();
-    const formData = new FormData();
-    // 自动设置file转二进制，和file的名字，请求头
-    formData.append('avatar',file);
-	xhr.send(formData);
+  const xhr = new XMLHttpRequest();
+  const url = 'https://....:8000/upload/img';
+  xhr.open('POST', url);
+  xhr.onload = () => {
+    showPic();
+  };
+  xhr.upload.onprogress = (e) => {
+    const per = Math.floor((e.loaded / e.total) * 100);
+    setProgress(per);
+  };
+  // 终止请求 xhr.abort();
+  const formData = new FormData();
+  // 自动设置file转二进制，和file的名字，请求头
+  formData.append('avatar', file);
+  xhr.send(formData);
 }
 ```
 
 ### fetch流式读取
 
 ```js
-const resp = await fetch('...',{});
+const resp = await fetch('...', {});
 // 等响应结果全部拿到，再进行渲染，有点卡
 // const body = await resp.text()
 
 // 要求一个个的一段段的渲染
 const reader = resp.body.getReader();
 const decoder = new TextDecoder(); // 文本解码器
-while(1) {
-    const { done, value } = await reader.read();
-    if(done) { break; }
-    console.log(value); // Unit8Array类型数据
-    const txt = decoder.decode(value);
-    console.log(txt);
+while (1) {
+  const { done, value } = await reader.read();
+  if (done) {
+    break;
+  }
+  console.log(value); // Unit8Array类型数据
+  const txt = decoder.decode(value);
+  console.log(txt);
 }
 ```
-
