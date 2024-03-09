@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    section:nth-last-of-type(1) {
+      background-image: url('../../../../img/bg1.jpg');
+    }
+
+    section:nth-last-of-type(2) {
+      background-image: url('../../../../img/bg2.jpg');
+    }
+
+    section:nth-last-of-type(3) {
+      background-image: url('../../../../img/bg3.jpg');
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    效果描述：
+    页面上有几段字，每段字居中页面，有一个背景
+    宽高占满屏幕，滚动的时候，背景会被元素带着往上跑
+    但是，发现背景跑的速度不一样，很慢。
+    =》 背景图的位置在变化
+
+    解析：
+    每段文字为一个区域，每个区域占满视口。
+    每个区域有一个背景图，撑满区域。
+    最开始的时候，第一个区域和他的背景是刚刚好，在视口内，占满的
+    第二个区域还没有被划入视口，
+    唯一确定的是随着滚动，元素慢慢往上跑，没做视差，就会固定背景和文字的相对距离。
+
+    为了做视差，我们需要：
+    在第二个区域还没有进入视口的时候，就把背景图，往上偏移，比第二个区域更快进入视口
+    =》因为他是背景，超出了不显示，而且文字目前视口看不到，不影响。
+    随着元素往上滚动，会带着背景一块往上，但是这个时候
+    我们要让背景往下偏移，
+    =》 总体是往上跑的，但是因为预先就先进入视口一部分，为了最后，
+    当第二个区域占满视口的时候，背景能够也占满视口，所以
+    需要跑的比较慢。
+
+    在第二个区域和他的背景完全重叠，占满视口的时候。
+    随着第二个区域继续往上跑，他们的偏差开始拉大。
+    因为往上的速度不一样。临界点在于：
+    第二个区域完全的离开视口的瞬间。第二个区域和背景的偏差，也是一开始的偏差。
+    是区域高度的一半，也是视口的一半
+    => 背景图片相对第二区域，从负的高度的一半变为正的高度的一半
+
+    使用动画库gsap
+    网址：https://gsap.com/resources
+    cdn：
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    通过gsap.fromTo简单设置了动画后，是根据时间变化的
+    我们希望是根据滚动条的
+    使用gsap的插件ScrollTrigger，把时间变为滚动条
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+
+    插件使用原理：
+    在第二区域的顶边，触碰到视口的底边，刚刚要进入视口的时候
+    动画开始播放。随着滚动条的上移，动画继续播放。
+    当第二区域的底边，触碰都视口的顶部，全部跑出视口的时候，结束动画。
+    中间的过程，库和插件自动运算了。
+  -->
+  <section>
+    <h1>HELLO!</h1>
+  </section>
+  <section>
+    <h1>I AM TESTING...</h1>
+  </section>
+  <section>
+    <h1>gsap</h1>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
