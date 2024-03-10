@@ -1,3 +1,4 @@
+// 并发任务控制
 class SuperTask {
   constructor(parallelCount = 2) {
     this.parallelCount = parallelCount; // 并发数量
