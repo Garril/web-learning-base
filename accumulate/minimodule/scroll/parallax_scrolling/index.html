@@ -33,6 +33,19 @@
     section:nth-last-of-type(3) {
       background-image: url('../../../../img/bg3.jpg');
     }
+
+    .my-circle {
+      background-image: url('../../../../img/pic1.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      overflow: hidden;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 0;
+    }
   </style>
 </head>
 
@@ -92,6 +105,8 @@
   <section>
     <h1>gsap</h1>
   </section>
+
+  <div class="my-circle"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
