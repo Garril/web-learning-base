@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .img-container {
+      display: flex;
+      flex-direction: row;
+      width: 100vw;
+      flex-wrap: wrap;
+    }
+
+    .img-container img {
+      flex: 1;
+      min-width: 45vw;
+      max-width: 50vw;
+      /* 保持宽高比  */
+      object-fit: cover;
+      /* 一定需要配置图片高度，不然不生效 */
+      height: 50vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="img-container">
+    <img data-src="/img/bg1.jpg" alt="">
+    <img data-src="/img/bg2.jpg" alt="">
+    <img data-src="/img/bg3.jpg" alt="">
+    <img data-src="/img/bg4.jpg" alt="">
+    <img data-src="/img/bg5.jpg" alt="">
+    <img data-src="/img/pic1.png" alt="">
+    <img data-src="/img/pic2.jpg" alt="">
+    <img data-src="/img/bg1.jpg" alt="">
+    <img data-src="/img/bg2.jpg" alt="">
+    <img data-src="/img/bg3.jpg" alt="">
+    <img data-src="/img/bg4.jpg" alt="">
+    <img data-src="/img/bg5.jpg" alt="">
+    <img data-src="/img/pic1.png" alt="">
+    <img data-src="/img/pic2.jpg" alt="">
+    <img data-src="/img/bg1.jpg" alt="">
+    <img data-src="/img/bg2.jpg" alt="">
+    <img data-src="/img/bg3.jpg" alt="">
+    <img data-src="/img/bg4.jpg" alt="">
+    <img data-src="/img/bg5.jpg" alt="">
+    <img data-src="/img/pic1.png" alt="">
+    <img data-src="/img/pic2.jpg" alt="">
+  </div>
+  <script>
+    const ob = new IntersectionObserver(function (items) {
+      console.log(items);
+      items.forEach(item => {
+        if (item.isIntersecting) {
+          item.target.src = item.target.getAttribute('data-src');
+        }
+      })
+    });
+    document.querySelectorAll('img').forEach(item => {
+      ob.observe(item)
+    })
+  </script>
+
+</body>
+
+</html>
