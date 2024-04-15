@@ -146,3 +146,32 @@ tcp链接可以设置超时时间的。一段时间内没有数据交互，就�
 sessionid被劫持了就和cookie没区别，session的好处就是服务器可以管理会话，比如二次登陆让第一次的sessionid失效。没有所谓的安全性更高，就和QQ在网吧保存密码一样，虽然别人看不到你的密码，但是一样可以登陆进行操作。
 
 别人拿到你的sessionID或者token就可以冒充你的，因为它们就是服务器根据你的账号密码颁发给你的，同时根据它们验证你的身份的。解决安全性问题有几个方法：第一，使用https防止会话劫持/临牌劫持。第二，定期颁发新的token给用户，让用户带上，这样增加别人拿到旧token的概率。第三，做异常监控，例如，这个人的ip不同，但是用的是同一个token，让token失效，让用户重新登录。
+
+#### token过期续期
+
+方案一：token过期后，跳登录页
+缺点：突兀，体验不好
+
+方案二：token重新发
+缺点：一直不用登录
+
+方案三：每次请求都刷新token
+缺点：服务器计算压力大
+
+方案四：token不过期，但是redis记录过期
+缺点：token给客户端，让客户端本地去做身份处理，而这里又反过来要服务器维护用户身份
+
+思路：登录注册，返回token，并且设置redis，key和value，搭配随机生成的uuid使用。比如：`uuid = "user-token:" + UUID.randomUUID();`
+`redisTemplate.opsForValue().set(uuid, userID,30,TimeUnit.MINUTES);`
+接受请求时（登录、注册除外），其余接口进行检测，若有token，且
+redis可以根据token中的uuid，获取到用户id，就表示通过，否则401，没权限。
+（这里可以在每次接受到请求时，重置redis的过期时间，上面例子为30分钟）
+
+方案四好处是：可以在分布式的情况下，利用redis将token变为共享，以及可以用redis踢人下线，把token的控制权握在自己手中。
+但是，主动踢人下线（将记录从redis中删除），需要能够，根据用户id获取token，这里的uuid不满足。
+
+方案五：双token
+登录后发两个token，token1和token2，token2的有效期是token1的两倍。一开始用token1，在token1过期后，使用token2，服务器再给他刷新token1和token2（token1过期但是token2没过期，默认为活跃用户）
+但是如果token1和token2都过期了，说明是非活跃用户，跳登录页。
+（而活跃判断就是：是否在token1的日期长度内，使用token2请求过一次）
+缺点：在第二个token2刷新 获取新的两个token的时候，原先的token会有一段时间不可用。（就是token1是加密的，我们这边不知道他是不是过期，等到服务器发回馈再换token2去发，解决是搞定时器，自动用有效的token2去发请求刷新两个token）
