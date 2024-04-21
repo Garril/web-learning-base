@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      position: relative;
+      background-color: #fff;
+      width: 1920px;
+      height: 1080px;
+    }
+
+    .top,
+    .content,
+    .center,
+    .left,
+    .right,
+    .left>div,
+    .right>div {
+      position: absolute;
+      background-color: #f3f3f3;
+    }
+
+    .top {
+      top: 0;
+      height: 100px;
+      width: 1920px;
+    }
+
+    .content {
+      top: 120px;
+      height: 960px;
+      width: 1920px;
+    }
+
+    .left {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      height: 960px;
+      background-color: skyblue;
+      width: calc(5760px / 11);
+    }
+
+    .right {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      height: 960px;
+      background-color: greenyellow;
+      width: calc(5760px / 11);
+    }
+
+    .center {
+      top: 0;
+      left: calc(5760px / 11);
+      right: calc(5760px / 11);
+      bottom: 0;
+      height: 960px;
+      background-color: orange;
+      width: calc(1920px * 5 / 11);
+    }
+
+    .left>div:nth-of-type(1) {
+      top: 0;
+      height: 320px;
+      left: 0;
+      right: 0;
+      background-color: rgb(247, 26, 26);
+    }
+
+    .left>div:nth-of-type(2) {
+      top: 320px;
+      height: 320px;
+      left: 0;
+      right: 0;
+      background-color: rgb(60, 68, 44);
+    }
+
+    .left>div:nth-of-type(3) {
+      top: 640px;
+      height: 320px;
+      left: 0;
+      right: 0;
+      background-color: rgb(26, 166, 247);
+    }
+
+    .right>div:nth-of-type(1) {
+      top: 0;
+      height: 320px;
+      left: 0;
+      right: 0;
+      background-color: rgb(177, 26, 247);
+    }
+
+    .right>div:nth-of-type(2) {
+      top: 640px;
+      height: 320px;
+      left: 0;
+      right: 0;
+      background-color: rgb(68, 44, 48);
+    }
+
+    body {
+      background-color: olive;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="top"></div>
+    <div class="content">
+      <div class="left">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="center"></div>
+      <div class="right">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+  <script src="./jquery/imgEdit/repo/jquery-1.11.3.min.js"></script>
+  <script>
+    window.onload = function () {
+      let clientWidth, clientHeight;
+      let rateX, rateY;
+      const designHeight = 1080, desigWidth = 1920;
+      let resizeTimer = null;
+      function calcScreenRate() {
+        clientWidth = document.documentElement.clientWidth;
+        clientHeight = document.documentElement.clientHeight;
+        rateX = clientWidth / desigWidth;
+        rateY = clientHeight / designHeight;
+        $('.container').css({
+          'transform': `scale(${rateX},${rateY})`,
+          'transform-origin': '0 0'
+        })
+      }
+      // 设计稿 1920px * 1080px
+
+      // 1 / desigWidth =  ratex / clientWidth；1 / designHeight = ratey / clientHeight;
+      calcScreenRate();
+      window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+          calcScreenRate();
+        }, 100);
+      })
+    }
+  </script>
+</body>
+
+</html>
