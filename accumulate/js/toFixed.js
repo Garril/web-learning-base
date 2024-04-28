@@ -1,4 +1,7 @@
-/* toFixed 的坑  */
+/* toFixed 的坑 
+  为了闭坑可以使用库 Decimal.js 
+    =》 原理：存字符串，运算是字符串运算
+*/
 2.45.toFixed(1)  // 2.5
 2.45.toFixed(2)  // 2.45
 2.55.toFixed(1)  // 2.5

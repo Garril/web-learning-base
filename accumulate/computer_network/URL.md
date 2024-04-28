@@ -92,6 +92,17 @@ content-type: application/x-www-form-urlencoded avatar=1000111.....;
 
 转出来的`base64`会大于原先的二进制数，所以一般也是不得以而为之。
 
+#### base64原理
+
+我们在命令行通过 `echo "HelloWorld" | base64`可以获得 HelloWorld 的 base64编码
+他先把 HelloWorld 通过ASCII编码转化为 二进制，
+比如H的ASCII编码72，二进制，01001000。8位
+然后所有字符获得的位，每6位作为一组，不足的补0
+然后每一组6位的二进制转化为10进制的数字，再到base64编码表中找到对应的字符
+所以 HelloWorld 得到的是：SGVs bG9X b3Js ZAo
+但是又因为，base64长度需要是4的倍数，不足，末尾补=
+最后结果为：SGVs bG9X b3Js ZAo=
+
 ## 什么时候会发`http`请求
 
 1、输入 `url` 地址
