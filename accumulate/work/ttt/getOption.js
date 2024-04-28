@@ -128,15 +128,41 @@ function getStackedLineOption({
       showSymbol: false,
       data: data
     })
-    option.xAxis.type = 'time';
+    option.xAxis = Object.assign(option.xAxis, {
+      data: data.map(item => item.value[0]),
+      type: 'category',
+    })
     option.xAxis.splitLine.show = false;
-    option.yAxis.boundaryGap = [0, '100%'];
-    option.yAxis.splitLine.show = true;
-    // formatter: function(value, index) {
-    //   const date1 = new Date(value);
-    //   const str = date1.toTimeString().substr(0,8);
-    //   return str;
-    // },
+
+    option.yAxis = Object.assign(option.yAxis, {
+      boundaryGap: [0, '100%'],
+    });
+    option.yAxis.splitLine.show = false;
+    option.xAxis.axisLabel.formatter = null;
+    option.tooltip = {
+      trigger: 'axis',
+      formatter: function (params) {
+        params = params[0];
+        const _name = parseInt(params.name);
+        let date;
+        if (Number.isNaN(_name)) {
+          date = new Date(params.name);
+        } else {
+          date = new Date(_name);
+        }
+
+        const formattedDate = date.toLocaleString();  // 获取带有日期的时间格式
+        return (
+          formattedDate + ' ' +
+          ' : ' +
+          params.value[1]
+        );
+      },
+      axisPointer: {
+        animation: false
+      }
+    }
+
   }
   // 是否需要支持保存为图片的功能
   if (download) {

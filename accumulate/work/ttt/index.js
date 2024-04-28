@@ -15,7 +15,7 @@ window.onload = function () {
   const myChart3 = echarts.init(chartDom3);
   option = getStackedLineOption(timeByOption);
   option && myChart3.setOption(option);
-
+  updateTimeBy(myChart3);
   // setInterval(function () {
   //   const option = myChart1.getOption();
   //   option.series = option.series.map(function (item) {

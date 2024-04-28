@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>测试</div>
+  <script src="../../../imgEdit/repo/jquery-1.11.3.min.js"></script>
+  <script>
+    // 创建对话框元素
+
+    var dialogElement = $(`<dialog id="myDialog">
+    <p>这是对话框的内容。</p>
+    <button id="closeDialog">关闭</button>
+</dialog>`);
+
+    // 设置对话框样式
+    dialogElement.css({
+      "width": "300px",
+      "height": "auto"
+    });
+
+    // 创建确定按钮并设置点击事件
+    var confirmButton = $("<button>确定</button>").click(function () {
+      $(dialogElement).dialog("close");
+    });
+
+    // 将按钮添加到对话框中
+    dialogElement.append(confirmButton);
+
+    // 将对话框添加到 body 中
+    $("body").append(dialogElement);
+
+    // 初始化对话框
+    dialogElement.dialog({
+      modal: true,
+      autoOpen: false // 设置为不自动打开
+    });
+
+    // 打开对话框
+    dialogElement.dialog("open");
+  </script>
+</body>
+
+</html>

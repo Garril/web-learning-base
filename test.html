@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
       border-radius: 50%;
       background-color: red;
     }
+
     div {
       padding-top: 20px;
       width: 100px;
@@ -19,6 +21,7 @@
     }
   </style>
 </head>
+
 <body>
   <div>
     <a href="#">nothing</a>
@@ -59,7 +62,17 @@
     })
     // 同步
     console.log('end2')
+    window.addEventListener('beforeunload', function (e) {
+      // 在此处添加你想要执行的操作，或者返回一个消息字符串以提示用户
+      // 例如：
+      // return "您确定要离开吗？";
+      console.log(e);
+    });
+    window.addEventListener("unload", function (e) {
+      console.log(e);
+    })
   </script>
 
 </body>
+
 </html>

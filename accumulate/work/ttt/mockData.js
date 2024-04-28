@@ -136,26 +136,27 @@ const memoryUsage = {
 }
 
 
-
-
-
-
 function randomData() {
-  now = new Date(+now + oneDay);
+  now = new Date(now.getTime() + oneDay);
   value = value + Math.random() * 21 - 10;
+
+  // 将时间格式化为 HH:MM
+  let timeFormatted = [now.getHours(), now.getMinutes()]
+    .map(num => num.toString().padStart(2, '0')).join(':');
   return {
+    // name: Date类型 toString / getTime均可
     name: now.toString(),
     value: [
-      [now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'),
+      timeFormatted,
       Math.round(value)
     ]
   };
 }
 let data = [];
 let now = new Date(2024, 1, 1);
-let oneDay = 24 * 3600 * 1000;
+let oneDay = 300000;
 let value = Math.random() * 1000;
-for (var i = 0; i < 1000; i++) {
+for (var i = 0; i < 200; i++) {
   data.push(randomData());
 }
 // 随时间变化
@@ -172,6 +173,24 @@ const timeByOption = {
   data: data,
   isTimeBy: true
 };
+
+function updateTimeBy(myChart) {
+  setInterval(function () {
+    data.shift();
+    data.push(randomData());
+    myChart.setOption({
+      xAxis: {
+        data: data.map(item => item.value[0]), // 更新x轴坐标值
+      },
+      series: [
+        {
+          data: data
+        }
+      ]
+    });
+  }, 5000);
+}
+
 
 
 
