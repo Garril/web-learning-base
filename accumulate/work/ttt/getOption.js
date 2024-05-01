@@ -45,8 +45,8 @@ function getStackedLineOption({
   download = false,
   isStackedArea = false,
   isTimeBy = false,
-  style = preConfig.stackedLineStyle,
-}) {
+  style = preConfig.stackedLineStyle
+}, instance = null) {
   const legendArr = data.map((item) => item['name']) || [];
 
   const option = {
@@ -105,21 +105,37 @@ function getStackedLineOption({
     },
     series: []
   };
+  // 更新函数
+  let updateFn = (data, xAxisData) => {
+    const newArr = data.map((item) => {
+      return formateData(item, isStackedArea)
+    });
+    instance.setOption({
+      xAxis: {
+        data: xAxisData, // 更新x轴坐标值
+      },
+      series: newArr
+    });
+  };
+  // 格式化请求结果数据的每一项
+  function formateData(item, isStackedArea) {
+    const formatObj = {
+      ...item,
+      type: 'line',
+      stack: 'Total',
+    };
+    if (isStackedArea) {
+      formatObj.areaStyle = {};
+      formatObj.emphasis = {
+        focus: 'series',
+      };
+    };
+    return formatObj;
+  }
   // 是否随时间变化
   if (!isTimeBy) {
     option.series = data.map((item) => {
-      const formatObj = {
-        ...item,
-        type: 'line',
-        stack: 'Total',
-      };
-      if (isStackedArea) {
-        formatObj.areaStyle = {};
-        formatObj.emphasis = {
-          focus: 'series',
-        };
-      };
-      return formatObj;
+      return formateData(item, isStackedArea)
     })
   } else {
     option.series.push({
@@ -128,15 +144,56 @@ function getStackedLineOption({
       showSymbol: false,
       data: data
     })
-    option.xAxis.type = 'time';
+    option.xAxis = Object.assign(option.xAxis, {
+      'type': 'category',
+      'data': data.map(item => item.value[0])
+    })
+
+    option.yAxis = Object.assign(option.yAxis, {
+      'boundaryGap': [0, '100%'],
+      'type': 'value'
+    })
+
     option.xAxis.splitLine.show = false;
-    option.yAxis.boundaryGap = [0, '100%'];
     option.yAxis.splitLine.show = true;
-    // formatter: function(value, index) {
-    //   const date1 = new Date(value);
-    //   const str = date1.toTimeString().substr(0,8);
-    //   return str;
-    // },
+
+    option.tooltip = {
+      trigger: 'axis',
+      formatter: function (params) {
+        params = params[0];
+        let paramsName = parseInt(params.name);
+        if (Number.isNaN(paramsName)) {
+          // date类型是一个格式化好的日期字符串
+          _date = new Date(params.name);
+        } else {
+          // date类型是一个数字串过来
+          _date = new Date(paramsName);
+        }
+
+        var formattedDate = _date.toLocaleString();  // 获取带有日期的时间格式
+        return (
+          formattedDate +
+          ' : ' +
+          params.value[1]
+        );
+      },
+      axisPointer: {
+        animation: false
+      }
+    }
+
+    updateFn = (timeByData) => {
+      instance.setOption({
+        xAxis: {
+          data: timeByData.map(inner => inner.value[0]), // 更新x轴坐标值
+        },
+        series: [
+          {
+            data: timeByData
+          }
+        ]
+      });
+    };
   }
   // 是否需要支持保存为图片的功能
   if (download) {
@@ -193,6 +250,6 @@ function getStackedLineOption({
     };
   }
 
-  return option;
+  return { option: option, fn: updateFn };
 }
 

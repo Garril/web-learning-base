@@ -1,24 +1,28 @@
 window.onload = function () {
   const chartDom1 = document.getElementById('main1');
   const myChart1 = echarts.init(chartDom1);
-  let option;
-  option = getStackedLineOption(lineBaseOption);
-  option && myChart1.setOption(option);
+  let res;
+  res = getStackedLineOption(lineBaseOption, myChart1);
+  let { option: option1, fn: fn1 } = res;
+  option1 && myChart1.setOption(option1);
 
   const chartDom2 = document.getElementById('main2');
   const myChart2 = echarts.init(chartDom2);
-  option = getStackedLineOption(memoryUsage);
-  option && myChart2.setOption(option);
+  res = getStackedLineOption(memoryUsage, myChart2);
+  let { option: option2, fn: fn2 } = res;
+  option2 && myChart2.setOption(option2);
 
 
   const chartDom3 = document.getElementById('main3');
   const myChart3 = echarts.init(chartDom3);
-  option = getStackedLineOption(timeByOption);
-  option && myChart3.setOption(option);
+  res = (getStackedLineOption(timeByOption, myChart3));
+  let { option: option3, fn: fn3 } = res;
+  option3 && myChart3.setOption(option3);
 
-  // setInterval(function () {
-  //   const option = myChart1.getOption();
-  //   option.series = option.series.map(function (item) {
-  //   })
-  // }, 2000);
+  // 假设 5s 重新请求，刷新一次
+  setInterval(function () {
+    timeByData.shift();
+    timeByData.push(randomData());
+    fn3(timeByData);
+  }, 5000);
 }

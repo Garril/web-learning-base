@@ -136,29 +136,31 @@ const memoryUsage = {
 }
 
 
-
-
-
-
+// 随时间变化
+// 假数据，间隔为5分钟，生成。只展示最新的200条
 function randomData() {
-  now = new Date(+now + oneDay);
+  now = new Date(now.getTime() + oneDay);
   value = value + Math.random() * 21 - 10;
+
+  // 将时间格式化为 HH:MM
+  let timeFormatted = [now.getHours(), now.getMinutes()]
+    .map(num => num.toString().padStart(2, '0')).join(':');
   return {
+    // toString() 或者 getTime()，均支持
     name: now.toString(),
     value: [
-      [now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'),
+      timeFormatted,
       Math.round(value)
     ]
   };
 }
-let data = [];
+let timeByData = [];
 let now = new Date(2024, 1, 1);
-let oneDay = 24 * 3600 * 1000;
+let oneDay = 300000;
 let value = Math.random() * 1000;
-for (var i = 0; i < 1000; i++) {
-  data.push(randomData());
+for (let i = 0; i < 200; i++) {
+  timeByData.push(randomData());
 }
-// 随时间变化
 const timeByOption = {
   // 标题
   title: {
@@ -169,9 +171,23 @@ const timeByOption = {
   legend: {
     show: false // 是否展示图例
   },
-  data: data,
-  isTimeBy: true
+  data: timeByData,
+  isTimeBy: true,
+  limitLines: {
+    // 临界线 样式
+    style: {
+      color: '#e53e31',
+      type: 'solid', // 'solid'、'dashed'、'dotted'
+      width: 2
+    },
+    // 临界线 数据
+    lines: [{
+      value: 1000,
+      label: '最大',
+    }]
+  },
 };
+
 
 
 
