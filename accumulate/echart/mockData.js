@@ -11,6 +11,7 @@ const lineBaseOption = {
     // show: false // 是否展示图例
     textAlign: 'right', // left、center、right（默认） 或 百分比
     orient: 'horizontal', // vertical竖直方向、horizontal横向（默认）
+    top: '3%'
   },
   // 折线，各类别数据
   data: [
@@ -27,9 +28,9 @@ const lineBaseOption = {
       data: [820, 932, 901, 934, 1290, 1330, 1320],
     },
   ],
-  // x轴数据
+  // 主轴数据
   xAxisData: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-  // x轴、y轴单位，°C、%、kg
+  // 主轴 副轴 单位，°C、%、kg。（ 主轴 xAxis、副轴 yAxis ）
   axisUnit: {
     x: '%',
     y: '°C',
@@ -73,7 +74,7 @@ const lineBaseOption = {
       color: '#a1b0c1',
     },
     xAxisStyle: {
-      // x轴坐标样式
+      // 主轴坐标样式
       show: true, // 是否显示坐标轴
       color: '#a1b0c1',
       width: 1, // 坐标轴线线宽
@@ -83,7 +84,7 @@ const lineBaseOption = {
       rotate: 40, // 旋转的角度从 -90 度到 90 度。
     },
     yAxisStyle: {
-      // y轴坐标样式
+      // 副轴坐标样式
       show: true, // 是否显示坐标轴（整个）
       showLine: true, // 是否显示坐标轴线
       color: '#a1b0c1',
@@ -94,9 +95,17 @@ const lineBaseOption = {
   splitLine: {
     x: {
       show: false, // 主轴是否显示网格线
+      // 线的颜色
+      // lineStyle: {
+      //   color: ['#7e8fa1']
+      // }
     },
     y: {
       show: false, // 副轴是否显示网格线
+      // 线的颜色
+      // lineStyle: {
+      //   color: ['#7e8fa1']
+      // }
     },
   },
   splitArea: {
@@ -127,7 +136,7 @@ const memoryUsage = {
       data: [95, 95, 95, 95, 95, 95, 95],
     },
   ],
-  // x轴数据
+  // 主轴数据
   xAxisData: [
     '15:24:33',
     '15:26:33',
@@ -315,17 +324,156 @@ const hollowPieBaseOption = {
 };
 
 
+// 柱状图
 const barBaseOption = {
-  mode: 'single', // 模式，单组数据为single、多组为multi(默认)
   title: {
     text: 'defalut bar', // 标题
-    textAlign: 'center',
+    textAlign: 'left',
   },
   data: [
-    { value: 1048, name: 'Search Engine' },
-    { value: 735, name: 'Direct' },
-    { value: 580, name: 'Email' },
-    { value: 484, name: 'Union Ads' },
-    { value: 300, name: 'Video Ads' },
+    {
+      name: 'Video Ads',
+      data: [150, 232, 201, 154, 190, 330, 410],
+    },
+    {
+      name: 'Direct',
+      data: [320, 332, 301, 334, 390, 330, 320],
+    },
+    {
+      name: 'Search Engine',
+      data: [820, 932, 901, 934, 1290, 1330, 1320],
+    },
   ],
+  // 主轴数据
+  xAxisData: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+  style: {
+    barWidth: '20%', // 柱子的宽度
+    backgroundColor: '#082437', // echart背景颜色
+    title: {
+      // 标题样式
+      fontSize: 20,
+      color: '#3cadea',
+      overflow: "break"
+    },
+    hover: 'shadow', // 指示器类型： 直线 - line、背景阴影 - shadow、xy轴双直线 - cross、无 - none
+    showBackground: false, // 填充整条柱子的背景
+    backgroundStyle: { // 柱子的背景颜色
+      color: '#30495c'
+    }
+  },
+  axisUnit: {
+    // 主轴 副轴 单位
+    x: '%',
+    y: '℃',
+  },
+  splitLine: {
+    x: {
+      show: false, // 主轴是否显示网格线
+    },
+    y: {
+      show: true, // 副轴是否显示网格线
+      // 网格线的颜色
+      lineStyle: {
+        color: ['#7e8fa1']
+      }
+    },
+  },
+  // 临界线
+  limitLines: {
+    // 临界线 样式
+    style: {
+      color: '#e53e31',
+      type: 'solid', // 'solid'、'dashed'、'dotted'
+      width: 2,
+    },
+    // 临界线 数据
+    lines: [
+      {
+        value: 1000,
+        label: '最大',
+      },
+    ],
+  },
+  markPoint: {
+    showMin: true,
+  },
+};
+
+
+
+// 横向 柱状图
+const barCrossOption = {
+  isCross: true, // 是否要转向横向
+  title: {
+    text: 'defalut bar', // 标题
+    textAlign: 'left',
+    top: '3%',
+  },
+  legend: {
+    top: '3%'
+  },
+  data: [
+    {
+      name: 'Video Ads',
+      data: [150, 232, 201, 154, 190, 330, 410],
+    },
+    {
+      name: 'Direct',
+      data: [320, 332, 301, 334, 390, 330, 320],
+    }
+  ],
+  // 主轴数据
+  xAxisData: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+  style: {
+    barWidth: '30%', // 柱子的宽度
+    backgroundColor: '#082437', // echart背景颜色
+    title: {
+      // 标题样式
+      fontSize: 20,
+      color: '#3cadea',
+      overflow: "break"
+    },
+    hover: 'shadow', // 指示器类型： 直线 - line、背景阴影 - shadow、xy轴双直线 - cross、无 - none
+    showBackground: false, // 填充整条柱子的背景
+    backgroundStyle: { // 柱子的背景颜色
+      color: '#30495c'
+    }
+  },
+  axisUnit: {
+    // 主轴 副轴 单位
+    x: '%',
+    y: '℃',
+  },
+  splitLine: {
+    x: {
+      show: false, // 主轴是否显示网格线
+    },
+    y: {
+      show: true, // 副轴是否显示网格线
+      // 网格线的颜色
+      lineStyle: {
+        color: ['#7e8fa1']
+      }
+    },
+  },
+  // 临界线
+  limitLines: {
+    // 临界线 样式
+    style: {
+      color: '#e53e31',
+      type: 'solid', // 'solid'、'dashed'、'dotted'
+      width: 2,
+    },
+    // 临界线 数据
+    lines: [
+      {
+        value: 200,
+        label: '最小',
+      },
+    ],
+  },
+  markPoint: {
+    showMax: true,
+    showMin: false,
+  },
 };

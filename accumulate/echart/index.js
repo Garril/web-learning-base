@@ -54,10 +54,25 @@ window.onload = function () {
   option6 && myChart6.setOption(option6);
 
 
-  // const chartDom6 = document.getElementById('main6');
-  // const myChart6 = echarts.init(chartDom6);
-  // res = getPieOption(pieBaseOption, myChart6);
-  // let { option: option6, fn: fn6 } = res;
-  // option6 && myChart6.setOption(option6);
+  const chartDom7 = document.getElementById('main7');
+  const myChart7 = echarts.init(chartDom7);
+  res = getBarOption(barCrossOption, myChart7);
+  let { option: option7, fn: fn7 } = res;
+  option7 && myChart7.setOption(option7);
+
+  setTimeout(function () {
+    const xAxisData = ['t0', 't1', 't2', 't3', 't4'];
+    const data = [
+      {
+        name: 'test1',
+        data: [150, 232, 201, 154, 190],
+      },
+      {
+        name: 'test2',
+        data: [320, 332, 301, 334, 390],
+      }
+    ];
+    fn7(data, xAxisData);
+  }, 2000);
 
 }

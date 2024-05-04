@@ -66,6 +66,34 @@ const preConfig = {
       color: '#3cadea',
       overflow: "break"
     },
+    barWidth: '50%',
+    hover: 'line',
+    legend: {
+      // 图例样式
+      fontSize: 12,
+      color: '#a1b0c1',
+    },
+    showBackground: false,
+    backgroundStyle: {
+      color: 'rgba(180, 180, 180, 0.2)'
+    },
+    xAxisStyle: {
+      // x轴坐标样式
+      show: true, // 是否显示坐标轴
+      color: '#a1b0c1',
+      width: 1, // 坐标轴线线宽
+      type: 'solid', // 坐标轴线 solid、dashed、dotted
+      showScale: true, // 是否显示刻度
+      isScaleInside: false, // 是否刻度超内
+    },
+    yAxisStyle: {
+      // y轴坐标样式
+      show: true, // 是否显示坐标轴（整个）
+      showLine: false, // 是否显示坐标轴线
+      color: '#a1b0c1',
+      width: 1, // 坐标轴线线宽
+      type: 'solid', // 坐标轴线 solid、dashed、dotted
+    }
   }
 };
 /* 
@@ -94,7 +122,19 @@ function getStackedLineOption({
   title = {},
   legend = {},
   limitLines = {},
-  splitLine = { x: { show: false }, y: { show: true } },
+  splitLine = {
+    x: {
+      show: false,
+      lineStyle: {
+        color: ['#7e8fa1']
+      }
+    }, y: {
+      show: true,
+      lineStyle: {
+        color: ['#7e8fa1']
+      }
+    }
+  },
   splitArea = { x: { show: false }, y: { show: false } },
   axisUnit = { x: '', y: '' },
   data = [],
@@ -405,13 +445,34 @@ function getPieOption({
 
 // 生成 柱状图 options
 function getBarOption({
-  mode = 'multi',
   title = {},
+  legend = {},
   data = [],
+  xAxisData = [],
   style = {},
+  axisUnit = { x: '', y: '' },
+  limitLines = {},
+  splitLine = {
+    x: {
+      show: false,
+      lineStyle: {
+        color: ['#7e8fa1']
+      }
+    }, y: {
+      show: true,
+      lineStyle: {
+        color: ['#7e8fa1']
+      }
+    }
+  },
+  isCross = false,
+  markPoint = {
+    showMax: false,
+    showMin: false,
+  }
 }, instance) {
   const _style = specAssign(preConfig.barStyle, style);
-  const xAxisData = [], barData = [];
+  const legendArr = data.map((item) => item['name']) || [];
 
   const option = {
     backgroundColor: _style.backgroundColor,
@@ -420,19 +481,61 @@ function getBarOption({
       show: true,
       textStyle: _style.title,
     },
+    legend: {
+      data: legendArr,
+      show: true,
+      textStyle: _style.legend,
+    },
     tooltip: {
       trigger: 'axis',
+      axisPointer: {
+        type: _style.hover
+      }
     },
     xAxis: {
       type: 'category',
+      data: xAxisData,
+      show: _style.xAxisStyle.show,
+      axisLine: {
+        lineStyle: _style.xAxisStyle,
+      },
+      axisTick: {
+        show: _style.xAxisStyle.showScale,
+        inside: _style.xAxisStyle.isScaleInside,
+      },
+      axisLabel: {
+        formatter: '{value}' + axisUnit.x,
+        rotate: _style.xAxisStyle.rotate
+      },
+      splitLine: splitLine.x,
     },
-    yAxis: {},
+    yAxis: {
+      type: 'value',
+      show: _style.yAxisStyle.show,
+      axisLine: {
+        lineStyle: _style.yAxisStyle,
+        show: _style.yAxisStyle.showLine,
+      },
+      axisLabel: {
+        formatter: '{value}' + axisUnit.y
+      },
+      splitLine: splitLine.y,
+    },
     grid: {
       left: '3%',
       right: '4%',
       bottom: '3%',
       containLabel: true,
     },
+    series: data.map(item => {
+      return {
+        ...item,
+        type: 'bar',
+        showBackground: _style.showBackground,
+        backgroundStyle: _style.backgroundStyle,
+        barWidth: _style.barWidth
+      }
+    })
   };
   // 标题
   if (title) {
@@ -440,24 +543,69 @@ function getBarOption({
     // 标题位置
     title.textAlign && (option.title.left = title.textAlign);
   }
-  // 单组数据模式
-  if (mode == 'single') {
-    data.forEach(item => {
-      xAxisData.push(item.name);
-      barData.push(item.value);
-    })
-    option.xAxis.data = xAxisData;
-    option.yAxis.type = 'value';
-    option.series = [
-      {
-        name: 'Direct',
-        type: 'bar',
-        barWidth: '60%',
-        data: barData
+  // 图例
+  if (legend) {
+    option.legend = { ...option.legend, ...legend };
+    // 图例位置
+    legend.textAlign && (option.legend.left = legend.textAlign);
+  }
+  // 最大 / 最小 线
+  if (limitLines.lines && limitLines.lines.length > 0) {
+    option.series = option.series.map((item) => {
+      const _markPoint = { data: [] };
+      if (markPoint.showMax) {
+        _markPoint.data.push({ type: 'max', name: 'Max' });
       }
-    ]
+      if (markPoint.showMin) {
+        _markPoint.data.push({ type: 'min', name: 'Min' });
+      }
+      if (isCross) {
+        _markPoint.symbolRotate = '-90';
+        !_markPoint.label && (_markPoint.label = {})
+        _markPoint.label.position = 'insideRight'
+      }
+      return {
+        ...item,
+        markLine: {
+          silent: false, // 是否响应鼠标
+          data: limitLines.lines.map((line) => ({
+            type: 'line',
+            yAxis: line.value,
+            label: { show: true, formatter: '{b}' },
+            name: line.label || 'default name',
+          })),
+          lineStyle: limitLines.style,
+        },
+        markPoint: _markPoint
+      };
+    });
   }
 
-  const updateFn = () => { };
+  if (isCross) {
+    const bakXaxis = JSON.parse(JSON.stringify(option.xAxis));
+    option.xAxis = JSON.parse(JSON.stringify(option.yAxis));
+    option.yAxis = bakXaxis;
+  }
+  // 更新函数
+  const updateFn = (data, xAxisData) => {
+
+    const preOption = instance.getOption();
+    const exampleObj = preOption.series[0];
+    const newArr = data.map(item => ({
+      ...exampleObj,
+      ...item
+    }))
+    const newOption = { series: newArr }
+    if (preOption.xAxis[0].type == 'category') {
+      newOption.xAxis = {
+        data: xAxisData,
+      }
+    } else if (preOption.xAxis[0].type == 'value') {
+      newOption.yAxis = {
+        data: xAxisData,
+      }
+    }
+    instance.setOption(newOption);
+  };
   return { option: option, fn: updateFn };
 }
