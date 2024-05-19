@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    #box {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      min-height: 100vh;
+      width: 100vw;
+      overflow-y: scroll;
+      padding: 2vw;
+      box-sizing: border-box;
+    }
+
+    .echart_container {
+      height: 30vh;
+      width: 45vw;
+      margin-bottom: 2vh;
+    }
+
+    #main4,
+    #main5 {
+      width: 30vw;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box">
+    <div id="main1" class="echart_container"></div>
+    <div id="main2" class="echart_container"></div>
+    <div id="main3" class="echart_container"></div>
+    <div id="main4" class="echart_container"></div>
+    <div id="main5" class="echart_container"></div>
+    <div id="main6" class="echart_container"></div>
+    <div id="main7" class="echart_container"></div>
+    <div id="main8" class="echart_container"></div>
+  </div>
+  <script src="./mockData.js"></script>
+  <script src="./echarts.js"></script>
+  <script src="./getOption.js"></script>
+  <script src="./index.js"></script>
+
+</body>
+
+</html>

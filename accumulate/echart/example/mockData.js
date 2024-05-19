@@ -277,8 +277,7 @@ const pieBaseOption = {
       fontWeight: 'bold',
       overflow: 'break',
       width: 100
-    },
-    // formatter: '{b} : {c} ({d}%)'  // 自定义formatter，显示名称、数值和占比
+    }
   }
 };
 
@@ -321,7 +320,7 @@ const hollowPieBaseOption = {
       borderColor: '#082437',
       borderWidth: 2,
     }
-  },
+  }
 };
 
 
@@ -477,3 +476,5 @@ const barCrossOption = {
     showMin: false,
   },
 };
+
+

@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <style>
     * {
@@ -14,6 +14,7 @@
     body {
       overflow-x: hidden;
       overflow-y: auto;
+      /* background-color: #082437; */
     }
 
     #box {
@@ -30,14 +31,110 @@
     }
 
     .echart_container {
-      height: 30vh;
+      height: 40vh;
       width: 45vw;
       margin-bottom: 2vh;
     }
 
-    #main4,
-    #main5 {
+    .main_echart {
+      height: 20vh;
+      width: 20vw;
+    }
+
+    #main3,
+    #main5,
+    #main7,
+    #main9 {
       width: 30vw;
+    }
+
+    .echart_box {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+    }
+
+    #centos_main,
+    #window_main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: #082437;
+      color: #94a4b5;
+    }
+
+    .echart_title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    .echart_title>div {
+      flex: 1;
+    }
+
+    #info_box {
+      width: 100%;
+      text-align: center;
+
+    }
+
+    .title {
+      color: #3cadea;
+      font-size: 15px;
+    }
+
+    #info_box>div {
+      text-align: left;
+      margin-left: 8%;
+      margin-bottom: .5vh;
+    }
+
+    #info_box>div:last-of-type {
+      margin-bottom: 2vh;
+    }
+
+    h2.title {
+      margin-bottom: 2vh;
+      font-size: 1.5em;
+    }
+
+    span:not(.title) {
+      font-size: 14px;
+      padding-left: 3px;
+    }
+
+    #window_main #content_box .title {
+      margin-bottom: 3px;
+    }
+
+    #window_main #content_box {
+      width: 40vw;
+      display: flex;
+      justify-content: stretch;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-left: 2rem;
+    }
+
+    #window_main #content_box>div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 70px;
+      border: 1.4px solid;
+      margin: 8px 10px;
+      padding: 5px 10px;
+      border-radius: 11px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      min-width: 25%;
+      max-width: 25%;
     }
   </style>
 </head>
@@ -52,12 +149,87 @@
     <div id="main6" class="echart_container"></div>
     <div id="main7" class="echart_container"></div>
     <div id="main8" class="echart_container"></div>
+    <div id="main9" class="echart_container"></div>
+    <div id="main10" class="echart_container"></div>
+    <div id="main11" class="echart_container"></div>
+    <div id="main12" class="echart_container"></div>
+    <div id="main13" class="echart_container"></div>
+
+    <div id="centos_main">
+      <div id="info_box">
+        <h2 class="title">系统信息</h2>
+        <div>
+          <span class="title">系统时间: </span>
+          <span>2024-05-19 11:16:31</span>
+        </div>
+        <div>
+          <span class="title">设备连续运行时间:</span>
+          <span>23 天 4 小时 32 分钟</span>
+        </div>
+      </div>
+      <div class="echart_title">
+        <span class="title">内存使用情况</span>
+        <span class="title">磁盘使用情况</span>
+      </div>
+      <div class="echart_box">
+        <div id="main14" class="main_echart"></div>
+        <div id="main15" class="main_echart"></div>
+      </div>
+    </div>
+
+
+    <div id="window_main">
+      <h2 class="title">系统信息</h2>
+      <div id="content_box">
+        <div>
+          <span class="title">操作系统</span>
+          <span>Windows Server 2019</span>
+          <span>64-bit</span>
+        </div>
+
+        <div>
+          <span class="title">系统时间</span>
+          <span>2024-05-19 11:16:31</span>
+        </div>
+        <div>
+          <span class="title">设备连续运行时间</span>
+          <span>23 天 4 小时 32 分钟</span>
+        </div>
+
+        <div>
+          <span class="title">总 CPU 使用率</span>
+          <span>75%</span>
+        </div>
+
+        <div>
+          <span class="title">内存使用情况</span>
+          <span>已用: 14.2GB</span>
+          <span>总共：32GB</span>
+        </div>
+        <div>
+          <span class="title">磁盘使用情况</span>
+          <span>已用: 783GB</span>
+          <span>总共：2T</span>
+        </div>
+        <div>
+          <span class="title">网络流量</span>
+          <span>流入: 1024 Mbps</span>
+          <span>流出：512 Mbps</span>
+        </div>
+        <div>
+          <span class="title">活动进程数</span>
+          <span>125</span>
+        </div>
+      </div>
+    </div>
   </div>
+  <script src="./utils.js"></script>
   <script src="./mockData.js"></script>
+  <script src="./centosData.js"></script>
+  <script src="./windowData.js"></script>
   <script src="./echarts.js"></script>
   <script src="./getOption.js"></script>
   <script src="./index.js"></script>
-
 </body>
 
 </html>

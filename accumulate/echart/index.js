@@ -2,77 +2,108 @@ window.onload = function () {
   const chartDom1 = document.getElementById('main1');
   const myChart1 = echarts.init(chartDom1);
   let res;
-  res = getStackedLineOption(lineBaseOption, myChart1);
+  res = getStackedLineOption(centosMonitorData.cpuUsedRate, myChart1);
   let { option: option1, fn: fn1 } = res;
   option1 && myChart1.setOption(option1);
 
   const chartDom2 = document.getElementById('main2');
   const myChart2 = echarts.init(chartDom2);
-  res = getStackedLineOption(memoryUsage, myChart2);
+  res = getStackedLineOption(centosMonitorData.memoryUsedRate, myChart2);
   let { option: option2, fn: fn2 } = res;
   option2 && myChart2.setOption(option2);
 
 
   const chartDom3 = document.getElementById('main3');
   const myChart3 = echarts.init(chartDom3);
-  res = getStackedLineOption(timeByOption, myChart3);
+  res = getPieOption(centosMonitorData.memoryUsedVal, myChart3);
   let { option: option3, fn: fn3 } = res;
   option3 && myChart3.setOption(option3);
 
-  // 假设 5s 重新请求，刷新一次
-  setInterval(function () {
-    timeByData.shift();
-    timeByData.push(randomData());
-    fn3(timeByData);
-  }, 5000);
+
 
   const chartDom4 = document.getElementById('main4');
   const myChart4 = echarts.init(chartDom4);
-  res = getPieOption(pieBaseOption, myChart4);
+  res = getStackedLineOption(centosMonitorData.diskUsedRate, myChart4);
   let { option: option4, fn: fn4 } = res;
   option4 && myChart4.setOption(option4);
-  const newdata4 = [
-    { value: 111, name: 'test1' },
-    { value: 222, name: 'test2' },
-    { value: 333, name: 'test3' },
-    { value: 444, name: 'test4' },
-    { value: 555, name: 'test5' },
-  ];
-  fn4(newdata4);
+
 
 
   const chartDom5 = document.getElementById('main5');
   const myChart5 = echarts.init(chartDom5);
-  res = getPieOption(hollowPieBaseOption, myChart5);
+  res = getPieOption(centosMonitorData.diskLeave, myChart5);
   let { option: option5, fn: fn5 } = res;
   option5 && myChart5.setOption(option5);
 
+
+
   const chartDom6 = document.getElementById('main6');
   const myChart6 = echarts.init(chartDom6);
-  res = getBarOption(barBaseOption, myChart6);
+  res = getStackedLineOption(centosMonitorData.activeProcesses, myChart6);
   let { option: option6, fn: fn6 } = res;
   option6 && myChart6.setOption(option6);
 
 
   const chartDom7 = document.getElementById('main7');
   const myChart7 = echarts.init(chartDom7);
-  res = getBarOption(barCrossOption, myChart7);
+  res = getPieOption(windowsMonitorData.memoryUsedVal, myChart7);
   let { option: option7, fn: fn7 } = res;
   option7 && myChart7.setOption(option7);
 
-  setTimeout(function () {
-    const xAxisData = ['t0', 't1', 't2', 't3', 't4'];
-    const data = [
-      {
-        name: 'test1',
-        data: [150, 232, 201, 154, 190],
-      },
-      {
-        name: 'test2',
-        data: [320, 332, 301, 334, 390],
-      }
-    ];
-    fn7(data, xAxisData);
-  }, 2000);
+
+  const chartDom8 = document.getElementById('main8');
+  const myChart8 = echarts.init(chartDom8);
+  res = getStackedLineOption(windowsMonitorData.diskUsedRate, myChart8);
+  let { option: option8, fn: fn8 } = res;
+  option8 && myChart8.setOption(option8);
+
+
+
+  const chartDom9 = document.getElementById('main9');
+  const myChart9 = echarts.init(chartDom9);
+  res = getPieOption(windowsMonitorData.diskLeave, myChart9);
+  let { option: option9, fn: fn9 } = res;
+  option9 && myChart9.setOption(option9);
+
+  const chartDom10 = document.getElementById('main10');
+  const myChart10 = echarts.init(chartDom10);
+  res = getStackedLineOption(windowsMonitorData.processorProcesses, myChart10);
+  let { option: option10, fn: fn10 } = res;
+  option10 && myChart10.setOption(option10);
+
+
+
+  const chartDom11 = document.getElementById('main11');
+  const myChart11 = echarts.init(chartDom11);
+  res = getStackedLineOption(windowsMonitorData.cpuHZ, myChart11);
+  let { option: option11, fn: fn11 } = res;
+  option11 && myChart11.setOption(option11);
+
+
+  const chartDom12 = document.getElementById('main12');
+  const myChart12 = echarts.init(chartDom12);
+  res = getStackedLineOption(windowsMonitorData.dealProcesses, myChart12);
+  let { option: option12, fn: fn12 } = res;
+  option12 && myChart12.setOption(option12);
+
+
+  const chartDom13 = document.getElementById('main13');
+  const myChart13 = echarts.init(chartDom13);
+  res = getStackedLineOption(windowsMonitorData.networkBandWidth, myChart13);
+  let { option: option13, fn: fn13 } = res;
+  option13 && myChart13.setOption(option13);
+
+
+  const chartDom14 = document.getElementById('main14');
+  const myChart14 = echarts.init(chartDom14);
+  res = getPieOption(centosMonitorMemory, myChart14);
+  let { option: option14, fn: fn14 } = res;
+  option14 && myChart14.setOption(option14);
+
+  const chartDom15 = document.getElementById('main15');
+  const myChart15 = echarts.init(chartDom15);
+  res = getPieOption(centosMonitorDisk, myChart15);
+  let { option: option15, fn: fn15 } = res;
+  option15 && myChart15.setOption(option15);
 
 }

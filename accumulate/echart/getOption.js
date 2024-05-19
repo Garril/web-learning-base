@@ -143,7 +143,8 @@ function getStackedLineOption({
   download = false,
   isStackedArea = false,
   isTimeBy = false,
-  style = {}
+  style = {},
+  area = {}
 }, instance = null) {
   const _style = specAssign(preConfig.stackedLineStyle, style);
   const legendArr = data.map((item) => item['name']) || [];
@@ -221,7 +222,8 @@ function getStackedLineOption({
     const formatObj = {
       ...item,
       type: 'line',
-      stack: 'Total',
+      // stack: 'Total',
+      color: _style.areaColor
     };
     if (isStackedArea) {
       formatObj.areaStyle = {};
@@ -231,6 +233,19 @@ function getStackedLineOption({
     };
     return formatObj;
   }
+  // 百分比设置范围
+  if (axisUnit.y == '%') {
+    option.yAxis.min = 0;
+    option.yAxis.max = 100;
+  } else {
+    if (area && area.min) {
+      option.yAxis.min = area.min
+    };
+    if (area && area.max) {
+      option.yAxis.max = area.max
+    };
+  }
+
   // 是否随时间变化
   if (!isTimeBy) {
     option.series = data.map((item) => {
@@ -241,7 +256,8 @@ function getStackedLineOption({
       name: 'MyData',
       type: 'line',
       showSymbol: false,
-      data: data
+      data: data,
+      color: _style.areaColor
     })
     option.xAxis = Object.assign(option.xAxis, {
       'type': 'category',
@@ -280,7 +296,6 @@ function getStackedLineOption({
         animation: false
       }
     }
-
     updateFn = (timeByData) => {
       instance.setOption({
         xAxis: {
@@ -364,6 +379,7 @@ function getPieOption({
   data = [],
   center = ['50%', '50%'],
   label = { hover: {} },
+  tooltip = {},
 }, instance) {
   const _style = specAssign(preConfig.pieStyle, style);
   // 更新函数
@@ -381,7 +397,11 @@ function getPieOption({
       subtextStyle: _style.subtext
     },
     tooltip: {
-      trigger: 'item'
+      trigger: 'item',
+      // formatter: function (params) {
+      //   return '<div style="font-weight: bold; color: #333;">' + params.seriesName + '</div>' +    // 设置 seriesName 的样式
+      //     params.marker + params.data.name + ': ' + params.data.value + ' (' + params.percent + '%)';  // 其他内容保持默认样式
+      // }
     },
     legend: {
       orient: 'vertical', // horizontal：水平分布、vertical：垂直分布
@@ -403,7 +423,7 @@ function getPieOption({
             shadowColor: 'rgba(0, 0, 0, 0.5)'
           },
           // 标注标签的样式
-          label: label.hover
+          label: label.hover,
         },
         center: center,
         label: label,
@@ -412,6 +432,7 @@ function getPieOption({
       }
     ],
   };
+  option.tooltip = Object.assign(option.tooltip, tooltip);
   // 空心饼图
   if (Array.isArray(radius) && radius[0] != radius[1]) {
     // 清除阴影
