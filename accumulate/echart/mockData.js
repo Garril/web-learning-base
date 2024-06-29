@@ -118,7 +118,7 @@ const lineBaseOption = {
   },
 };
 // 内存使用率
-const memoryUsage = {
+const rateBaseOption = {
   // 标题
   title: {
     text: '内存使用率',
@@ -153,6 +153,8 @@ const memoryUsage = {
   },
   isStackedArea: true,
 };
+const memoryUsage = rateBaseOption;
+
 
 // 随时间变化
 // 假数据，间隔为5分钟，生成。只展示最新的200条

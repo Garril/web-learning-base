@@ -459,8 +459,6 @@ function getPieOption({
   if (label.position && label.position == 'center') {
     option.series[0].avoidLabelOverlap = false;
   }
-
-
   return { option: option, fn: updateFn };
 }
 
@@ -492,9 +490,9 @@ function getBarOption({
     showMin: false,
   }
 }, instance) {
-  const _style = specAssign(preConfig.barStyle, style);
-  const legendArr = data.map((item) => item['name']) || [];
-
+  const _style = specAssign(preConfig.barStyle, style); // 预设的部分样式
+  const legendArr = data.map((item) => item['name']) || []; // 图例的数组
+  // 基础配置项
   const option = {
     backgroundColor: _style.backgroundColor,
     title: {
@@ -601,7 +599,7 @@ function getBarOption({
       };
     });
   }
-
+  // 是否翻转x轴y轴，衡向显示
   if (isCross) {
     const bakXaxis = JSON.parse(JSON.stringify(option.xAxis));
     option.xAxis = JSON.parse(JSON.stringify(option.yAxis));

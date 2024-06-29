@@ -19,6 +19,14 @@ window.onload = function () {
   let { option: option3, fn: fn3 } = res;
   option3 && myChart3.setOption(option3);
 
+  // // 假设 5s 重新请求，刷新一次
+  // setInterval(function () {
+  //   // mockData为当前饼图展示的数据。是对象数组，每一项含有属性name和value
+  //   mockData.shift(); // 删除数组首项（最早的数据）
+  //   mockData.push(randomData()); // 加入新数据到数组中
+  //   fn3(mockData); // 更新饼图的数据
+  // }, 5000);
+
 
 
   const chartDom4 = document.getElementById('main4');
@@ -27,6 +35,15 @@ window.onload = function () {
   let { option: option4, fn: fn4 } = res;
   option4 && myChart4.setOption(option4);
 
+    // 假设 5s 重新请求，刷新一次
+    setInterval(function () {
+      // xMockData是当前折线图的x轴的数据，是时间，格式类似于："18:30:22"
+      // yMockData为当前折线图的y轴展示的数据。是保存数字的数组
+      xMockData.shift();yMockData.shift(); // 删除数组首项（最早的数据）
+      xMockData.push(randomDataX());
+      yMockData.push(randomDataY()); // 加入新数据到数组中
+      fn4(xMockData,yMockData); // 更新折线图的数据
+    }, 5000);
 
 
   const chartDom5 = document.getElementById('main5');

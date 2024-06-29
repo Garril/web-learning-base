@@ -13,6 +13,7 @@ window.onload = function () {
   option2 && myChart2.setOption(option2);
 
 
+  // 假设这里的折线图，用的数据就是 
   const chartDom3 = document.getElementById('main3');
   const myChart3 = echarts.init(chartDom3);
   res = getStackedLineOption(timeByOption, myChart3);
@@ -21,9 +22,9 @@ window.onload = function () {
 
   // 假设 5s 重新请求，刷新一次
   setInterval(function () {
-    timeByData.shift();
-    timeByData.push(randomData());
-    fn3(timeByData);
+    timeByData.shift(); // 删除数组首项（最早的数据）
+    timeByData.push(randomData()); // 加入新数据到数组中
+    fn3(timeByData); // 更新
   }, 5000);
 
   const chartDom4 = document.getElementById('main4');

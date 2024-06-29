@@ -20,7 +20,6 @@ function createTimeArr(second = 60) {
     ).padStart(2, '0')}:${String(newSecond).padStart(2, '0')}`;
     timeArray.unshift(formattedTime);
   }
-
   return timeArray;
 }
 
@@ -32,7 +31,7 @@ function getFormatTime(date = new Date()) {
   return month + '-' + day + ' ' + hours + ':' + minutes; // 返回格式化后的日期时间字符串
 }
 
-// 生成CPU利用率
+// 生成CPU利用率 数据函数
 function generateStableCPUUsageArray(length = 200) {
   const cpuUsageArray = [];
   let previousUsage = 50; // 初始CPU利用率设为50%
@@ -55,7 +54,6 @@ function generateStableCPUUsageArray(length = 200) {
 
     previousUsage = currentUsage; // 更新前一时间点的 CPU 利用率
   }
-
   return cpuUsageArray;
 }
 
